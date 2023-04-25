@@ -53,24 +53,24 @@ Los commits van a seguir el siguiente formato:
 
 * `git init` 
 	* Para inizializar el repositorio local
-* `git git remote add origin https://github.com/OWNER/REPOSITORY.git`
-    * Para crear la conexion remota con el repositorio
+* `git remote add origin https://github.com/OWNER/REPOSITORY.git`
+    * Para crear la conexion remota con el repositorio.
 * `git fetch`
     * Para descargar commits, archivos y referencias del repositorio remoto al repositorio local.
-* `git commit`
-	* Para guardar todos los cambio realizados en el repositorio local al staging area.
 * `git pull`
 	* Para bajar los cambios del repositorio remoto al repositorio local.
-* `git push`
-	* Para subir los cambios realizados al repositorio.
-* `git merge`
-	*  Para unir dos ramas.
-* `git branch`
-	* Para listar las ramas existentes. Crear y eliminar ramas.
-* `git checkout`
-	* Para salir de una rama y entrar a otra. Asumiendo estas ramas ya existen.
 * `git add` 
 	* Para contrastar los cambios hechos de forma local, contra el repositorio. Los cambios no son guardados con git add. Para eso debe luego utilizarse git commit.
+* `git commit`
+	* Para guardar todos los cambio realizados en el repositorio local al staging área.
+* `git push`
+	* Para subir los cambios realizados al repositorio.
+* `git branch`
+	* Para listar las ramas existentes. Crear y eliminar ramas.
+* `git merge`
+	*  Para unir dos ramas.
+* `git checkout`
+	* Para salir de una rama y entrar a otra. Asumiendo estas ramas ya existen.
 * `git diff`
 	* Para identificar diferencias en el repositorio.
 * `git stash`
