@@ -89,8 +89,8 @@ Identificamos dos tipos de personas:
 -   Madre de dos hijos casada y con un trabajo estable.
 -   Padre soltero con un hijo y falta de recursos.
 
-![Mariana](elicitacion\user_persona\user_persona_mariana.png?raw=true "Mariana")
-![Martin](elicitacion\user_persona\user_persona_martin.png?raw=true "Martin")
+![Mariana](elicitacion/user_persona/user_persona_mariana.png?raw=true "Mariana")
+![Martin](elicitacion/user_persona/user_persona_martin.png?raw=true "Martin")
 
 ## Especificación
 
