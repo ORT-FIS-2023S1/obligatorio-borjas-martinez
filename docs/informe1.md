@@ -51,45 +51,46 @@ Los commits van a seguir el siguiente formato:
 
 #### Comandos git a utilizar:
 
-* `git init` 
-	* Para inizializar el repositorio local
-* `git remote add origin https://github.com/OWNER/REPOSITORY.git`
-    * Para crear la conexion remota con el repositorio.
-* `git fetch`
-    * Para descargar commits, archivos y referencias del repositorio remoto al repositorio local.
-* `git pull`
-	* Para bajar los cambios del repositorio remoto al repositorio local.
-* `git add` 
-	* Para contrastar los cambios hechos de forma local, contra el repositorio. Los cambios no son guardados con git add. Para eso debe luego utilizarse git commit.
-* `git commit`
-	* Para guardar todos los cambio realizados en el repositorio local al staging área.
-* `git push`
-	* Para subir los cambios realizados al repositorio.
-* `git branch`
-	* Para listar las ramas existentes. Crear y eliminar ramas.
-* `git merge`
-	*  Para unir dos ramas.
-* `git checkout`
-	* Para salir de una rama y entrar a otra. Asumiendo estas ramas ya existen.
-* `git diff`
-	* Para identificar diferencias en el repositorio.
-* `git stash`
-	* Para almacenar temporalmente los cambios reaizados en el código para que poder trabajar en otra cosa y, más tarde, regresar y volver a aplicar los cambios.
+-   `git init`
+    -   Para inizializar el repositorio local
+-   `git remote add origin https://github.com/OWNER/REPOSITORY.git`
+    -   Para crear la conexion remota con el repositorio.
+-   `git fetch`
+    -   Para descargar commits, archivos y referencias del repositorio remoto al repositorio local.
+-   `git pull`
+    -   Para bajar los cambios del repositorio remoto al repositorio local.
+-   `git add`
+    -   Para contrastar los cambios hechos de forma local, contra el repositorio. Los cambios no son guardados con git add. Para eso debe luego utilizarse git commit.
+-   `git commit`
+    -   Para guardar todos los cambio realizados en el repositorio local al staging área.
+-   `git push`
+    -   Para subir los cambios realizados al repositorio.
+-   `git branch`
+    -   Para listar las ramas existentes. Crear y eliminar ramas.
+-   `git merge`
+    -   Para unir dos ramas.
+-   `git checkout`
+    -   Para salir de una rama y entrar a otra. Asumiendo estas ramas ya existen.
+-   `git diff`
+    -   Para identificar diferencias en el repositorio.
+-   `git stash`
+    -   Para almacenar temporalmente los cambios reaizados en el código para que poder trabajar en otra cosa y, más tarde, regresar y volver a aplicar los cambios.
 
 ## Versionado
 
-## Elicitación
+Para mantener buenas practicas a lo largo de todo el proyecto, haremos uso de todo lo mencionado en el punto anterior. Cabe enmarcar que cada rama que creemos para una nueva feature llevará en su nombre una breve referencia para poder identificar que es lo que hace o a que parte del codigo hace referencia. Por ejemplo `feature/historial_pedidos` o `hotfix/listado_menu`.
 
+## Elicitación
 
 ### User Persona
 
 Identificamos dos tipos de personas:
 
-* Madre de dos hijos casada y con un trabajo estable.
-* Padre soltero con un hijo y falta de recursos.
+-   Madre de dos hijos casada y con un trabajo estable.
+-   Padre soltero con un hijo y falta de recursos.
 
 ![Mariana](elicitacion\user_persona\user_persona_mariana.png?raw=true "Mariana")
-![Martin](elicitacion\user_persona\user_persona_martin.png?raw=true  "Martin")
+![Martin](elicitacion\user_persona\user_persona_martin.png?raw=true "Martin")
 
 ## Especificación
 
