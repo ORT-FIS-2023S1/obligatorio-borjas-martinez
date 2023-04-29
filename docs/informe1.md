@@ -82,12 +82,30 @@ Para mantener buenas practicas a lo largo de todo el proyecto, haremos uso de to
 
 ## Elicitación
 
-### User Persona
+#### Entrevistas
+
+Nuestra primer técnica de elicitación que llevamos a cabo fue realizar tres diferentes entrevistas que traten de abarcar a los usuarios potenciales. Para esto se eligieron preguntas abiertas, diferentes para cada entrevistado, con la finalidad de conocer el contexto de cada uno. Posterior a esto se utilizaron preguntas mas específicas a cada situación y/o rubro.
+
+Los entrevistados representaban diferentes grupos, grupo de padres, cocineros y niños. De aquí se sacaron las siguientes conclusiones:
+
+-   Lo primero que pudimos notar es que por lo general a los padres se les hace dificil hacer un seguimiento a que lo que el niño consume en los comedores. Ésto es debido a que le dan dinero para que compre lo que le apetezca durante la jornada.
+-   Los niños muchas veces desconocen el menú semanal ya que no prestan atención a los medios tradicionales que utiliza el comedor para publicarlo. Esto deriva en que no compren el ticket diario para el almuerzo y compren golosinas o comida no adecuada para la correcta alimentación.
+-   Por a ciertas condiciones del trabajo de los padres, se les hace imposible prepararle comida para llevar y esto agudiza los puntos anteriores.
+
+-   Los cocineros no saben exactamente cuanta comida realizar, produciendo desperdicio de comida a diario. Cabe enmarcar también que no estan familiarizados con las diferentes situaciones de salud que pueden presentar los niños y podrían estar facilitando el acceso de ciertos alimentos a quienes presentan algun tipo de problema con ellos como por ejemplo intolerancia a las harinas o a la lactosa.
+
+Creemos fuertemente que con el desarrollo de nuestra aplicación se podrían abordar todos estos problemas.
+
+Las evidencias de las entrevistas pueden ser corroboradas aquí: [Entrevista 1](/docs/elicitacion/entrevistas/entrevista1.md), [Entrevista 2](/docs/elicitacion/entrevistas/entrevista2.md) y [Entrevista 3](/docs/elicitacion/entrevistas/entrevista3.md)
+
+#### User Persona
 
 Identificamos dos tipos de personas:
 
 -   Madre de dos hijos casada y con un trabajo estable.
--   Padre soltero con un hijo y falta de recursos.
+-   Padre soltero con un hijo y recursos ajustados.
+
+A grandes razgos, los usuarios ideales sobre los que nos vamos centrar para que hagan uso de nuestra aplicación estan englobados por estos dos tipos.
 
 ![Mariana](elicitacion/user_persona/user_persona_mariana.png?raw=true "Mariana")
 ![Martin](elicitacion/user_persona/user_persona_martin.png?raw=true "Martin")
