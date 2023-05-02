@@ -188,6 +188,10 @@ Además contamos con imagenes de la applicacion:
 -   **RNF4:** El sistema en su primera version debera admitir 3 comedores con hasta 100 alumnos cada uno.
 -   **RNF5:** El sistema debe ser compatible con Google Chrome.
 -   **RNF6:** El sistema en su primera version debe ser compatible con dispositivos mobile, Android 10 e iOS 13 en adelante.
+-   **RNF7:** El color primario debe ser Green 900 #1B5E20 y el secundario Light Blue 800 #0277BD como lo establece los estandares de [Material Design](https://m3.material.io/)
+-   **RNF8:** La fuente a utilizar sera Roboto
+-   **RNF9** El estilo de los iconos sera filled
+-   **RNF10** Los estilos de los componentes seran bajo las especificaiones de [Material Design](https://m3.material.io/)
 
 ## Historias de Usuario
 
