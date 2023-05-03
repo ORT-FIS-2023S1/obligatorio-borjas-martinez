@@ -7,12 +7,41 @@
 Vamos a utlizar la rama main como rama estable en la cuál vamos a depositar todo el código y funcionalidades desarrolladas.
 También utilizaremos una rama docs en la cuál pondremos toda la documentación correspondiente. Cada feature que vayamos a desarrollar tendrá su rama correspondiente para el orden y legibilidad del proyecto.
 
+#### Comandos git a utilizar:
+
+-   `git init`
+    -   Para inizializar el repositorio local
+-   `git remote add origin https://github.com/OWNER/REPOSITORY.git`
+    -   Para crear la conexion remota con el repositorio.
+-   `git fetch`
+    -   Para descargar commits, archivos y referencias del repositorio remoto al repositorio local.
+-   `git pull`
+    -   Para bajar los cambios del repositorio remoto al repositorio local.
+-   `git add`
+    -   Para contrastar los cambios hechos de forma local, contra el repositorio. Los cambios no son guardados con git add. Para eso debe luego utilizarse git commit.
+-   `git commit`
+    -   Para guardar todos los cambio realizados en el repositorio local al staging área.
+-   `git push`
+    -   Para subir los cambios realizados al repositorio.
+-   `git branch`
+    -   Para listar las ramas existentes. Crear y eliminar ramas.
+-   `git merge`
+    -   Para unir dos ramas.
+-   `git checkout`
+    -   Para salir de una rama y entrar a otra. Asumiendo estas ramas ya existen.
+-   `git diff`
+    -   Para identificar diferencias en el repositorio.
+-   `git stash`
+    -   Para almacenar temporalmente los cambios reaizados en el código para que poder trabajar en otra cosa y, más tarde, regresar y volver a aplicar los cambios.
+
+## Versionado
+
 #### Mensajes de commits convencionales
 
 Los commits van a seguir el siguiente formato:
 
 <pre>
-<b><a>&lt;tipo&gt;</a></b></font>(<b><a>&lt;alcance&gt;</a></b>): <b><a>&lt;asunto&gt;</a></b>
+<b><a>&lt;tipo&gt;</a></b>(<b><a>&lt;alcance&gt;</a></b>): <b><a>&lt;asunto&gt;</a></b>
 </pre>
 
 **Tipos:**
@@ -49,36 +78,7 @@ Los commits van a seguir el siguiente formato:
     build(package.json): actualización de dependencias
     ```
 
-#### Comandos git a utilizar:
-
--   `git init`
-    -   Para inizializar el repositorio local
--   `git remote add origin https://github.com/OWNER/REPOSITORY.git`
-    -   Para crear la conexion remota con el repositorio.
--   `git fetch`
-    -   Para descargar commits, archivos y referencias del repositorio remoto al repositorio local.
--   `git pull`
-    -   Para bajar los cambios del repositorio remoto al repositorio local.
--   `git add`
-    -   Para contrastar los cambios hechos de forma local, contra el repositorio. Los cambios no son guardados con git add. Para eso debe luego utilizarse git commit.
--   `git commit`
-    -   Para guardar todos los cambio realizados en el repositorio local al staging área.
--   `git push`
-    -   Para subir los cambios realizados al repositorio.
--   `git branch`
-    -   Para listar las ramas existentes. Crear y eliminar ramas.
--   `git merge`
-    -   Para unir dos ramas.
--   `git checkout`
-    -   Para salir de una rama y entrar a otra. Asumiendo estas ramas ya existen.
--   `git diff`
-    -   Para identificar diferencias en el repositorio.
--   `git stash`
-    -   Para almacenar temporalmente los cambios reaizados en el código para que poder trabajar en otra cosa y, más tarde, regresar y volver a aplicar los cambios.
-
-## Versionado
-
-Para mantener buenas practicas a lo largo de todo el proyecto, haremos uso de todo lo mencionado en el punto anterior. Cabe enmarcar que cada rama que creemos para una nueva feature llevará en su nombre una breve referencia para poder identificar que es lo que hace o a que parte del codigo hace referencia. Por ejemplo `feature/historial_pedidos` o `hotfix/listado_menu`.
+Cada rama que creemos para una nueva feature o para corregir lo ya establecido llevará en su nombre una breve referencia para poder identificar a que parte del codigo hace referencia. Por ejemplo `feature/historial_pedidos` o `hotfix/listado_menu`.
 
 ## Elicitación
 
