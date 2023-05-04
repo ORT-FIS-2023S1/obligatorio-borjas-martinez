@@ -205,6 +205,7 @@ Además contamos con imagenes de la applicacion:
     -   **Dado** el padre registrado
     -   **Cuando** quiera ver el historial en el comedor
     -   **Entonces** se le mostrara en pantalla el dinero total gastado y un listado con todos los productos con su fecha correspondiente.
+    <hr>
 
 -   **ID:** 2
 -   **Título:** Agregar nuevo producto al comedor
@@ -212,13 +213,27 @@ Además contamos con imagenes de la applicacion:
     -   **Quiero** agregar un nuevo producto
     -   **Para** que los niños puedan consumirlo
 -   **Criterios de aceptación:**
+
     -   **Dado** el empleado
     -   **Cuando** quiera registrar un nuevo producto
     -   **Entonces** podrá agregar una foto, precio y descripción.
+    <hr>
+
+    -   **ID:** 3
+
+-   **Título:** Compra de merienda
+    -   **Como** padre de un niño que regularmente consume en el comedor escolar
+    -   **Quiero** comprar una merienda saludable
+    -   **Para** que mi hijo tenga su merienda y así estar involucrado en la alimentación
+-   **Criterios de aceptación:**
+
+    -   **Dado** el padre registrado en el sistema
+    -   **Cuando** quiera comprar la merienda
+    -   **Entonces** se le mostrara en pantalla todas las opciones que la cantina ofrece.
 
 ## Casos de Uso
 
--   **Título:** Cargar billetera digital
+-   **Título:** Consultar resumen mensual
 -   **Actor:** Padre/Tutor
 -   **Precondición:** El tutor ya esta registrado y tiene a su hijo asignado
 -   **Curso normal:**
@@ -229,9 +244,24 @@ Además contamos con imagenes de la applicacion:
     -   5 (Actor): Selecciona opcion de ver resumen
     -   6 (Sistema): Muestra total de dinero gastado y una lista con los productos y su fecha
 -   **Curso alternativo:**
+
     -   5.1 (Actor) Si selecciona resumen de un mes pasado
     -   5.2 (Sistema) Descarga en formato PDF el resumen.
     -   6.1 (Sistema) Si no tiene ningun gasto muestra un mensaje en pantalla.
+    <hr>
+
+-   **Título:** Cargar billetera virtual
+-   **Actor:** Padre/Tutor
+-   **Precondición:** El tutor ya esta registrado y tiene a su hijo asignado
+-   **Curso normal:**
+    -   1 (Actor): Ingresa a la aplicación
+    -   2 (Sistema): Muestra la ventana principal
+    -   3 (Actor): Selecciona opcion dinero en barra de navegación
+    -   4 (Sistema): Muestra seccion dinero
+    -   5 (Actor): Presiona botón cargar dinero
+    -   6 (Sistema): Muestra opciones como tarjeta de crédito, débito o MercadoPago
+-   **Curso alternativo:**
+    -   6.1 (Sistema) Si ya tiene tarjeta precargada muestra opcion de esa tarjeta.
 
 ## Validación y verificación
 
