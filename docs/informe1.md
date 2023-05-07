@@ -98,18 +98,6 @@ Creemos fuertemente que con el desarrollo de nuestra aplicación se podrían abo
 
 Las evidencias de las entrevistas pueden ser corroboradas aquí: [Entrevista 1](/docs/elicitacion/entrevistas/entrevista1.md), [Entrevista 2](/docs/elicitacion/entrevistas/entrevista2.md) y [Entrevista 3](/docs/elicitacion/entrevistas/entrevista3.md)
 
-#### User Persona
-
-Identificamos dos tipos de personas:
-
--   Madre de dos hijos casada y con un trabajo estable.
--   Padre soltero con un hijo y recursos ajustados.
-
-A grandes razgos, los usuarios ideales sobre los que nos vamos centrar para que hagan uso de nuestra aplicación estan englobados por estos dos tipos.
-
-![Mariana](elicitacion/user_persona/user_persona_mariana.png?raw=true "Mariana")
-![Martin](elicitacion/user_persona/user_persona_martin.png?raw=true "Martin")
-
 #### Análisis de Documentación
 
 Buscando aplicaciones ya existentes encontramos OrderEAT, un negocio planteado por tes estudiantes de un liceo que buscaban solucionar los problemas que afecta al servicio de su comedor. Uno de esos problemas eran las largas filas de treinta minutos para recibir el almuerzo, que los platos llegaban fríos y, muchas veces, se quedaban sin comer.
@@ -136,65 +124,69 @@ Además contamos con imagenes de la applicacion:
 <img src="elicitacion/documentos/OrderEAT5.png" >
 <img src="elicitacion/documentos/OrderEAT6.png" >
 
+
+#### User Persona
+
+Identificamos dos tipos de personas:
+
+-   Madre de dos hijos casada y con un trabajo estable.
+-   Padre soltero con un hijo y recursos ajustados.
+
+A grandes razgos, los usuarios ideales sobre los que nos vamos centrar para que hagan uso de nuestra aplicación estan englobados por estos dos tipos.
+
+![Mariana](elicitacion/user_persona/user_persona_mariana.png?raw=true "Mariana")
+![Martin](elicitacion/user_persona/user_persona_martin.png?raw=true "Martin")
+
+#### Modelo conceptual del problema
+![Modelo](elicitacion/modelo_conceptual/modelo_conceptual_del_problema.png?raw=true "Modelo")
+
 ## Especificación
 
-## Requerimientos Funcionales
+### Requerimientos Funcionales
 
-<!-- ### RF1 : Permitir regisrar comedores, tutores y niños
-
--   **Autor:** 
--   **Descripción:** El sistema debe permitir registrar un comedor, tutores y niños.
- - **Prioridad:** Alta. -->
-
-<!-- ### RF2 : Asociar los niños a un comedor y tutores
-
--   **Autor:** 
--   **Descripción:** El sistema debe permitir asociar los niños a un comedor y tutores, para poder hacer un correcto seguimiento de que es lo que el niño consume.
- - **Prioridad:** Alta. -->
-
-### RF1 : Permitir compras a los comedores
+#### RF1 : Permitir compras a los comedores
 
 -   **Autor:** Padre/Tutor 
 -   **Descripción:** El sistema debe permitir compras a los comedores de parte de los tutores para que los niños lo consuma en el comedor y así asegurarse que el niño coma adecuadamente.
  - **Prioridad:** Alta.
 
-### RF2 : Se debe poder cargar dinero en una billetera virtual
+#### RF2 : Se debe poder cargar dinero en una billetera virtual
 
 -   **Autor:** Padre/Tutor
 -   **Descripción:** El sistema debe permitir agregar dinero a una billetera virtual para poder comprar productos del comedor.
  - **Prioridad:** Alta.
 
-### RF3 : Se debe guardar un registro de todas las compras durante el mes
+#### RF3 : Se debe guardar un registro de todas las compras durante el mes
 
 -   **Autor:** Padre/Tutor
 -   **Descripción:** El sistema debe guardar un registro de las compras mensuales que los tutores pueden observar presionando un boton resumen.
  - **Prioridad:** Alta.
 
-### RF4 : Los comedores deben poder publicar y editar sus planificaiones de alimentos
+#### RF4 : Los comedores deben poder publicar y editar sus planificaiones de alimentos
 
 -   **Autor:** Comedor
 -   **Descripción:** Los comedores deben poder publicar y editar su planificacion semanal, precios y ofertas del plato del dia en su perfil.
  - **Prioridad:** Alta.
 
-### RF5 : Los comedores deben poder observar los platos reservados para el dia o semana
+#### RF5 : Los comedores deben poder observar los platos reservados para el dia o semana
 
 -   **Autor:** Comedor
 -   **Descripción:** Los comedores deben poder observar cuantos platos reservados tienen para poder cocinar la cantidad correspondiente y no desperdiciar comida.
  - **Prioridad:** Baja.
 
-### RF6 : El sistema debe notificar a los tutores despues de una compra
+#### RF6 : El sistema debe notificar a los tutores despues de una compra
 
 -   **Autor:** Padre/Tutor
 -   **Descripción:** El sistema debe notificar a los tutores al momento de hacer una compra con la billetera virtual.
  - **Prioridad:** Baja.
 
-### RF7 : Debe restringirse el acceso de ciertos alientos a algunos niños
+#### RF7 : Debe restringirse el acceso de ciertos alientos a algunos niños
 
 -   **Autor:** Padre/Tutor
 -   **Descripción:** El sistema debe permitir a los padres restringir alimentos.
  - **Prioridad:** Media.
 
-## Requerimientos no funcionales:
+### Requerimientos no funcionales:
 
 -   **RNF1:** El sistema debe estar integrado con la pasarela de pago MercadoPago
 -   **RNF2:** El sistema utilizará protocolos https como método de seguridad.
@@ -207,7 +199,7 @@ Además contamos con imagenes de la applicacion:
 -   **RNF9** El estilo de los iconos sera filled
 -   **RNF10** Los estilos de los componentes seran bajo las especificaiones de [Material Design](https://m3.material.io/)
 
-## Historias de Usuario
+### Historias de Usuario
 
 -   **ID:** 1
 -   **Título:** Seguimiento del consumo del niño
@@ -245,7 +237,7 @@ Además contamos con imagenes de la applicacion:
     -   **Cuando** quiera comprar la merienda
     -   **Entonces** se le mostrara en pantalla todas las opciones que la cantina ofrece.
 
-## Casos de Uso
+### Casos de Uso
 
 -   **Título:** Consultar resumen mensual
 -   **Actor:** Padre/Tutor
@@ -276,7 +268,7 @@ Además contamos con imagenes de la applicacion:
     -   6 (Sistema): Muestra opciones como tarjeta de crédito, débito o MercadoPago
 -   **Curso alternativo:**
     -   6.1 (Sistema) Si ya tiene tarjeta precargada muestra opcion de esa tarjeta.
-
+   
 ## Validación y verificación
 
 ## Reflexión
