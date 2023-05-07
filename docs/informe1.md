@@ -140,45 +140,59 @@ Además contamos con imagenes de la applicacion:
 
 ## Requerimientos Funcionales
 
-### RF1 : Permitir regisrar comedores, tutores y niños
+<!-- ### RF1 : Permitir regisrar comedores, tutores y niños
 
+-   **Autor:** 
 -   **Descripción:** El sistema debe permitir registrar un comedor, tutores y niños.
+ - **Prioridad:** Alta. -->
 
-### RF2 : Asociar los niños a un comedor y tutores
+<!-- ### RF2 : Asociar los niños a un comedor y tutores
 
+-   **Autor:** 
 -   **Descripción:** El sistema debe permitir asociar los niños a un comedor y tutores, para poder hacer un correcto seguimiento de que es lo que el niño consume.
+ - **Prioridad:** Alta. -->
 
-### RF3 : Permitir compras a los comedores a traves del sistema
+### RF1 : Permitir compras a los comedores
 
--   **Descripción:** El sistema debe permitir compras a los comedores de parte de los tutores para que los niños lo canjeen en el comedor y así asegurarse que el niño coma adecuadamente.
+-   **Autor:** Padre/Tutor 
+-   **Descripción:** El sistema debe permitir compras a los comedores de parte de los tutores para que los niños lo consuma en el comedor y así asegurarse que el niño coma adecuadamente.
+ - **Prioridad:** Alta.
 
-### RF4 : Debe existir una billetera virtual para los niños
+### RF2 : Se debe poder cargar dinero en una billetera virtual
 
--   **Descripción:** El sistema debe permitir agregar dinero a una billetera virtual para que el niño utilice en los productos del comedor.
+-   **Autor:** Padre/Tutor
+-   **Descripción:** El sistema debe permitir agregar dinero a una billetera virtual para poder comprar productos del comedor.
+ - **Prioridad:** Alta.
 
-### RF5 : Permitir cargar billetera virtual con tarjeta de crédito o débito
+### RF3 : Se debe guardar un registro de todas las compras durante el mes
 
--   **Descripción:** El sistema debe admitir tarjeta de crédito o débito para comprar y/o cargar la billetera virtual del niño.
-
-### RF6 : Se debe guardar un registro de todas las compras durante el mes
-
+-   **Autor:** Padre/Tutor
 -   **Descripción:** El sistema debe guardar un registro de las compras mensuales que los tutores pueden observar presionando un boton resumen.
+ - **Prioridad:** Alta.
 
-### RF7 : Los comedores deben poder publicar y editar sus planificaiones de alimentos
+### RF4 : Los comedores deben poder publicar y editar sus planificaiones de alimentos
 
+-   **Autor:** Comedor
 -   **Descripción:** Los comedores deben poder publicar y editar su planificacion semanal, precios y ofertas del plato del dia en su perfil.
+ - **Prioridad:** Alta.
 
-### RF8 : Los comedores deben poder observar cuanto llevan vendido
+### RF5 : Los comedores deben poder observar los platos reservados para el dia o semana
 
--   **Descripción:** Los comedores deben poder observar cuantos platos reservados tienen para poder cocinar la cantidad correspondiente y no desperdiiar comida.
+-   **Autor:** Comedor
+-   **Descripción:** Los comedores deben poder observar cuantos platos reservados tienen para poder cocinar la cantidad correspondiente y no desperdiciar comida.
+ - **Prioridad:** Baja.
 
-### RF9 : El sistema debe notificar a los tutores despues de una compra
+### RF6 : El sistema debe notificar a los tutores despues de una compra
 
+-   **Autor:** Padre/Tutor
 -   **Descripción:** El sistema debe notificar a los tutores al momento de hacer una compra con la billetera virtual.
+ - **Prioridad:** Baja.
 
-### RF10 : Debe restringirse el acceso de ciertos alientos a algunos niños.
+### RF7 : Debe restringirse el acceso de ciertos alientos a algunos niños
 
--   **Descripción:** El sistema debe restringir los alimentos a los niños con problemas alimenticios.
+-   **Autor:** Padre/Tutor
+-   **Descripción:** El sistema debe permitir a los padres restringir alimentos.
+ - **Prioridad:** Media.
 
 ## Requerimientos no funcionales:
 
@@ -188,7 +202,7 @@ Además contamos con imagenes de la applicacion:
 -   **RNF4:** El sistema en su primera version debera admitir 3 comedores con hasta 100 alumnos cada uno.
 -   **RNF5:** El sistema debe ser compatible con Google Chrome.
 -   **RNF6:** El sistema en su primera version debe ser compatible con dispositivos mobile, Android 10 e iOS 13 en adelante.
--   **RNF7:** El color primario debe ser Green 900 #1B5E20 y el secundario Light Blue 800 #0277BD como lo establece los estandares de [Material Design](https://m3.material.io/)
+-   **RNF7:** El color primario debe ser Green 900 #1B5E20 y el secundario Light Blue 800 #0277BD
 -   **RNF8:** La fuente a utilizar sera Roboto
 -   **RNF9** El estilo de los iconos sera filled
 -   **RNF10** Los estilos de los componentes seran bajo las especificaiones de [Material Design](https://m3.material.io/)
@@ -214,7 +228,7 @@ Además contamos con imagenes de la applicacion:
     -   **Para** que los niños puedan consumirlo
 -   **Criterios de aceptación:**
 
-    -   **Dado** el empleado
+    -   **Dado** el empleado registrado 
     -   **Cuando** quiera registrar un nuevo producto
     -   **Entonces** podrá agregar una foto, precio y descripción.
     <hr>
