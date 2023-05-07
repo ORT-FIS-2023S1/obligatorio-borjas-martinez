@@ -103,9 +103,7 @@ Las evidencias de las entrevistas pueden ser corroboradas aquí: [Entrevista 1](
 Buscando aplicaciones ya existentes encontramos OrderEAT, un negocio planteado por tes estudiantes de un liceo que buscaban solucionar los problemas que afecta al servicio de su comedor. Uno de esos problemas eran las largas filas de treinta minutos para recibir el almuerzo, que los platos llegaban fríos y, muchas veces, se quedaban sin comer.
 La plataforma tiene un doble objetivo. Por un lado, que los comedores y cafeterías escolares puedan digitalizar el servicio, cobrar a través de la plataforma, eliminar las filas de espera y disminuir la cantidad de comida desperdiciada. Por el otro, busca conectar a los padres con la alimentación de los hijos, ya que a través de la aplicación tienes seguimiento de lo que consumen, los gastos que realiza cada chico y pueden configurar presupuestos o restricciones alimentarias.
 
-De la documentacion pudimos identiicar los siguientes puntos:
-
-Las evidencias de la documentacion puede ser corroborado aquí: [Nota ElPais](/docs/elicitacion/documentos/OrderEAT%20ElPais.pdf), [Nota ElObservador](/docs/elicitacion/documentos/OrderEAT%20ElObservador.pdf) y [Entrevista en TeleDoce](https://www.teledoce.com/?p=596829)
+###### De la documentacion pudimos identiicar los siguientes puntos:
 
 | Solución para tutores y estudiantes:                | Solución para comedores/cafés:      |
 | --------------------------------------------------- | ----------------------------------- |
@@ -125,6 +123,7 @@ Además contamos con imagenes de la applicacion:
 <img src="elicitacion/documentos/OrderEAT6.png" >
 
 
+Las evidencias de la documentacion puede ser corroborado aquí: [Nota ElPais](/docs/elicitacion/documentos/OrderEAT%20ElPais.pdf), [Nota ElObservador](/docs/elicitacion/documentos/OrderEAT%20ElObservador.pdf) y [Entrevista en TeleDoce](https://www.teledoce.com/?p=596829)
 #### User Persona
 
 Identificamos dos tipos de personas:
