@@ -286,6 +286,13 @@ A grandes razgos, los usuarios ideales sobre los que nos vamos centrar para que 
     -   6.1 (Sistema) Si ha ocurrido una falla durante el proceso lo notifica y no agrega al carrito.
 -    **Postcondición:** El menú seleccionado se mostará en carrito. 
 
+### Bocetos de IU
+![login](elicitacion/bocetos_UI/UI_login.png?raw=true "login")
+![main](elicitacion/bocetos_UI/UI_main_page.png?raw=true "main")
+![menu](elicitacion/bocetos_UI/UI_menu.png?raw=true "menu")
+![cart](elicitacion/bocetos_UI/UI_cart.png?raw=true "cart")
+![wallet](elicitacion/bocetos_UI/UI_wallet.png?raw=true  "wallet")
+
    
 ## Validación y verificación
 
