@@ -268,6 +268,24 @@ A grandes razgos, los usuarios ideales sobre los que nos vamos centrar para que 
     -   6 (Sistema): Muestra opciones como tarjeta de crédito, débito o MercadoPago
 -   **Curso alternativo:**
     -   6.1 (Sistema) Si ya tiene tarjeta precargada muestra opcion de esa tarjeta.
+-   **Postcondición:** Se debe visualizar el monto cargado en el saldo de la billetera virtual. 
+
+<hr>
+
+-   **Título:** Agregar un producto al carrito
+-   **Actor:** Padre/Tutor
+-   **Precondición:** El tutor ya esta registrado y tiene a su hijo asignado
+-   **Curso normal:**
+    -   1 (Actor): Ingresa a la aplicación
+    -   2 (Sistema): Muestra la ventana principal
+    -   3 (Actor): Selecciona opcion de menú de la seccion principal
+    -   4 (Sistema): Muestra la lista de platos para ese día y los siguientes.
+    -   5 (Actor): Presiona en agregar al carrito en una de las opciones de platos
+    -   6 (Sistema): Agrega al carrito y notifica.
+-   **Curso alternativo:**
+    -   6.1 (Sistema) Si ha ocurrido una falla durante el proceso lo notifica y no agrega al carrito.
+-    **Postcondición:** El menú seleccionado se mostará en carrito. 
+
    
 ## Validación y verificación
 
