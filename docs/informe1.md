@@ -335,3 +335,25 @@ Aprendí que el software de calidad no se obtiene de un día para el otro, es de
 Aplicamos las técnicas que creímos relevantes para toda la elicitación.
 
 También aprendí mucho con Git, si bien tenía un poco de experiencia, fue la primera vez trabajando con alguien en simultaneo y esto ayuda a darse cuenta de la importancia de la comunicación entre desarrolladores, ya desde los mensajes de los commits.
+
+
+
+#### Reflexión Agustina Martínez
+
+En cuanto al trabajo en el que colaboré, fue:
+
+-   Contribuir con ideas para el manejo de Git, tanto en prácticas de versionado como en la gestión de ramas.
+-   Plantear estrategias para abordar las entrevistas y llevarlas a cabo con éxito.
+-   Investigar sobre aplicaciones existentes y analizar la documentación correspondiente.
+-   Diseñar y desarrollar el modelo conceptual del problema.
+-   Validar y ajustar los requerimientos planteados por el equipo.
+-   Crear un caso de uso que refleje el funcionamiento del sistema.
+-   Colaborar en la elaboración de los bocetos de la interfaz de usuario.
+-   Participar en la presentación de los prototipos a los entrevistados y escribir un análisis posterior.
+-   Colaborar en la verificación de los requerimientos y en la transcripción de la lista de verificación.
+
+En cuanto al aprendizaje, considero que fue muy beneficioso poder involucrarme en todo el proceso de desarrollo y comprender la importancia de cada paso. Personalmente, nunca había tenido la oportunidad de participar en un proyecto de esta índole en mi ámbito laboral, por lo que fue una experiencia muy enriquecedora.
+
+Uno de los mayores desafíos fue interpretar las necesidades de los usuarios, ya que a menudo tendemos a pensar en soluciones que podrían ser útiles sin tener en cuenta la realidad del usuario. Este proceso me hizo replantear mi forma de abordar nuevas tareas en el campo del desarrollo de software.
+
+En cuanto al uso de git, no tuve dificultades ya que había trabajado previamente con plataformas como GitHub, GitLab y Bitbucket, por lo que ya tenía conocimientos previos sobre cómo trabajar con ramas locales y remotas.
