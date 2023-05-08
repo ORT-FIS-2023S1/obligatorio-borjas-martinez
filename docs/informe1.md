@@ -112,12 +112,33 @@ La plataforma tiene un doble objetivo. Por un lado, que los comedores y cafeter�
 
 Además contamos con imágenes de la aplicación:
 
-<img src="elicitacion/documentos/OrderEAT1.png">
-<img src="elicitacion/documentos/OrderEAT2.png">
-<img src="elicitacion/documentos/OrderEAT3.png" >
-<img src="elicitacion/documentos/OrderEAT4.png" >
-<img src="elicitacion/documentos/OrderEAT5.png" >
-<img src="elicitacion/documentos/OrderEAT6.png" >
+<table>
+
+  <tr>
+        <td>
+            <img src="elicitacion/documentos/OrderEAT1.png">
+        </td>
+        <td>
+            <img src="elicitacion/documentos/OrderEAT2.png">
+        </td>
+        <td>
+            <img src="elicitacion/documentos/OrderEAT3.png" >
+        </td>
+  </tr>
+
+<tr>
+        <td>
+            <img src="elicitacion/documentos/OrderEAT4.png" >
+        </td>
+        <td>
+            <img src="elicitacion/documentos/OrderEAT5.png" >
+        </td>
+        <td>
+            <img src="elicitacion/documentos/OrderEAT6.png" >
+        </td>
+
+  </tr>
+</table>
 
 Las evidencias de la documentación puede ser corroborado aquí: [Nota ElPais](/docs/elicitacion/documentos/OrderEAT%20ElPais.pdf), [Nota ElObservador](/docs/elicitacion/documentos/OrderEAT%20ElObservador.pdf) y [Entrevista en TeleDoce](https://www.teledoce.com/?p=596829)
 
@@ -285,11 +306,29 @@ A grandes rasgos, los usuarios ideales sobre los que nos vamos centrar para que 
 
 ### Bocetos de IU
 
-![login](elicitacion/bocetos_UI/UI_login.png?raw=true "login")
-![main](elicitacion/bocetos_UI/UI_main_page.png?raw=true "main")
-![menu](elicitacion/bocetos_UI/UI_menu.png?raw=true "menu")
-![cart](elicitacion/bocetos_UI/UI_cart.png?raw=true "cart")
-![wallet](elicitacion/bocetos_UI/UI_wallet.png?raw=true "wallet")
+<table>
+
+  <tr>
+        <td>
+            <img src="elicitacion/bocetos_UI/UI_login.png" />
+        </td>
+        <td>
+            <img src="elicitacion/bocetos_UI/UI_main_page.png" />
+        </td>
+        <td>
+            <img src="elicitacion/bocetos_UI/UI_menu.png"/>
+        </td>
+  </tr>
+
+<tr>
+        <td>
+            <img src="elicitacion/bocetos_UI/UI_cart.png" />
+        </td>
+        <td>
+            <img src="elicitacion/bocetos_UI/UI_wallet.png" />
+        </td>
+  </tr>
+</table>
 
 ## Validación y verificación
 
@@ -335,8 +374,6 @@ Aprendí que el software de calidad no se obtiene de un día para el otro, es de
 Aplicamos las técnicas que creímos relevantes para toda la elicitación.
 
 También aprendí mucho con Git, si bien tenía un poco de experiencia, fue la primera vez trabajando con alguien en simultaneo y esto ayuda a darse cuenta de la importancia de la comunicación entre desarrolladores, ya desde los mensajes de los commits.
-
-
 
 #### Reflexión Agustina Martínez
 
