@@ -4,7 +4,7 @@
 
 #### Manejo de los repositorios locales y remotos
 
-Nuestro equipo ha decidido utilizar múltiples ramas en el proyecto. La rama main será la rama estable en la cuál vamos a depositar todo el código y funcionalidades desarrolladas. En la rama `docs` pondremos toda la documentación correspondiente. Cada feature que vayamos a desarrollar tendrá su rama correspondiente para el orden y legibilidad del proyecto y llevará en su nombre una breve referencia para poder identificar a que parte del código hace referencia. Por ejemplo `feature/historial_pedidos` o `hotfix/listado_menu`.
+Nuestro equipo ha decidido utilizar múltiples ramas en el proyecto. La rama `main` será la rama estable en la cuál vamos a depositar todo el código y funcionalidades desarrolladas. En la rama `documentation` pondremos toda la documentación correspondiente y en la rama `develop` todo lo relacionado con el código de la implementación . Cada feature que vayamos a desarrollar tendrá su rama correspondiente para el orden y legibilidad del proyecto y llevará en su nombre una breve referencia para poder identificar a que parte del código hace referencia. Por ejemplo `feature/historial_pedidos` o `hotfix/listado_menu`.
 
 #### Comandos git a utilizar:
 
@@ -314,7 +314,7 @@ Además surgieron algunas sugerencias, como por ejemplo: mostrar mensajes de err
 
 ## Reflexión
 
-#### Reflexión Sebastian Borjas
+#### Reflexión Sebastian Borjas.
 
 Mi aporte en durante el proceso fue:
 
