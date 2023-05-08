@@ -313,3 +313,25 @@ Además surgieron algunas sugerencias, como por ejemplo: mostrar mensajes de err
 | ¿Se identifica claramente el origen?                                                | Si  | Si  | Si  | Si  | Si  | Si  | Si  |
 
 ## Reflexión
+
+#### Reflexión Sebastian Borjas
+
+Mi aporte en durante el proceso fue:
+
+-   Aportar ideas para los mensajes convencionales de git y nombre de las ramas.
+-   Diseñar preguntas y conseguir candidatos para las entrevistas.
+-   Transcribir las entrevistas y aportar para conclusión.
+-   Realización de User personas.
+-   Aporte en los casos de usos.
+-   Desarrollo de los requerimientos funcionales y no funcionales.
+-   Ideas en el desarrollo de los prototipos.
+-   Priorización de los requerimientos.
+-   Validación de lo realizado con las personas entrevistadas.
+
+Desde mi punto de vista fue interesante aprender todos los pasos previos al desarrollo del código. Es muy bueno ir obteniendo experiencia en la comunicación con quienes van a ser usuarios de mi sistema porque esto ayuda a que la solución sea amigable para ellos.
+
+Aprendí que el software de calidad no se obtiene de un día para el otro, es decir, hay que invertir mucho tiempo investigando no solo el problema sino también el entorno y todas las posibles soluciones.
+
+Aplicamos las técnicas que creímos relevantes para toda la elicitación.
+
+También aprendí mucho con Git, si bien tenía un poco de experiencia, fue la primera vez trabajando con alguien en simultaneo y esto ayuda a darse cuenta de la importancia de la comunicación entre desarrolladores, ya desde los mensajes de los commits.
