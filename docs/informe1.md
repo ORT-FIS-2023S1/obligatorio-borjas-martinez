@@ -322,9 +322,9 @@ Mi aporte en durante el proceso fue:
 -   Diseñar preguntas y conseguir candidatos para las entrevistas.
 -   Transcribir las entrevistas y aportar para conclusión.
 -   Realización de User personas.
--   Aporte en los casos de usos.
+-   Aporte y realización de dos casos de usos.
 -   Desarrollo de los requerimientos funcionales y no funcionales.
--   Ideas en el desarrollo de los prototipos.
+-   Ideas y participación en el desarrollo de los prototipos.
 -   Priorización de los requerimientos.
 -   Validación de lo realizado con las personas entrevistadas.
 
