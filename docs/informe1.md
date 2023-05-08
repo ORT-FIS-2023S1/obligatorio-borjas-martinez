@@ -294,5 +294,24 @@ A grandes razgos, los usuarios ideales sobre los que nos vamos centrar para que 
 
    
 ## Validación y verificación
+Con respecto a la validación del prototipo, la demo de los prototipos se mostraron a los entrevistados. En general tuvo buena aceptación, la interfaz resultó amigable y entendible para ellos.
+Además surgieron algunas sugerencias, como por ejemplo: mostrar mensajes de errores si llega a fallar alguno de los procesos, que al cargar plata se muestren diferentes montos como opciones a elegir para así facilitar la desición de carga del padre, y que se pueda ver el saldo disponible en todo momento. 
+
+
+|Nro. Req.|R1|R2|R3|R4|R5|R6|R7|
+|---------|--|--|--|--|--|--|--|
+|¿Está correctamnete priorizado? |Si|Si|Si|Si|Si|Si|Si|
+|¿Las tipos de usuario estan identificados? |Si|Si|Si|Si|Si|Si|Si|
+|¿Respeta la estructura y apartados de estándar ? |Si|Si|Si|Si|Si|Si|Si|
+|¿Se identifica y describen las dependencias con otros sistemas? |No|Si|No|No|No|Si|No|
+|¿Están todas las características de calidad tenidas en cuenta en la especificación? |Si|Si|Si|Si|Si|Si|Si|
+|¿Tiene una única interpretación?|Si|Si|Si|Si|Si|Si|Si|
+|¿Es verificable de alguna manera?|Si|Si|Si|Si|Si|Si|Si|
+|¿Es consistente y con un nivel de detalle adecuado?|Si|Si|Si|Si|Si|Si|Si|
+|¿Está duplicado o tiene conflicto con otro requerimiento?|No|No|No|No|No|No|No|
+|¿Está dentro del alcance a resolver?|Si|Si|Si|Si|Si|Si|Si|
+|¿Evita incluir aspectos de diseño o implementación?|Si|Si|Si|Si|Si|Si|Si|
+|¿Se identifica correctamente y de forma única?|Si|Si|Si|Si|Si|Si|Si|
+|¿Se identifica claramente el origen?|Si|Si|Si|Si|Si|Si|Si|
 
 ## Reflexión
