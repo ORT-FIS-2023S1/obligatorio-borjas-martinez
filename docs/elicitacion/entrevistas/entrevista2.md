@@ -20,7 +20,7 @@ Generalmente realizamos comida como para 90 personas y por lo general suele sobr
 
 #### ¿Qué otras cosas ofrecen?
 
-El comedor cuenta con producto como yogurts, galletas, bizcochos que se venden al igual que en cualquier supermercado y para los estudiantes de la tarde se realiza una merienda que consiste en en una taza de leche con chocolate y una porcion de torta marmolada.
+El comedor cuenta con producto como yogurts, galletas, bizcochos que se venden al igual que en cualquier supermercado y para los estudiantes de la tarde se realiza una merienda que consiste en en una taza de leche con chocolate y una porción de torta marmolada.
 
 #### ¿La merienda funciona igual que el servicio del mediodía?
 
