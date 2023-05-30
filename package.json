@@ -1,0 +1,18 @@
+{
+  "name": "obligatorio",
+  "version": "1.0.0",
+  "description": "Objetivo general: aprender las actividades fundamentales de la ingeniería de software, mediante el desarrollo de un proyecto real con objetivos de calidad y tecnologías en el estado del arte.",
+  "main": "src/interface/main.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Agustina Martinez, Sebastian Borjas",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.41.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
