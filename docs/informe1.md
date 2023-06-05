@@ -171,7 +171,7 @@ A grandes rasgos, los usuarios ideales sobre los que nos vamos centrar para que 
 #### RF2 : Se debe poder cargar dinero en una billetera virtual
 
 -   **Autor:** Padre/Tutor
--   **Descripción:** El sistema debe permitir agregar dinero a una billetera virtual para poder comprar productos del comedor.
+-   **Descripción:** El sistema debe permitir agregar dinero a una billetera virtual mediante mercadopago para poder comprar productos del comedor.
 -   **Prioridad:** Alta.
 
 #### RF3 : Se debe guardar un registro de todas las compras durante el mes
@@ -257,6 +257,7 @@ A grandes rasgos, los usuarios ideales sobre los que nos vamos centrar para que 
 
 ### Casos de Uso
 
+-   **CU: 01**
 -   **Título:** Consultar resumen mensual
 -   **Actor:** Padre/Tutor
 -   **Precondición:** El tutor ya esta registrado y tiene a su hijo asignado
@@ -274,6 +275,7 @@ A grandes rasgos, los usuarios ideales sobre los que nos vamos centrar para que 
     -   6.1 (Sistema) Si no tiene ningún gasto muestra un mensaje en pantalla.
     <hr>
 
+-   **CU: 02**
 -   **Título:** Cargar billetera virtual
 -   **Actor:** Padre/Tutor
 -   **Precondición:** El tutor ya esta registrado y tiene a su hijo asignado
@@ -290,6 +292,7 @@ A grandes rasgos, los usuarios ideales sobre los que nos vamos centrar para que 
 
 <hr>
 
+-   **CU: 03**
 -   **Título:** Agregar un producto al carrito
 -   **Actor:** Padre/Tutor
 -   **Precondición:** El tutor ya esta registrado y tiene a su hijo asignado
