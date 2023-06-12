@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Proyecto 2023S1</title>
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link href="css/home_page.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <nav class="navbar navbar-expand-sm navbar-dark nav-top secondary-color">
+            <div class="container">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarCollapse"
+                aria-controls="navbarCollapse"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav w-100v d-flex">
+                  <li class="nav-item active d-flex align-items-center">
+                    <i class="material-icons">person</i
+                    ><a class="nav-link" href="#">Perfil</a>
+                  </li>
+                  <li class="nav-item active d-flex align-items-center">
+                    <i class="material-icons">list_alt</i
+                    ><a class="nav-link" href="#">Historial órdenes</a>
+                  </li>
+                </ul>
+              </div>
+              <form class="form-inline ml-auto navbar-brand w-100v">
+                <div class="input-group">
+                  <input class="form-control" type="text" />
+                  <button
+                    class="btn btn-outline-light btn-search"
+                    type="submit"
+                  >
+                    Buscar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </nav>
+          <div class="container main-section">
+            <div class="lead">
+              <div class="lt-highlighter__wrapper">
+                <div class="lt-highlighter__scroll-element"></div>
+              </div>
+            </div>
+            <h1 class="lead mt-3 mb-3">Secciones</h1>
+            <div class="mt-3 mb-3 btn-secccion">
+              <button type="button" class="btn btn-block btn-lg">
+                <i class="material-icons">restaurant_menu</i> Menú
+              </button>
+            </div>
+            <div class="mt-3 mb-3 btn-secccion">
+              <button type="button" class="btn btn-block btn-lg">
+                <i class="material-icons">local_drink</i> Bebidas
+              </button>
+            </div>
+            <div class="mt-3 mb-3 btn-secccion">
+              <button type="button" class="btn btn-block btn-lg">
+                <i class="material-icons">free_breakfast</i> Desayuno/Merienda
+              </button>
+            </div>
+            <div class="card mt-3 mb-3">
+              <div class="lt-highlighter--grid-item">
+                <div class="lt-highlighter__wrapper">
+                  <div class="lt-highlighter__scroll-element"></div>
+                </div>
+              </div>
+              <h5 class="card-header">Plato de hoy</h5>
+              <div class="card-body">
+                <img
+                  alt="Imagen del plato del dia"
+                  src="https://picsum.photos/200"
+                />
+              </div>
+              <div class="card-footer text-right">
+                <button type="button" class="btn btn-add-cart">
+                  <i class="material-icons">shopping_cart</i> Agregar al carrito
+                </button>
+              </div>
+            </div>
+          </div>
+          <nav class="navbar navbar-expand nav-footer fixed-bottom">
+            <ul class="navbar-nav nav-fill w-100">
+              <li class="nav-item">
+                <a class="nav-link text-center" href="#">
+                  <i class="material-icons d-block">home</i> Inicio
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center" href="#">
+                  <i class="material-icons d-block">attach_money</i> Dinero
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center" href="#">
+                  <i class="material-icons d-block">shopping_cart</i> Carrito
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

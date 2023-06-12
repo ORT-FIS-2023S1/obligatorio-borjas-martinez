@@ -1,0 +1,12 @@
+@import "./variables";
+
+.btn-search,
+.btn-secccion,
+.btn-add-cart,
+.nav-footer,
+.nav-top {
+  background-color: $secondary-color;
+}
+.main-section {
+  margin-bottom: 90px; /* Ajusta la altura del navbar inferior */
+}

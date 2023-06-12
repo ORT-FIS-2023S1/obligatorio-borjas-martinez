@@ -1,0 +1,13 @@
+.btn-search,
+.btn-secccion,
+.btn-add-cart,
+.nav-footer,
+.nav-top {
+  background-color: #58a05b;
+}
+
+.main-section {
+  margin-bottom: 90px; /* Ajusta la altura del navbar inferior */
+}
+
+/*# sourceMappingURL=home_page.css.map */
