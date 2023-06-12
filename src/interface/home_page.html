@@ -18,11 +18,11 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-primary-light">
-        <div class="container d-flex align-items-start">
-          <div>
-            <button
-              class="navbar-toggler"
+      <nav class="navbar navbar-expand-lg bg-primary-light container rounded-5">
+        <div class="container">
+            <form class="d-flex w-100 " role="search">
+              <button
+              class="navbar-toggler rounded-5 border-0"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
@@ -32,6 +32,21 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
+              <input
+                class="form-control rounded-5"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button
+                class="btn rounded-5 primary-color"
+                type="submit"
+              >
+                <span class="primary-color icon-section">
+                  <i class="material-icons">search</i>
+                </span>
+              </button>
+            </form>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item active d-flex align-items-center">
@@ -47,25 +62,7 @@
                   <a class="nav-link" href="#">Historial órdenes</a>
                 </li>
               </ul>
-            </div>
-          </div>
-
-          <form class="d-flex" role="search">
-            <input
-              class="form-control rounded-start rounded-0"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button
-              class="btn rounded-end rounded-0 border-light primary-color"
-              type="submit"
-            >
-              <span class="primary-color icon-section">
-                <i class="material-icons">search</i>
-              </span>
-            </button>
-          </form>
+            </div>        
         </div>
       </nav>
     </header>
