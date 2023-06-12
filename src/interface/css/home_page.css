@@ -1,9 +1,12 @@
+.primary-color{
+  background-color: rgba(27, 94, 32, 0.25);
+}
 .btn-search,
 .btn-secccion,
 .btn-add-cart,
 .nav-footer,
 .nav-top {
-  background-color: #58a05b;
+  background-color: rgba(27, 94, 32, 0.25);
 }
 
 .main-section {
