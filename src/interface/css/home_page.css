@@ -1,16 +1,19 @@
-.primary-color{
-  background-color: rgba(27, 94, 32, 0.25);
+.bg-primary{
+  background-color:  rgb(27, 94, 32) !important;
 }
-.btn-search,
-.btn-secccion,
-.btn-add-cart,
-.nav-footer,
-.nav-top {
-  background-color: rgba(27, 94, 32, 0.25);
+.bg-primary-light{
+  background-color:   rgba(27, 94, 32, 0.25);
+}
+
+.primary-color{
+  color:  rgb(27, 94, 32) !important;
+}
+
+.icon-section{
+  position: relative;
+  top: 5px;
 }
 
 .main-section {
   margin-bottom: 90px; /* Ajusta la altura del navbar inferior */
 }
-
-/*# sourceMappingURL=home_page.css.map */
