@@ -9,6 +9,11 @@
     color:  rgb(27, 94, 32) !important;
   }
   
+  .icon-section{
+    position: relative;
+    top: 5px;
+  }
+  
   .main-section {
     margin-bottom: 90px; /* Ajusta la altura del navbar inferior */
   }
