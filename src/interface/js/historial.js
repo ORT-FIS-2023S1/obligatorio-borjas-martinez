@@ -38,26 +38,36 @@ function createHistorialHtml() {
 
   historialOrdenes.forEach((orden) => {
     const ordenContainer = document.createElement('div');
-    ordenContainer.classList.add('orden');
+    ordenContainer.classList.add('orden', 'card', 'bg-primary-light', 'mb-3');
 
-    const ordenPrecio = document.createElement('p');
+    const ordenBody = document.createElement('div');
+    ordenBody.classList.add('card-body', 'd-flex', 'flex-column');
+
+    const ordenPrecioFecha = document.createElement('div');
+    ordenPrecioFecha.classList.add('d-flex', 'justify-content-between');
+
+    const ordenPrecio = document.createElement('div');
     ordenPrecio.classList.add('orden-precio');
-    ordenPrecio.textContent = '$' + orden.precio;
-
-    const ordenTitulo = document.createElement('p');
-    ordenTitulo.classList.add('orden-titulo');
-    ordenTitulo.textContent = orden.titulo;
+    ordenPrecio.textContent = `-$${orden.precio}`;
 
     const ordenFecha = document.createElement('p');
-    ordenFecha.classList.add('orden-fecha');
-    ordenFecha.textContent = orden.fecha;
+    ordenFecha.classList.add('orden-fecha', 'm-0');
+    ordenFecha.textContent = `${orden.fecha}`;
 
-    ordenContainer.appendChild(ordenPrecio);
-    ordenContainer.appendChild(ordenTitulo);
-    ordenContainer.appendChild(ordenFecha);
+    const ordenTitulo = document.createElement('p');
+    ordenTitulo.classList.add('orden-titulo', 'm-0');
+    ordenTitulo.textContent = orden.titulo;
 
+    ordenPrecioFecha.appendChild(ordenPrecio);
+    ordenPrecioFecha.appendChild(ordenFecha);
+    ordenBody.appendChild(ordenPrecioFecha);
+    ordenBody.appendChild(ordenTitulo);
+
+    ordenContainer.appendChild(ordenBody);
     historialOrdenesContainer.appendChild(ordenContainer);
   });
 }
 
 document.addEventListener('DOMContentLoaded', createHistorialHtml);
+
+
