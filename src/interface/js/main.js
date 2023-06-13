@@ -15,20 +15,19 @@ btnAdd.addEventListener('click', () => {
   loadCountryList();
 } );
 
-function loadCountryList(){
+function loadCountryList() {
   const countries = mainCountryList.getCountries();
-  let seccountries = document.getElementById('seccountries');
-  
-  for(let i = 0; i < countries.length; i++) {
-    let country = countries[i];
+  const seccountries = document.getElementById('seccountries');
 
-    let infocountry = document.createElement("div")
-    infocountry.className = "infocountry";
+  for (let i = 0; i < countries.length; i++) {
+    const country = countries[i];
+
+    const infocountry = document.createElement('div');
+    infocountry.className = 'infocountry';
     infocountry.innerHTML = country.presentar();
     seccountries.appendChild(infocountry);
 
-    let saltoLinea = document.createElement('br');
+    const saltoLinea = document.createElement('br');
     seccountries.appendChild(saltoLinea);
-
   }
 }
