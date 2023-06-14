@@ -8,7 +8,8 @@ function scrollToSection(event) {
   event.preventDefault();
 
   // Obtener el elemento <a> más cercano
-  const targetLink = event.target.closest('a');
+  // const targetLink = event.target.closest('a');
+  const targetLink = event.target.getAttribute('section');
 
   if (!targetLink) {
     return;
@@ -55,7 +56,7 @@ function scrollToSection(event) {
 }
 
 // Obtener todos los elementos de navegación del navbar
-const navItems = document.querySelectorAll('.navbar-nav .nav-link');
+const navItems = document.querySelectorAll('.section');
 
 // Agregar un controlador de eventos de clic a cada elemento de navegación
 navItems.forEach((navItem) => {
