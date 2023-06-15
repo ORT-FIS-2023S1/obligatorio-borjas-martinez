@@ -1,34 +1,30 @@
-import { Country } from "../domain/country.js";
-import { CountryList } from "../domain/countrylist.js";
+// esperar a que cargue el DOM
+document.addEventListener('DOMContentLoaded', () => {
+  // Ocultar todas las secciones excepto la sección "home" al cargar la página
+  document.querySelectorAll('section:not(#home)').forEach((section) => {
+    section.classList.add('d-none');
+  });
 
-const btnAdd = document.getElementById('btn_add');
-const inpName = document.getElementById('inp_name');
-const inpCapital = document.getElementById('inp_capital');
+  const sectionLists = document.querySelectorAll('.section');
 
-const mainCountryList = new CountryList();
+  sectionLists.forEach((element) => {
+    element.addEventListener('click', (e) => {
+      showSection(e.target);
+    });
+  });
 
-btnAdd.addEventListener('click', () => {
-  const newCountry = new Country(inpName.value);
-  newCountry.setCapital(inpCapital.value);
-  mainCountryList.add(newCountry);
-  console.log(newCountry.presentar());
-  loadCountryList();
-} );
+  const showSection = (e) => {
+    const currentSectionId = e.getAttribute('href');
 
-function loadCountryList(){
-  const countries = mainCountryList.getCountries();
-  let seccountries = document.getElementById('seccountries');
-  
-  for(let i = 0; i < countries.length; i++) {
-    let country = countries[i];
-
-    let infocountry = document.createElement("div")
-    infocountry.className = "infocountry";
-    infocountry.innerHTML = country.presentar();
-    seccountries.appendChild(infocountry);
-
-    let saltoLinea = document.createElement('br');
-    seccountries.appendChild(saltoLinea);
-
-  }
-}
+    sectionLists.forEach((element) => {
+      const otherSectionId = element.getAttribute('href');
+      if (currentSectionId === otherSectionId) {
+        const currentSection = document.querySelector(currentSectionId);
+        currentSection.classList.remove('d-none');
+      } else {
+        const otherSection = document.querySelector(otherSectionId);
+        otherSection.classList.add('d-none');
+      }
+    });
+  };
+});
