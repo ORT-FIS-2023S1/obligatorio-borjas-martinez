@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Proyecto 2023S1</title>
-    <link
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto 2023S1</title>
+  <link
       rel="stylesheet"
       href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
@@ -21,130 +23,159 @@
       <nav class="navbar navbar-expand-lg bg-primary-light">
         <div class="container d-flex align-items-start">
           <div>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item active d-flex align-items-center">
-                  <span class="primary-color icon-section me-2">
-                    <i class="material-icons">person</i>
-                  </span>
-                  <a class="nav-link" href="#">Perfil</a>
-                </li>
-                <li class="nav-item active d-flex align-items-center">
-                  <span class="primary-color icon-section me-2">
-                    <i class="material-icons">list_alt</i>
-                  </span>
-                  <a class="nav-link" href="#">Historial órdenes</a>
-                </li>
-              </ul>
+      <div class="container">  
+        <form class="d-flex w-100" role="search">
+          <button class="mx-2 navbar-toggler rounded-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <input class="form-control me-2 rounded-5" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success d-flex rounded-5" type="submit">
+            <i class="material-icons">search</i>
+          </button>
+        </form>
+        <div class="collapse navbar-collapse mt-2" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item my-1">
+              <a class="nav-link active d-flex section" aria-current="page" href="#perfil">
+                  <i class="material-icons">person</i>Perfil
+              </a>
+            </li>            
+            <li class="nav-item my-1">
+              
+              <a class="nav-link active d-flex section" aria-current="page" href="#historial-compras">
+                <i class="material-icons">list_alt</i>
+                Historial Compras
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <section id="home" class="mt-5" >
+      <h1>Secciones</h1>
+    <hr>
+    <div class="list-group ">
+      <a class="list-group-item list-group-item-action d-flex bg-primary-light py-3 section" href="#menu">
+        <i class="material-icons me-2">restaurant_menu</i>
+        <h2 class="fs-5" >Menu</h2>
+      </a>
+      <a class="list-group-item list-group-item-action d-flex bg-primary-light py-3 section" href="#bebidas">
+        <i class="material-icons me-2">local_drink</i>
+        <h2 class="fs-5">Bebidas</h2>
+      </a>
+      <a class="list-group-item list-group-item-action d-flex bg-primary-light py-3 section" href="#desayuno-merienda">
+        <i class="material-icons me-2">free_breakfast</i>
+        <h2 class="fs-5">Desayuno/Merienda</h2>
+      </a>
+    </div>
+    
+    <div class="card my-3">
+      <div class="card-header w-100 bg-primary">
+        <h2 class="text-white">Menu del dia</h2>
+      </div>
+      <img src="https://picsum.photos/200" class="card-img img-fluid w-100 m-1" style="max-width: 500px; justify-content: center;" alt="Imagen del plato del dia">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        
+      </div>
+      <div class="card-footer  w-100">
+        <button type="button" class="btn bg-primary-light">
+          <span class="primary-color icon-section">
+            <i class="material-icons">shopping_cart</i>
+          </span>
+          Agregar al carrito
+        </button>
+      </div>
+    </div>
+    </section>
+    <section id="menu" class="mt-5">
+        <main class="main-section">
+          <div class="container p-0">
+            <div class="menu_semanal">
+              <h3>Menu Semanal</h3>
+              <h1 class="my-3">Hoy</h1>
+              <div id="menu_regular_day1" class="mb-2"></div>
+              <div id="menu_vegetariano_day1" class="mb-2"></div>
+            </div>
+            <div class="menu_semanal mt-5">
+              <h1 class="my-3">Mañana</h1>
+              <div id="menu_regular_day2" class="mb-2"></div>
+              <div id="menu_vegetariano_day2" class="mb-2"></div>
+            </div>
+            <div class="menu_semanal mt-5">
+              <h1 class="my-3" id="day3"></h1>
+              <div id="menu_regular_day3" class="mb-2"></div>
+              <div id="menu_vegetariano_day3" class="mb-2"></div>
+            </div>
+            <div class="menu_semanal mt-5">
+              <h1 class="my-3" id="day4"></h1>
+              <div id="menu_regular_day4" class="mb-2"></div>
+              <div id="menu_vegetariano_day4" class="mb-2"></div>
+            </div>
+            <div class="menu_semanal mt-5">
+              <h1 class="my-3" id="day5"></h1>
+              <div id="menu_regular_day5" class="mb-2"></div>
+              <div id="menu_vegetariano_day5" class="mb-2"></div>
+            </div>
+            <div class="menu_semanal mt-5">
+              <h1 class="my-3" id="day6"></h1>
+              <div id="menu_regular_day6" class="mb-2"></div>
+              <div id="menu_vegetariano_day6" class="mb-2"></div>
+            </div>
+            <div class="menu_semanal mt-5">
+              <h1 class="my-3" id="day7"></h1>
+              <div id="menu_regular_day7" class="mb-2"></div>
+              <div id="menu_vegetariano_day7" class="mb-2"></div>
             </div>
           </div>
-
-          <form class="d-flex" role="search">
-            <input
-              class="form-control rounded-start rounded-0"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button
-              class="btn rounded-end rounded-0 border-light primary-color"
-              type="submit"
-            >
-              <span class="primary-color icon-section">
-                <i class="material-icons">search</i>
-              </span>
-            </button>
-          </form>
-        </div>
-      </nav>
-    </header>
-    <section id="home"></section>
-
-    <section id="menu">
-      <main class="main-section">
-        <div class="container p-0">
-          <div class="menu_semanal">
-            <h1 class="my-3">Hoy</h1>
-            <div id="menu_regular_day1" class="mb-2"></div>
-            <div id="menu_vegetariano_day1" class="mb-2"></div>
-          </div>
-          <div class="menu_semanal mt-5">
-            <h1 class="my-3">Mañana</h1>
-            <div id="menu_regular_day2" class="mb-2"></div>
-            <div id="menu_vegetariano_day2" class="mb-2"></div>
-          </div>
-          <div class="menu_semanal mt-5">
-            <h1 class="my-3" id="day3"></h1>
-            <div id="menu_regular_day3" class="mb-2"></div>
-            <div id="menu_vegetariano_day3" class="mb-2"></div>
-          </div>
-          <div class="menu_semanal mt-5">
-            <h1 class="my-3" id="day4"></h1>
-            <div id="menu_regular_day4" class="mb-2"></div>
-            <div id="menu_vegetariano_day4" class="mb-2"></div>
-          </div>
-          <div class="menu_semanal mt-5">
-            <h1 class="my-3" id="day5"></h1>
-            <div id="menu_regular_day5" class="mb-2"></div>
-            <div id="menu_vegetariano_day5" class="mb-2"></div>
-          </div>
-          <div class="menu_semanal mt-5">
-            <h1 class="my-3" id="day6"></h1>
-            <div id="menu_regular_day6" class="mb-2"></div>
-            <div id="menu_vegetariano_day6" class="mb-2"></div>
-          </div>
-          <div class="menu_semanal mt-5">
-            <h1 class="my-3" id="day7"></h1>
-            <div id="menu_regular_day7" class="mb-2"></div>
-            <div id="menu_vegetariano_day7" class="mb-2"></div>
-          </div>
-        </div>
-      </main>
+        </main>
     </section>
-    <footer class="fixed-bottom bg-white border-top border-1">
-      <nav class="navbar navbar-expand bg-primary-light">
-        <ul class="navbar-nav nav-fill w-100">
-          <li class="nav-item">
-            <a class="nav-link text-center" href="#">
-              <span class="primary-color">
-                <i class="material-icons d-block">home</i>
-              </span>
+    <section id="bebidas" class="mt-5">
+      <h3>bebidas</h3>
+    </section>
+    <section id="desayuno-merienda" class="mt-5">
+      <h3>desayuno-merienda</h3>
+    </section>
+    <section id="dinero" class="mt-5">
+      <h3>dinero</h3>
+    </section>
+    <section id="carrito" class="mt-5">
+      <h3>carrito</h3>
+    </section>
+    <section id="perfil" class="mt-5">
+      <h3>perfil</h3>
+    </section>
+    <section id="historial-compras" class="mt-5">
+      <h3>historial-compras</h3>
+    </section>
+    
+    
+  </main>
+  <footer style="padding-bottom: 80px;">
+      <nav class="navbar fixed-bottom bg-primary">
+        <div class="container-fluid justify-content-around">
+          <a class="navbar-brand text-center btn text-white section" href="#home">
+              <i class="material-icons d-block">home</i>
               Inicio
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-center" href="#">
-              <span class="primary-color">
-                <i class="material-icons d-block">attach_money</i>
-              </span>
+          </a>
+          <a class="navbar-brand text-center btn text-white section" href="#dinero">
+              <i class="material-icons d-block">attach_money</i>
               Dinero
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-center" href="#">
-              <span class="primary-color">
-                <i class="material-icons d-block">shopping_cart</i>
-              </span>
+          </a>
+          <a class="navbar-brand text-center text-white btn section" href="#carrito">
+              <i class="material-icons d-block">shopping_cart</i>
               Carrito
-            </a>
-          </li>
-        </ul>
+          </a>
+        </div>
       </nav>
-    </footer>
+    
+    
+  </footer>
 
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/menu_page.js"></script>
-    <!-- <script src="main.js" type="module"></script> -->
-  </body>
+  <script src="js/main.js"></script>
+</body>
 </html>

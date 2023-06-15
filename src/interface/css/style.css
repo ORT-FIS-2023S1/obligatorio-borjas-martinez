@@ -17,3 +17,7 @@
   .main-section {
     margin-bottom: 90px; /* Ajusta la altura del navbar inferior */
   }
+
+  i{
+    pointer-events: none;
+  }
