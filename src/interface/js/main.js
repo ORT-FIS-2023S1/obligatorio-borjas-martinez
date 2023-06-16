@@ -1,63 +1,30 @@
-// Ocultar todas las secciones excepto la sección "home" al cargar la página
-document.querySelectorAll('section:not(#home)').forEach((section) => {
-  section.style.display = 'none';
-});
+// esperar a que cargue el DOM
+document.addEventListener('DOMContentLoaded', () => {
+  // Ocultar todas las secciones excepto la sección "home" al cargar la página
+  document.querySelectorAll('section:not(#home)').forEach((section) => {
+    section.classList.add('d-none');
+  });
 
-// Función para realizar el desplazamiento a la sección correspondiente
-function scrollToSection(event) {
-  event.preventDefault();
+  const sectionLists = document.querySelectorAll('.section');
 
-  // Obtener el elemento <a> más cercano
-  const targetLink = event.target.closest('a');
+  sectionLists.forEach((element) => {
+    element.addEventListener('click', (e) => {
+      showSection(e.target);
+    });
+  });
 
-  if (!targetLink) {
-    return;
-  }
+  const showSection = (e) => {
+    const currentSectionId = e.getAttribute('href');
 
-  // Obtener el ID de la sección a la que se desea ir
-  const targetId = targetLink.getAttribute('href');
-  if (!targetId) {
-    return;
-  }
-
-  // Obtener la sección visible actualmente
-  const visibleSection =
-  document.querySelector('section:not([style*="display: none"])');
-
-  // Si la sección visible actualmente es la misma que la sección
-  // a la que se desea ir no hacer nada
-  if (visibleSection &&
-    visibleSection.getAttribute('id') === targetId.slice(1)) {
-    return;
-  }
-
-  // Ocultar todas las secciones excepto la sección correspondiente
-  document.querySelectorAll('section:not(' + targetId + ')')
-      .forEach((section) => {
-        section.style.display = 'none';
-      });
-
-  // Mostrar la sección correspondiente
-  const targetSection = document.querySelector(targetId);
-
-  if (targetSection) {
-    // Si targetSection no es null
-    const visibleSection =
-    document.querySelector('section:not([style*="display: none"])');
-
-    if (visibleSection && visibleSection !== targetSection) {
-      // Si visibleSection no es null y es diferente de targetSection
-      visibleSection.style.display = 'none';
-    }
-
-    targetSection.style.display = 'block';
-  }
-}
-
-// Obtener todos los elementos de navegación del navbar
-const navItems = document.querySelectorAll('.navbar-nav .nav-link');
-
-// Agregar un controlador de eventos de clic a cada elemento de navegación
-navItems.forEach((navItem) => {
-  navItem.addEventListener('click', scrollToSection);
+    sectionLists.forEach((element) => {
+      const otherSectionId = element.getAttribute('href');
+      if (currentSectionId === otherSectionId) {
+        const currentSection = document.querySelector(currentSectionId);
+        currentSection.classList.remove('d-none');
+      } else {
+        const otherSection = document.querySelector(otherSectionId);
+        otherSection.classList.add('d-none');
+      }
+    });
+  };
 });
