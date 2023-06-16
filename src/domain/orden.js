@@ -1,7 +1,7 @@
 export class Orden {
-  constructor(plato, precio, metodoPago, fecha, comedor, alumno, tutor) {
-    this.plato = plato;
-    this.precio = precio;
+  constructor(platos, total, metodoPago, fecha, comedor, alumno, tutor) {
+    this.platos = platos;
+    this.total = total;
     this.metodoPago = metodoPago;
     this.fecha = fecha;
     this.comedor = comedor;
@@ -10,17 +10,17 @@ export class Orden {
   }
 
   getPlato() {
-    return this.plato;
+    return this.platos;
   }
-  setPlato(plato) {
-    this.plato = plato;
+  setPlato(platos) {
+    this.platos = platos;
   }
 
-  getPrecio() {
-    return this.precio;
+  getTotal() {
+    return this.total;
   }
-  setPrecio(precio) {
-    this.precio = precio;
+  setTotal(total) {
+    this.total = total;
   }
 
   getMetodoPago() {
