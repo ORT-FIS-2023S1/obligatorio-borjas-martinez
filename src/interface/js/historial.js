@@ -33,7 +33,7 @@ const historialOrdenes = [
 
 function createHistorialHtml() {
   const historialOrdenesContainer =
-  document.querySelector('#historial-ordenes');
+  document.querySelector('#historial-compras');
   historialOrdenesContainer.innerHTML = '';
 
   historialOrdenes.forEach((orden) => {
