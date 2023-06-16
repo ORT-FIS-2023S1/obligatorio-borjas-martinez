@@ -1,0 +1,97 @@
+[
+  {
+    "dia":"Lunes",
+    "platos":[
+      {
+        "tipo":"Regular",
+        "plato":"Spaghetti Bolognese",
+        "descripcion":"Deliciosa pasta con salsa bolognesa casera",
+        "precio":200,
+        "imagen":"https://picsum.photos/200"
+      },
+      {
+        "tipo":"Vegetariano",
+        "plato":"Pasta Primavera",
+        "descripcion":"Pasta con vegetales frescos de temporada",
+        "precio":200,
+        "imagen":"https://picsum.photos/200"
+      }
+    ]
+  },
+  {
+    "dia":"Martes",
+    "platos":[
+      {
+        "tipo":"Regular",
+        "plato":"Pollo a la parrilla",
+        "descripcion":"Jugoso pollo a la parrilla con verduras",
+        "precio":200,
+        "imagen":"https://picsum.photos/200"
+      },
+      {
+        "tipo":"Vegetariano",
+        "plato":"Tofu a la parrilla",
+        "descripcion":"Tofu marinado a la parrilla con vegetales",
+        "precio":200,
+        "imagen":"https://picsum.photos/200"
+      }
+    ]
+  },
+  {
+    "dia":"Miércoles",
+    "platos":[
+      {
+        "tipo":"Regular",
+        "plato":"Ensalada César",
+        "descripcion":"Fresca ensalada con pollo, lechuga y aderezo César",
+        "precio":200,
+        "imagen":"https://picsum.photos/200"
+      },
+      {
+        "tipo":"Vegetariano",
+        "plato":"Ensalada Mediterránea",
+        "descripcion":"Ensalada con queso feta, aceitunas y vegetales frescos",
+        "precio":200,
+        "imagen":"https://picsum.photos/200"
+      }
+    ]
+  },
+  {
+    "dia":"Jueves",
+    "platos":[
+      {
+        "tipo":"Regular",
+        "plato":"Pescado a la plancha",
+        "descripcion":"Filete de pescado fresco a la plancha con guarnición",
+        "precio":180,
+        "imagen":"https://picsum.photos/200"
+      },
+      {
+        "tipo":"Vegetariano",
+        "plato":"Hamburguesa de lentejas",
+        "descripcion":"Hamburguesa vegetariana de lentejas con ensalada",
+        "precio":150,
+        "imagen":"https://picsum.photos/200"
+      }
+    ]
+  },
+  {
+    "dia":"Viernes",
+    "platos":[
+      {
+        "tipo":"Regular",
+        "plato":"Filete de ternera",
+        "descripcion":"Jugoso filete de ternera a la parrilla con papas fritas",
+        "precio":190,
+        "imagen":"https://picsum.photos/200"
+      },
+      {
+        "tipo":"Vegetariano",
+        "plato":"Pizza de vegetales",
+        "descripcion":"Pizza vegetariana con variedad de vegetales frescos",
+        "precio":200,
+        "imagen":"https://picsum.photos/200"
+      }
+    ]
+  }
+]
