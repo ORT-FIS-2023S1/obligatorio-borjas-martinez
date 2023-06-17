@@ -1,4 +1,4 @@
-export class Menu {
+class Plato {
   constructor(tipo, titulo, descripcion, precio, imagen) {
     this.tipo = tipo;
     this.titulo = titulo;
@@ -42,3 +42,4 @@ export class Menu {
     this.imagen = imagen;
   }
 }
+export default Plato;
