@@ -1,4 +1,4 @@
-export class Resumen {
+class Resumen {
   constructor(ordenes, totalGastos, alumno, tutor) {
     this.ordenes = ordenes;
     this.totalGastos = totalGastos;
@@ -34,3 +34,5 @@ export class Resumen {
     this.tutor = tutor;
   }
 }
+
+export default Resumen;

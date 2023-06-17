@@ -17,7 +17,11 @@ class Orden {
   }
 
   getTotal() {
-    return this.total;
+    let total = 0;
+    for (let i = 0; i < this.getPlatos().length; i++) {
+      total += this.getPlatos[i].getPrecio();
+    }
+    return total;
   }
   setTotal(total) {
     this.total = total;

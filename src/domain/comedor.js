@@ -1,10 +1,11 @@
-export class Comedor {
-  constructor(nombre, direccion, telefono, carta, colegio, ordenes, alumnos) {
+class Comedor {
+  constructor(nombre, direccion, telefono, menuSemanal,
+      colegio, ordenes, alumnos) {
     this.nombre = nombre;
     this.direccion = direccion;
     this.telefono = telefono;
     // Arreglo
-    this.carta = carta;
+    this.menuSemanal = menuSemanal;
     this.colegio = colegio;
     // Arreglo
     this.ordenes = ordenes;
@@ -33,11 +34,11 @@ export class Comedor {
     this.telefono = telefono;
   }
 
-  getCarta() {
-    return this.carta;
+  getMenuSemanal() {
+    return this.menuSemanal;
   }
-  setCarta(carta) {
-    this.carta = carta;
+  setMenuSemanal(menuSemanal) {
+    this.menuSemanal = menuSemanal;
   }
 
   getColegio() {
@@ -69,3 +70,5 @@ export class Comedor {
     this.getCarta.push(menu);
   }
 }
+
+export default Comedor;

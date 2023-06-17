@@ -1,13 +1,13 @@
-export class Tutor {
+class Tutor {
   constructor(nombre, apellido, telefono, direccion, alumno, ordenes,
-      billeteraVirtual) {
+      dinero) {
     this.nombre = nombre;
     this.apellido = apellido;
     this.telefono = telefono;
     this.direccion = direccion;
     this.alumno = alumno;
     this.ordenes = ordenes;
-    this.billeteraVirtual = billeteraVirtual;
+    this.dinero = dinero;
   }
 
   getNombre() {
@@ -52,10 +52,12 @@ export class Tutor {
     this.ordenes = ordenes;
   }
 
-  getBilleteraVirtual() {
+  getDinero() {
     return this.ordenes;
   }
-  setBilleteraVirtual(billeteraVirtual) {
-    this.billeteraVirtual = billeteraVirtual;
+  setDinero(dinero) {
+    this.dinero = dinero;
   }
 }
+
+export default Tutor;
