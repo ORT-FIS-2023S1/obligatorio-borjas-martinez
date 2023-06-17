@@ -87,7 +87,7 @@ const menuSemanal = [
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log(menuSemanal);
+  document.querySelector('#menu-semanal').innerHTML = createHtmlMenuSemanal();
 });
 
 // function getDayName(additionalDays) {
@@ -104,29 +104,32 @@ document.addEventListener('DOMContentLoaded', () => {
 // Función para armar el html del menu semanal
 function createHtmlMenuSemanal() {
   let html = '';
-  const currentDay = new Date().getDay();
+  const currentDay = 0;
   for (let i = currentDay; i < 5; i++) {
-    const menuDay = menuSemanal[i].getDay();
-    console.log(menuDay);
+    const menuDay = menuSemanal[i].getDia();
     const menuPlatos = menuSemanal[i].getPlatos();
     html += `
-      <h1 class="text-center">${menuDay}</h1>
-      <div class="card bg-primary-light justify-content-end">
-        <div class="card-body d-flex flex-row">
-          <img src="${menuPlatos[0].getImagen()}"
-          alt="${menuPlatos[0].getPlato()}"
-          style="height: 200px; width: 200px;" class="card-img-left">
-          <div class="d-flex flex-column flex-grow-1">
-            <div class="card-header">
-            <h3 class="card-title mx-3">${menuPlatos[0].getPlato()}</h3>
-            </div>
+      <h1 class="text-start">${menuDay}</h1>
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-2">
+            <img src="${menuPlatos[0].getImagen()}" 
+              class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
             <div class="card-body">
-              <p class="card-text mx-3">${menuPlatos[0].getDescripcion()}</p>
-            </div>
-            <div class="card-footer">
-              <div class="d-flex flex-row justify-content-between">
-                <p class="card-text mx-3">${menuPlatos[0].getPrecio()} ARS</p>
-                <button class="btn btn-primary">Pedir</button>
+              <h5 class="card-title">${menuPlatos[0].getTitulo()}</h5>
+              <p class="card-text">${menuPlatos[0].getDescripcion()}</p>
+              <div class="d-flex justify-content-between">
+                <span class="fs-2">
+                  $ ${menuPlatos[0].getPrecio()}
+                </span>
+                <button type="button" class="btn bg-primary-light">
+                  <span class="primary-color icon-section">
+                    <i class="material-icons">shopping_cart</i>
+                  </span>
+                  Agregar al carrito
+                </button>
               </div>
             </div>
           </div>
@@ -137,4 +140,3 @@ function createHtmlMenuSemanal() {
   return html;
 }
 
-document.querySelector('#menu-semanal').innerHTML = createHtmlMenuSemanal();
