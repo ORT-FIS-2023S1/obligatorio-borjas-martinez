@@ -1,33 +1,17 @@
+import Plato from '../../domain/plato.js';
+
 const historialOrdenes = [
   {
-    precio: 200,
-    titulo: 'Pasta Primavera',
-    fecha: '2023-06-10',
+    Plato: new Plato('Vegetariano', 'Pasta Primavera',
+        'Pasta saludable', '200', 'https://picsum.photos/200'),
   },
   {
-    precio: 150,
-    titulo: 'Hamburguesa de lentejas',
-    fecha: '2023-06-13',
+    Plato: new Plato('Regular', 'Hamburguesa de lentejas',
+        'Hamburguesa saludable', '150', 'https://picsum.photos/200'),
   },
   {
-    precio: 200,
-    titulo: 'Pizza de vegetales',
-    fecha: '2023-06-14',
-  },
-  {
-    precio: 50,
-    titulo: 'Café',
-    fecha: '2023-06-10',
-  },
-  {
-    precio: 60,
-    titulo: 'Jugo de naranja',
-    fecha: '2023-06-11',
-  },
-  {
-    precio: 80,
-    titulo: 'Croissant',
-    fecha: '2023-06-12',
+    Plato: new Plato('Regular', 'Milanesa de pechuga premium',
+        'Milanesa al pan de pollo', '400', 'https://picsum.photos/200'),
   },
 ];
 
@@ -37,6 +21,7 @@ function createHistorialHtml() {
   historialOrdenesContainer.innerHTML = '';
 
   historialOrdenes.forEach((orden) => {
+    const plato = orden.Plato;
     const ordenContainer = document.createElement('div');
     ordenContainer.classList.add('orden', 'card', 'bg-primary-light', 'mb-3');
 
@@ -48,15 +33,15 @@ function createHistorialHtml() {
 
     const ordenPrecio = document.createElement('div');
     ordenPrecio.classList.add('orden-precio');
-    ordenPrecio.textContent = `-$${orden.precio}`;
+    ordenPrecio.textContent = `$${plato.getPrecio()}`;
 
     const ordenFecha = document.createElement('p');
     ordenFecha.classList.add('orden-fecha', 'm-0');
-    ordenFecha.textContent = `${orden.fecha}`;
+    ordenFecha.textContent = `${plato.getDescripcion()}`;
 
     const ordenTitulo = document.createElement('p');
     ordenTitulo.classList.add('orden-titulo', 'm-0');
-    ordenTitulo.textContent = orden.titulo;
+    ordenTitulo.textContent = plato.getTitulo();
 
     ordenPrecioFecha.appendChild(ordenPrecio);
     ordenPrecioFecha.appendChild(ordenFecha);
