@@ -9,10 +9,10 @@ class Orden {
     this.tutor = tutor;
   }
 
-  getPlato() {
+  getPlatos() {
     return this.platos;
   }
-  setPlato(platos) {
+  setPlatos(platos) {
     this.platos = platos;
   }
 
