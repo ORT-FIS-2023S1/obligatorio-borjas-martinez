@@ -1,4 +1,4 @@
-export class Orden {
+class Orden {
   constructor(platos, total, metodoPago, fecha, comedor, alumno, tutor) {
     this.platos = platos;
     this.total = total;
@@ -58,3 +58,5 @@ export class Orden {
     this.tutor = tutor;
   }
 }
+
+export default Orden;

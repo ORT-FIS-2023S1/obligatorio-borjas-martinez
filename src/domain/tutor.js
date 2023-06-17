@@ -1,4 +1,4 @@
-export class Tutor {
+class Tutor {
   constructor(nombre, apellido, telefono, direccion, alumno, ordenes,
       billeteraVirtual) {
     this.nombre = nombre;
@@ -59,3 +59,5 @@ export class Tutor {
     this.billeteraVirtual = billeteraVirtual;
   }
 }
+
+export default Tutor;

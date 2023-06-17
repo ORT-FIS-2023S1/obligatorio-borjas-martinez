@@ -1,4 +1,4 @@
-export class Comedor {
+class Comedor {
   constructor(nombre, direccion, telefono, carta, colegio, ordenes, alumnos) {
     this.nombre = nombre;
     this.direccion = direccion;
@@ -69,3 +69,5 @@ export class Comedor {
     this.getCarta.push(menu);
   }
 }
+
+export default Comedor;
