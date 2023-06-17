@@ -90,17 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('#menu-semanal').innerHTML = createHtmlMenuSemanal();
 });
 
-// function getDayName(additionalDays) {
-//   if (additionalDays < 0 || additionalDays >= 5) {
-//     return;
-//   }
-//   const date = new Date();
-//   date.setDate(date.getDate() + additionalDays);
-//   const day = date.getDay();
-//   const dayName = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'];
-//   return dayName[day];
-// }
-
 // Función para armar el html del menu semanal
 function createHtmlMenuSemanal() {
   let html = '';
@@ -108,34 +97,37 @@ function createHtmlMenuSemanal() {
   for (let i = currentDay; i < 5; i++) {
     const menuDay = menuSemanal[i].getDia();
     const menuPlatos = menuSemanal[i].getPlatos();
-    html += `
-      <h1 class="text-start">${menuDay}</h1>
-      <div class="card mb-3">
-        <div class="row g-0">
-          <div class="col-md-2">
-            <img src="${menuPlatos[0].getImagen()}" 
-              class="img-fluid rounded-start" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">${menuPlatos[0].getTitulo()}</h5>
-              <p class="card-text">${menuPlatos[0].getDescripcion()}</p>
-              <div class="d-flex justify-content-between">
-                <span class="fs-2">
-                  $ ${menuPlatos[0].getPrecio()}
-                </span>
-                <button type="button" class="btn bg-primary-light">
-                  <span class="primary-color icon-section">
-                    <i class="material-icons">shopping_cart</i>
+    html += `<h1 class="text-start mt-3">${menuDay}</h1>`;
+    
+    for (let j = 0; j < menuPlatos.length; j++) {
+      html +=
+        `<div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-2">
+              <img src="${menuPlatos[j].getImagen()}" 
+                class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">${menuPlatos[j].getTitulo()}</h5>
+                <p class="card-text">${menuPlatos[j].getDescripcion()}</p>
+                <div class="d-flex justify-content-between">
+                  <span class="fs-2">
+                    $ ${menuPlatos[j].getPrecio()}
                   </span>
-                  Agregar al carrito
-                </button>
+                  <button type="button" class="btn bg-primary-light">
+                    <span class="primary-color icon-section">
+                      <i class="material-icons">shopping_cart</i>
+                    </span>
+                    Agregar al carrito
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    `;
+      `;
+    }
   }
   return html;
 }
