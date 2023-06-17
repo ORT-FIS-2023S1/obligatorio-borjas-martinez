@@ -9,15 +9,19 @@ class Orden {
     this.tutor = tutor;
   }
 
-  getPlato() {
+  getPlatos() {
     return this.platos;
   }
-  setPlato(platos) {
+  setPlatos(platos) {
     this.platos = platos;
   }
 
   getTotal() {
-    return this.total;
+    let total = 0;
+    for (let i = 0; i < this.getPlatos().length; i++) {
+      total += this.getPlatos[i].getPrecio();
+    }
+    return total;
   }
   setTotal(total) {
     this.total = total;
