@@ -50,9 +50,9 @@
               <a class="nav-link active d-flex section" aria-current="page" href="#ver-reservas">
                   <i class="material-icons">receipt_long</i>Ver reservas
               </a>
-            </li>           
+            </li>      
             <li class="nav-item my-1">
-              <a class="nav-link active d-flex section" aria-current="page" href="#historial">
+              <a class="nav-link active d-flex section" aria-current="page" href="#historial-compras">
                 <i class="material-icons">list_alt</i>
                 Historial Compras
               </a>
@@ -69,21 +69,21 @@
     <div class="list-group ">
       <a class="list-group-item list-group-item-action d-flex bg-primary-light py-3 section" href="#menu">
         <i class="material-icons me-2">restaurant_menu</i>
-        <h2class="fs-5" >Menu</h2>
+        <p class="fs-5">Menu</p>
       </a>
       <a class="list-group-item list-group-item-action d-flex bg-primary-light py-3 section" href="#bebidas">
         <i class="material-icons me-2">local_drink</i>
-        <h2class="fs-5">Bebidas</h2>
+        <p class="fs-5">Bebidas</p>
       </a>
       <a class="list-group-item list-group-item-action d-flex bg-primary-light py-3 section" href="#desayuno-merienda">
         <i class="material-icons me-2">free_breakfast</i>
-        <h2class="fs-5">Desayuno/Merienda</h2>
+        <p class="fs-5">Desayuno/Merienda</p>
       </a>
     </div>
     
     <div class="card my-3">
       <div class="card-header w-100 bg-primary">
-        <h2 class="text-white">Menu del dia</h2>
+        <h2 class="text-white">Menu del dia</p>
       </div>
       <img src="https://picsum.photos/200" class="card-img img-fluid w-100 m-1" style="max-width: 500px; justify-content: center;" alt="Imagen del plato del dia">
       <div class="card-body">
@@ -103,25 +103,35 @@
     </div>
     </section>
     <section id="menu" class="mt-5">
-      <p class="fs-1 fw-bold">Menu Semanal</p>
+      <p class="fs-1 fw-bold">menu</p>
       <div id="menu-semanal"></div>
     </section>
+    <section id="bebidas" class="mt-5">
+      <p class="fs-1 fw-bold">bebidas</p>
+    </section>
+    <section id="desayuno-merienda" class="mt-5">
+      <p class="fs-1 fw-bold">desayuno-merienda</p>
+    </section>
     <section id="dinero" class="mt-5">
-      <p class="fs-1 fw-bold">Dinero</p>
+      <p class="fs-1 fw-bold">dinero</p>
     </section>
     <section id="carrito" class="mt-5">
-      <p class="fs-1 fw-bold">Carrito</p>
+      <p class="fs-1 fw-bold">carrito</p>
     </section>
     <section id="perfil" class="mt-5">
-      <p class="fs-1 fw-bold">Perfil</p>
+      <p class="fs-1 fw-bold">perfil</p>
     </section>
-    <section id="historial" class="mt-5">
-      <p class="fs-1 fw-bold">Historial</p>
-      <div id="historial-compras"></div>
+    <section id="historial-compras" class="mt-5">
+      <p class="fs-1 fw-bold">Historial Compras</p>
     </section>
     <section id="editar-menu" class="mt-5">
-      <p class="fs-1 fw-bold mb-0">Editar Menu</p>
+      <p class="fs-1 fw-bold">Editar Menu</p>
       <div id="editar-menu-semanal"></div>
+      <div id="modalContainer"></div>
+    </section>
+    <section id="ver-reservas" class="mt-5">
+      <p class="fs-1 fw-bold">Reservas</p>
+      <div id="ver-reservas-semanal"></div>
     </section>
   </main>
   <footer style="padding-bottom: 80px;">
@@ -149,5 +159,6 @@
   <script src="js/menu.js" type="module"></script>
   <script src="js/editarMenu.js" type="module"></script>
   <script src="js/historial.js" type="module"></script>
+  <script src="js/reservas.js" type="module"></script>
 </body>
 </html>
