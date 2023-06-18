@@ -80,7 +80,7 @@ function createHtmlMenuSemanal(menuSemanal) {
   for (let i = 0; i < 5; i++) {
     const menuDay = menuSemanal[i].getDia();
     const menuPlatos = menuSemanal[i].getPlatos();
-    html += `<h1 class="text-start mt-3">${menuDay}</h1>`;
+    html += `<h1 class="text-start mt-3 menu-day">${menuDay}</h1>`;
 
     for (let j = 0; j < menuPlatos.length; j++) {
       html += `
