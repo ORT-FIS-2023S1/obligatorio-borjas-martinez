@@ -10,7 +10,9 @@ class Menu {
   setPlatos(platos) {
     this.platos = platos;
   }
-
+  addPlato(plato) {
+    this.platos.push(plato);
+  }
   getDia() {
     return this.dia;
   }
