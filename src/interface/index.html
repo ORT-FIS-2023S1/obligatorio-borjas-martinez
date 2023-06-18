@@ -40,9 +40,13 @@
               <a class="nav-link active d-flex section" aria-current="page" href="#perfil">
                   <i class="material-icons">person</i>Perfil
               </a>
-            </li>            
+            </li>    
             <li class="nav-item my-1">
-              
+              <a class="nav-link active d-flex section" aria-current="page" href="#editar-menu">
+                  <i class="material-icons">edit</i>Editar Menu
+              </a>
+            </li>          
+            <li class="nav-item my-1">
               <a class="nav-link active d-flex section" aria-current="page" href="#historial-compras">
                 <i class="material-icons">list_alt</i>
                 Historial Compras
@@ -115,8 +119,11 @@
     <section id="historial-compras" class="mt-5">
       <h3>historial-compras</h3>
     </section>
-    
-    
+    <section id="editar-menu" class="mt-5">
+      <h3>editar-menu</h3>
+      <div id="editar-menu-semanal"></div>
+      <div id="modalContainer"></div>
+    </section>
   </main>
   <footer style="padding-bottom: 80px;">
       <nav class="navbar fixed-bottom bg-primary">
@@ -141,6 +148,7 @@
 
   <script src="js/main.js"></script>
   <script src="js/menu.js" type="module"></script>
+  <script src="js/editarMenu.js" type="module"></script>
   <script src="js/historial.js" type="module"></script>
 </body>
 </html>

@@ -115,11 +115,11 @@ const platoVegViernes = new Plato(
     'https://picsum.photos/200',
 );
 
-const menuLunes = new Menu(1, [platoRegLunes, platoVegLunes]);
-const menuMartes = new Menu(2, [platoRegMartes, platoVegMartes]);
-const menuMiercoles = new Menu(3, [platoRegMiercoles, platoVegMiercoles]);
-const menuJueves = new Menu(4, [platoRegJueves, platoVegJueves]);
-const menuViernes = new Menu(5, [platoRegViernes, platoVegViernes]);
+const menuLunes = new Menu('Lunes', [platoRegLunes, platoVegLunes]);
+const menuMartes = new Menu('Martes', [platoRegMartes, platoVegMartes]);
+const menuMiercoles = new Menu('Miercoles', [platoRegMiercoles, platoVegMiercoles]);
+const menuJueves = new Menu('Jueves', [platoRegJueves, platoVegJueves]);
+const menuViernes = new Menu('Viernes', [platoRegViernes, platoVegViernes]);
 
 const menuSemanal = [
   menuLunes,
