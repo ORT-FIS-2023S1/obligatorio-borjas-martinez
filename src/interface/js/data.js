@@ -140,5 +140,7 @@ const orden1 = new Orden(
 );
 
 const ordenes = [orden1];
+resumen.setOrdenes(ordenes);
+resumen.setTotalGastos(ordenes[0].getTotal());
 
 export {alumno, tutor, comedor, resumen, menuSemanal, ordenes};
