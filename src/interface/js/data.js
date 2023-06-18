@@ -134,7 +134,7 @@ const orden1 = new Orden(
     [platoVegMartes],
     platoVegMartes.getPrecio(),
     'efectivo',
-    '20/5/2023',
+    'Martes',
     comedor.getNombre(),
     alumno,
     tutor.getNombre(),
