@@ -95,6 +95,12 @@ function createHtmlMenuSemanal(menuSemanal) {
                     </span>  
                     Editar
                   </button>
+                  <button type="button" class="btn bg-primary-light" data-dia="${menuDay}"  data-titulo="${menuPlatos[j].getTitulo()}" data-indice="${j}" id="btn-delete-menu-${menuDay}-${j}">
+                    <span class="primary-color icon-section">
+                        <i class="material-icons">delete</i>
+                    </span>
+                    Eliminar
+                  </button>
                   </div>
 
                   <!-- Modal -->
@@ -224,6 +230,20 @@ function handleSaveMenu(event) {
       createHtmlMenuSemanal(menuSemanal);
 }
 
+function handleDeleteMenu(event){
+  event.preventDefault();
+  const button = event.target;
+  const dia = button.dataset.dia;
+  const indice = button.dataset.indice;
+  const titulo = button.dataset.titulo;
+  const menu = menuSemanal.find((menu) => menu.getDia() === dia);
+  const plato = menu.getPlatos().find((plato) =>  plato.titulo === titulo);
+
+  menu.deletePlato(plato);
+  document.querySelector("#editar-menu-semanal").innerHTML =
+    createHtmlMenuSemanal(menuSemanal);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#editar-menu-semanal").innerHTML =
     createHtmlMenuSemanal(menuSemanal);
@@ -232,18 +252,18 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", (event) => {
     // Si el click es en el botón de guardar
     event.preventDefault();
-    console.log(event.target)
     const button = event.target;
 
     const id = button.id;
-    console.log("clic",id);
     if (id.startsWith("btn-save-menu-")) {
       handleSaveMenu(event);
     }
     if (id.startsWith("btn-agregar-plato")) {
       handleAgregarPlato(event);
     }
-
+    if(id.startsWith("btn-delete-menu-")){
+      handleDeleteMenu(event);
+    }
   });
 });
 

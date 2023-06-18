@@ -13,6 +13,10 @@ class Menu {
   addPlato(plato) {
     this.platos.push(plato);
   }
+  deletePlato(plato) {
+    this.platos = this.platos.filter(item => item.titulo !== plato.titulo);
+  }
+
   getDia() {
     return this.dia;
   }
