@@ -117,7 +117,8 @@ const platoVegViernes = new Plato(
 
 const menuLunes = new Menu('Lunes', [platoRegLunes, platoVegLunes]);
 const menuMartes = new Menu('Martes', [platoRegMartes, platoVegMartes]);
-const menuMiercoles = new Menu('Miercoles', [platoRegMiercoles, platoVegMiercoles]);
+const menuMiercoles = new Menu('Miercoles', [platoRegMiercoles,
+  platoVegMiercoles]);
 const menuJueves = new Menu('Jueves', [platoRegJueves, platoVegJueves]);
 const menuViernes = new Menu('Viernes', [platoRegViernes, platoVegViernes]);
 

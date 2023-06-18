@@ -1,7 +1,4 @@
-import Plato from '../../domain/plato.js';
-import Menu from '../../domain/menu.js';
-
-import { menuSemanal } from "./data.js";
+import {menuSemanal} from './data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('#menu-semanal').innerHTML = createHtmlMenuSemanal();
@@ -15,7 +12,6 @@ function createHtmlMenuSemanal() {
     const menuDay = menuSemanal[i].getDia();
     const menuPlatos = menuSemanal[i].getPlatos();
     html += `<h1 class="text-start mt-3">${menuDay}</h1>`;
-    
     for (let j = 0; j < menuPlatos.length; j++) {
       html +=
         `<div class="card mb-3">
