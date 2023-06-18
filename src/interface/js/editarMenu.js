@@ -1,91 +1,7 @@
 import Plato from "../../domain/plato.js";
 import Menu from "../../domain/menu.js";
 
-// Menu semanal
-const menuSemanal = [
-  new Menu("Lunes", [
-    new Plato(
-      "Regular",
-      "Spaghetti Bolognese",
-      "Deliciosa pasta con salsa bolognesa casera",
-      200,
-      "https://picsum.photos/200"
-    ),
-    new Plato(
-      "Vegetariano",
-      "Pasta Primavera",
-      "Pasta con vegetales frescos de temporada",
-      200,
-      "https://picsum.photos/200"
-    ),
-  ]),
-  new Menu("Martes", [
-    new Plato(
-      "Regular",
-      "Pollo a la parrilla",
-      "Jugoso pollo a la parrilla con verduras",
-      200,
-      "https://picsum.photos/200"
-    ),
-    new Plato(
-      "Vegetariano",
-      "Tofu a la parrilla",
-      "Tofu marinado a la parrilla con vegetales",
-      200,
-      "https://picsum.photos/200"
-    ),
-  ]),
-  new Menu("Miercoles", [
-    new Plato(
-      "Regular",
-      "Ensalada César",
-      "Fresca ensalada con pollo, lechuga y aderezo César",
-      200,
-      "https://picsum.photos/200"
-    ),
-    new Plato(
-      "Vegetariano",
-      "Ensalada Mediterránea",
-      "Ensalada con queso feta, aceitunas y vegetales frescos",
-      200,
-      "https://picsum.photos/200"
-    ),
-  ]),
-  new Menu("Jueves", [
-    new Plato(
-      "Regular",
-      "Pescado a la plancha",
-      "Filete de pescado fresco a la plancha con guarnición",
-      180,
-      "https://picsum.photos/200"
-    ),
-    new Plato(
-      "Vegetariano",
-      "Tofu a la plancha",
-      "Tofu marinado a la plancha con guarnición",
-      180,
-      "https://picsum.photos/200"
-    ),
-  ]),
-  new Menu("Viernes", [
-    new Plato(
-      "Regular",
-      "Hamburguesa",
-      "Hamburguesa de carne con queso, lechuga y tomate",
-      200,
-      "https://picsum.photos/200"
-    ),
-    new Plato(
-      "Vegetariano",
-      "Hamburguesa de lentejas",
-      "Hamburguesa de lentejas con lechuga y tomate",
-      200,
-      "https://picsum.photos/200"
-    ),
-  ]),
-];
-
-// Función para retornar
+import { menuSemanal } from "./data.js";
 
 // Función para armar el html del menu semanal
 function createHtmlMenuSemanal(menuSemanal) {
@@ -104,7 +20,7 @@ function createHtmlMenuSemanal(menuSemanal) {
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">${menuPlatos[j].getTitulo()}</h5>
+                <h2 class="card-title">${menuPlatos[j].getTitulo()}</h2>
                 <p class="card-text">${menuPlatos[j].getDescripcion()}</p>
                 <div class="d-flex justify-content-between">
                   <span class="fs-2">
@@ -112,7 +28,7 @@ function createHtmlMenuSemanal(menuSemanal) {
                   </span>
                  
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn bg-primary-light" data-bs-toggle="modal" data-bs-target="#editBtn-${menuDay}-${j}">
+                  <button type="button" class="btn bg-primary-light" data-bs-toggle="modal" data-bs-target="#editBtn-${menuDay}-${j}" data-dia="${menuDay}" data-indice="${j}">
                     <span class="primary-color icon-section">
                         <i class="material-icons">edit</i>
                     </span>  
@@ -124,9 +40,9 @@ function createHtmlMenuSemanal(menuSemanal) {
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="editBtnLabel">${menuPlatos[
-          j
-        ].getTitulo()}</h5>
+                          <h2 class="modal-title" id="editBtnLabel">${menuPlatos[
+                            j
+                          ].getTitulo()}</h2>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -136,36 +52,36 @@ function createHtmlMenuSemanal(menuSemanal) {
                             
                               <label for="nombre-${menuDay}-${j}" class="form-label">Nombre</label>
                               <input type="text" class="form-control" id="nombre-${menuDay}-${j}" value="${menuPlatos[
-          j
-        ].getTitulo()}">
+        j
+      ].getTitulo()}">
                               
                               <label for="descripcion-${menuDay}-${j}" class="form-label">Descripción</label>
                               <input type="text" class="form-control" id="descripcion-${menuDay}-${j}" value="${menuPlatos[
-          j
-        ].getDescripcion()}">
+        j
+      ].getDescripcion()}">
 
                               <label for="precio-${menuDay}-${j}" class="form-label">Precio</label>
                               <input type="text" class="form-control" id="precio-${menuDay}-${j}" value="${menuPlatos[
-          j
-        ].getPrecio()}">
+        j
+      ].getPrecio()}">
 
                               <label for="tipo-${menuDay}-${j}" class="form-label">Tipo</label>
                               <input type="text" class="form-control" id="tipo-${menuDay}-${j}" value="${menuPlatos[
-          j
-        ].getTipo()}">
+        j
+      ].getTipo()}">
 
                               <label for="imagen-${menuDay}-${j}" class="form-label">Imagen</label>
                               <input type="text" class="form-control" id="imagen-${menuDay}-${j}" value="${menuPlatos[
-          j
-        ].getImagen()}">
+        j
+      ].getImagen()}">
                             </div>
                           </form> 
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                           <button type="button" class="btn bg-primary-light" data-bs-dismiss="modal" id="save-menu-${menuDay}-${j}" data-indice="${j}" data-dia="${menuDay}" data-titulo="${menuPlatos[
-          j
-        ].getTitulo()}">Guardar Cambios</button>
+        j
+      ].getTitulo()}">Guardar Cambios</button>
                         </div>
                       </div>
                     </div>
@@ -193,7 +109,9 @@ function updateMenuSemanal(menu, plato) {
 // Función para guardar los cambios en el menu semanal
 function saveMenuSemanal(dia, indice) {
   const titulo = document.querySelector(`#nombre-${dia}-${indice}`).value;
-  const descripcion = document.querySelector(`#descripcion-${dia}-${indice}`).value;
+  const descripcion = document.querySelector(
+    `#descripcion-${dia}-${indice}`
+  ).value;
   const precio = document.querySelector(`#precio-${dia}-${indice}`).value;
   const tipo = document.querySelector(`#tipo-${dia}-${indice}`).value;
   const imagen = document.querySelector(`#imagen-${dia}-${indice}`).value;
@@ -209,12 +127,20 @@ function findPlatoByDiaAndTitulo(dia, titulo) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#editar-menu-semanal").innerHTML = createHtmlMenuSemanal(menuSemanal);
-  document.querySelector("#editar-menu-semanal").addEventListener("click", handleSaveMenu);
+  document.querySelector("#editar-menu-semanal").innerHTML =
+    createHtmlMenuSemanal(menuSemanal);
+
+  document
+    .querySelector("#editar-menu-semanal")
+    .addEventListener("click", handleSaveMenu);
 });
 
 function handleSaveMenu(event) {
-  if (event.target.classList.contains("btn") && event.target.classList.contains("bg-primary-light")) {
+  // Si el click es en el botón de guardar
+  event.preventDefault();
+  const button = event.target;
+  const id = button.id;
+  if (id.startsWith("save-menu-")) {
     const button = event.target;
     const dia = button.dataset.dia;
     const indice = button.dataset.indice;
@@ -225,7 +151,9 @@ function handleSaveMenu(event) {
     // Actualizar el menu semanal
     const plato = findPlatoByDiaAndTitulo(dia, titulo);
     updateMenuSemanal(menu, plato);
+
     // actualizar el html
-    document.querySelector("#editar-menu-semanal").innerHTML = createHtmlMenuSemanal(menuSemanal);
+    document.querySelector("#editar-menu-semanal").innerHTML =
+      createHtmlMenuSemanal(menuSemanal);
   }
 }
