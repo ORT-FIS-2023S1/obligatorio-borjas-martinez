@@ -5,7 +5,6 @@ import {agregarAlCarrito} from './menu.js';
 document.addEventListener('DOMContentLoaded', () => {
   // Selecciono el id "home-menu-dia"
   const homeMenuDia = document.querySelector('#home-menu-dia');
-  console.log(homeMenuDia);
   // Creo el html del plato del dia
   homeMenuDia.innerHTML = createHtmlPlatoDelDia();
 
