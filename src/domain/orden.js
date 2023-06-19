@@ -1,9 +1,9 @@
 class Orden {
-  constructor(platos, total, metodoPago, fecha, comedor, alumno, tutor) {
+  constructor(platos, total, metodoPago, dia, comedor, alumno, tutor) {
     this.platos = platos;
     this.total = total;
     this.metodoPago = metodoPago;
-    this.fecha = fecha;
+    this.dia = dia;
     this.comedor = comedor;
     this.alumno = alumno;
     this.tutor = tutor;
@@ -30,11 +30,11 @@ class Orden {
     this.metodoPago = metodoPago;
   }
 
-  getFecha() {
-    return this.fecha;
+  getDia() {
+    return this.dia;
   }
-  setFecha(fecha) {
-    this.fecha = fecha;
+  setDia(dia) {
+    this.dia = dia;
   }
 
   getComedor() {
