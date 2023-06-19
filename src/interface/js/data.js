@@ -130,9 +130,9 @@ const menuSemanal = [
   menuJueves,
   menuViernes,
 ];
-
+const ordenes = [];
 const orden1 = new Orden(
-    [platoVegMartes],
+    [platoVegMartes, platoRegMartes],
     platoVegMartes.getPrecio(),
     'efectivo',
     'Martes',
@@ -140,8 +140,17 @@ const orden1 = new Orden(
     alumno,
     tutor.getNombre(),
 );
-
-const ordenes = [orden1];
+ordenes.push(orden1);
+const orden2 = new Orden(
+    [platoVegJueves],
+    platoVegJueves.getPrecio(),
+    'efectivo',
+    'Jueves',
+    comedor.getNombre(),
+    alumno,
+    tutor.getNombre(),
+);
+ordenes.push(orden2);
 resumen.setOrdenes(ordenes);
 resumen.setTotalGastos(ordenes[0].getTotal());
 
@@ -155,70 +164,70 @@ const reservas = [
 
 // Reserva: platos, diaSemana, comedor, cantidad
 const reserva1 = new Reserva(
-    [platoRegLunes],
+    platoRegLunes,
     'Lunes',
     comedor.getNombre(),
     3,
 );
 reservas[0].Lunes.push(reserva1);
 const reserva2 = new Reserva(
-    [platoVegLunes],
+    platoVegLunes,
     'Lunes',
     comedor.getNombre(),
     7,
 );
 reservas[0].Lunes.push(reserva2);
 const reserva3 = new Reserva(
-    [platoVegMartes],
+    platoVegMartes,
     'Martes',
     comedor.getNombre(),
     5,
 );
 reservas[1].Martes.push(reserva3);
 const reserva4 = new Reserva(
-    [platoRegMartes],
+    platoRegMartes,
     'Martes',
     comedor.getNombre(),
     2,
 );
 reservas[1].Martes.push(reserva4);
 const reserva5 = new Reserva(
-    [platoRegMiercoles],
+    platoRegMiercoles,
     'Miercoles',
     comedor.getNombre(),
     1,
 );
 reservas[2].Miercoles.push(reserva5);
 const reserva6 = new Reserva(
-    [platoVegMiercoles],
+    platoVegMiercoles,
     'Miercoles',
     comedor.getNombre(),
     3,
 );
 reservas[2].Miercoles.push(reserva6);
 const reserva7 = new Reserva(
-    [platoRegJueves],
+    platoRegJueves,
     'Jueves',
     comedor.getNombre(),
     1,
 );
 reservas[3].Jueves.push(reserva7);
 const reserva8 = new Reserva(
-    [platoVegJueves],
+    platoVegJueves,
     'Jueves',
     comedor.getNombre(),
-    2,
+    0,
 );
 reservas[3].Jueves.push(reserva8);
 const reserva9 = new Reserva(
-    [platoRegViernes],
+    platoRegViernes,
     'Viernes',
     comedor.getNombre(),
     1,
 );
 reservas[4].Viernes.push(reserva9);
 const reserva10 = new Reserva(
-    [platoVegViernes],
+    platoVegViernes,
     'Viernes',
     comedor.getNombre(),
     0,

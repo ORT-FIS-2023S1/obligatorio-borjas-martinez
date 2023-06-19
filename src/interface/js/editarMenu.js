@@ -22,7 +22,8 @@ function createHtmlMenuSemanal(menuSemanal) {
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title" id="addBtnLabel">Agregar plato</h2>
+          <p class="card-text fs-4 modal-title" id="addBtnLabel">
+          Agregar plato</p>
           <button type="button" class="btn-close" 
             data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
@@ -90,16 +91,21 @@ function createHtmlMenuSemanal(menuSemanal) {
               <img src="${menuPlatos[j].getImagen()}" 
                 class="img-fluid rounded-start" alt="...">
             </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h2 class="card-title">${menuPlatos[j].getTitulo()}</h2>
-                <p class="card-text">${menuPlatos[j].getDescripcion()}</p>
-                <div class="d-flex>
-                  <span class="fs-2">
-                    $ ${menuPlatos[j].getPrecio()}
-                  </span>
+            <div class="col-md-10">
+              <div class="card-body py-3 px-4">
+                <p class="card-text fs-4 card-title">
+                ${menuPlatos[j].getTitulo()}</p>
+                <div class="d-flex justify-content-between mb-0">
+                  <p class="card-text description">
+                  ${menuPlatos[j].getDescripcion()}</p>
+                  <p class="card-text price fs-4">$
+                  ${menuPlatos[j].getPrecio()}</p>
+                </div>
                  
-                  <div class="d-flex justify-content-end">
+                <div class="d-flex">
+                  <p class="card-text type fs-5">Tipo: 
+                  ${menuPlatos[j].getTipo()}</p>
+                  <div class="justify-content-end ms-auto">
                     <!-- Button trigger modal -->
                     <button type="button" class="btn bg-primary-light me-2"
                       data-bs-toggle="modal" 
@@ -121,92 +127,93 @@ function createHtmlMenuSemanal(menuSemanal) {
                         Eliminar
                     </button>
                   </div>
-                  <!-- Modal -->
-                  <div class="modal fade" 
-                      id="editBtn-${menuDay}-${j}" 
-                      tabindex="-1" aria-labelledby="editBtnLabel" 
-                      aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h2 class="modal-title" id="editBtnLabel">
-                                ${menuPlatos[j].getTitulo()}
-                              </h2>
-                              <button type="button" class="btn-close" 
-                                data-bs-dismiss="modal" 
-                                aria-label="Close">
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <!-- Formulario -->
-                                <form>
-                                  <div class="mb-3">
-                                    <label for="nombre-${menuDay}-${j}" 
-                                      class="form-label">
-                                        Nombre
-                                    </label>
-                                    <input type="text" 
-                                      class="form-control" 
-                                      id="nombre-${menuDay}-${j}" 
-                                      value="${menuPlatos[j].getTitulo()}">
-                              
-                                    <label for="descripcion-${menuDay}-${j}" 
-                                      class="form-label">
-                                        Descripción
-                                    </label>
-                                    <input type="text" 
-                                      class="form-control" 
-                                      id="descripcion-${menuDay}-${j}" 
-                                      value="${menuPlatos[j].getDescripcion()}"
-                                    >
-                                    <label for="precio-${menuDay}-${j}" 
-                                      class="form-label">
-                                        Precio
-                                    </label>
-                                    <input type="text" 
-                                      class="form-control" 
-                                      id="precio-${menuDay}-${j}" 
-                                      value="${menuPlatos[j].getPrecio()}"
-                                    >
-                                    <label for="tipo-${menuDay}-${j}" 
-                                      class="form-label">
-                                        Tipo
-                                    </label>
-                                    <input type="text" 
-                                      class="form-control" 
-                                      id="tipo-${menuDay}-${j}" 
-                                      value="${menuPlatos[j].getTipo()}"
-                                    >
-                                    <label for="imagen-${menuDay}-${j}" 
-                                      class="form-label">
-                                        Imagen
-                                    </label>
-                                    <input type="text" 
-                                      class="form-control" 
-                                      id="imagen-${menuDay}-${j}" 
-                                      value="${menuPlatos[j].getImagen()}"
-                                    >
-                                  </div>
-                                </form> 
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-dark" 
-                                data-bs-dismiss="modal">
-                                  Cerrar
-                              </button>
-                              <button type="button" 
-                                class="btn bg-primary-light" 
-                                data-bs-dismiss="modal" 
-                                id="btn-save-menu-${menuDay}-${j}" 
-                                data-indice="${j}" data-dia="${menuDay}" 
-                                data-titulo="${menuPlatos[j].getTitulo()}">
-                                  Guardar Cambios
-                              </button>
-                            </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" 
+                    id="editBtn-${menuDay}-${j}" 
+                    tabindex="-1" aria-labelledby="editBtnLabel" 
+                    aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <p class="card-text fs-4 modal-title" 
+                            id="editBtnLabel">
+                              ${menuPlatos[j].getTitulo()}
+                            </p>
+                            <button type="button" class="btn-close" 
+                              data-bs-dismiss="modal" 
+                              aria-label="Close">
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <!-- Formulario -->
+                              <form>
+                                <div class="mb-3">
+                                  <label for="nombre-${menuDay}-${j}" 
+                                    class="form-label">
+                                      Nombre
+                                  </label>
+                                  <input type="text" 
+                                    class="form-control" 
+                                    id="nombre-${menuDay}-${j}" 
+                                    value="${menuPlatos[j].getTitulo()}">
+                            
+                                  <label for="descripcion-${menuDay}-${j}" 
+                                    class="form-label">
+                                      Descripción
+                                  </label>
+                                  <input type="text" 
+                                    class="form-control" 
+                                    id="descripcion-${menuDay}-${j}" 
+                                    value="${menuPlatos[j].getDescripcion()}"
+                                  >
+                                  <label for="precio-${menuDay}-${j}" 
+                                    class="form-label">
+                                      Precio
+                                  </label>
+                                  <input type="text" 
+                                    class="form-control" 
+                                    id="precio-${menuDay}-${j}" 
+                                    value="${menuPlatos[j].getPrecio()}"
+                                  >
+                                  <label for="tipo-${menuDay}-${j}" 
+                                    class="form-label">
+                                      Tipo
+                                  </label>
+                                  <input type="text" 
+                                    class="form-control" 
+                                    id="tipo-${menuDay}-${j}" 
+                                    value="${menuPlatos[j].getTipo()}"
+                                  >
+                                  <label for="imagen-${menuDay}-${j}" 
+                                    class="form-label">
+                                      Imagen
+                                  </label>
+                                  <input type="text" 
+                                    class="form-control" 
+                                    id="imagen-${menuDay}-${j}" 
+                                    value="${menuPlatos[j].getImagen()}"
+                                  >
+                                </div>
+                              </form> 
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" 
+                              data-bs-dismiss="modal">
+                                Cerrar
+                            </button>
+                            <button type="button" 
+                              class="btn bg-primary-light" 
+                              data-bs-dismiss="modal" 
+                              id="btn-save-menu-${menuDay}-${j}" 
+                              data-indice="${j}" data-dia="${menuDay}" 
+                              data-titulo="${menuPlatos[j].getTitulo()}">
+                                Guardar Cambios
+                            </button>
                           </div>
                         </div>
+                      </div>
                   </div>
-                </div>
               </div>
             </div>
           </div>
