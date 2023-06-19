@@ -253,9 +253,8 @@ function findPlatoByDiaAndTitulo(dia, titulo) {
   return plato;
 }
 
-function handleAgregarPlato(event) {
+function handleAgregarPlato() {
   // Lógica para abrir el modal y permitir al usuario agregar un nuevo plato
-  event.preventDefault();
   const nombre = document.querySelector('#nombre-agregar').value;
   const descripcion = document.querySelector('#descripcion-agregar').value;
   const precio = document.querySelector('#precio-agregar').value;
@@ -264,7 +263,6 @@ function handleAgregarPlato(event) {
   const plato = new Plato(tipo, nombre, descripcion, precio, imagen);
   const dia = document.querySelector('#dia-agregar').value;
   const menu = menuSemanal.find((menu) => menu.getDia() === dia);
-  // Corregir el error de que se sobreescriben los platos en el menu semanal
   menu.addPlato(plato);
 
   // Agregar el plato al menu semanal correspondiente al dia
@@ -272,28 +270,20 @@ function handleAgregarPlato(event) {
     createHtmlMenuSemanal(menuSemanal);
 }
 
-function handleSaveMenu(event) {
-  // Si el click es en el botón de guardar
-  event.preventDefault();
-  const button = event.target;
+function handleSaveMenu(button) {
   const dia = button.dataset.dia;
   const indice = button.dataset.indice;
   const titulo = button.dataset.titulo;
 
   const menu = saveMenuSemanal(dia, indice);
-
-  // Actualizar el menu semanal
   const plato = findPlatoByDiaAndTitulo(dia, titulo);
   updateMenuSemanal(menu, plato);
 
-  // actualizar el html
   document.querySelector('#editar-menu-semanal').innerHTML =
       createHtmlMenuSemanal(menuSemanal);
 }
 
-function handleDeleteMenu(event) {
-  event.preventDefault();
-  const button = event.target;
+function handleDeleteMenu(button) {
   const dia = button.dataset.dia;
   const titulo = button.dataset.titulo;
   const menu = menuSemanal.find((menu) => menu.getDia() === dia);
@@ -305,24 +295,25 @@ function handleDeleteMenu(event) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('#editar-menu-semanal').innerHTML =
+  const sectionEditMenu = document.querySelector('#editar-menu-semanal');
+  sectionEditMenu.innerHTML =
     createHtmlMenuSemanal(menuSemanal);
 
   // Escuchar el evento click en el documento
-  document.addEventListener('click', (event) => {
+  sectionEditMenu.addEventListener('click', (event) => {
     // Si el click es en el botón de guardar
     event.preventDefault();
     const button = event.target;
 
     const id = button.id;
     if (id.startsWith('btn-save-menu-')) {
-      handleSaveMenu(event);
+      handleSaveMenu(button);
     }
     if (id.startsWith('btn-agregar-plato')) {
-      handleAgregarPlato(event);
+      handleAgregarPlato();
     }
     if (id.startsWith('btn-delete-menu-')) {
-      handleDeleteMenu(event);
+      handleDeleteMenu(button);
     }
   });
 });

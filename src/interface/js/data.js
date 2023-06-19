@@ -6,6 +6,9 @@ import Plato from '../../domain/plato.js';
 import Menu from '../../domain/menu.js';
 import Reserva from '../../domain/reserva.js';
 
+// eslint-disable-next-line prefer-const
+let carrito = [];
+
 const alumno = 'Mariana Perez';
 
 const tutor = new Tutor(
@@ -234,4 +237,4 @@ const reserva10 = new Reserva(
 );
 reservas[4].Viernes.push(reserva10);
 
-export {alumno, tutor, comedor, resumen, menuSemanal, ordenes, reservas};
+export {alumno, tutor, comedor, resumen, menuSemanal, ordenes, carrito};
