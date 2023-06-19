@@ -31,13 +31,6 @@ function getDayName() {
   return dayName[day];
 }
 
-// Funcion para tomar el numero del dia de la semana
-function getDayNumber() {
-  const date = new Date();
-  const day = date.getDay();
-  return day;
-}
-
 // Funcion para tomar el plato del dia de menuSemanal
 function getPlatoDelDia() {
   const dia = getDayName();
