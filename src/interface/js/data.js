@@ -5,6 +5,9 @@ import Orden from '../../domain/orden.js';
 import Plato from '../../domain/plato.js';
 import Menu from '../../domain/menu.js';
 
+// eslint-disable-next-line prefer-const
+let carrito = [];
+
 const alumno = 'Mariana Perez';
 
 const tutor = new Tutor(
@@ -144,4 +147,4 @@ const ordenes = [orden1];
 resumen.setOrdenes(ordenes);
 resumen.setTotalGastos(ordenes[0].getTotal());
 
-export {alumno, tutor, comedor, resumen, menuSemanal, ordenes};
+export {alumno, tutor, comedor, resumen, menuSemanal, ordenes, carrito};
