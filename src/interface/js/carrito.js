@@ -1,4 +1,5 @@
 import {carrito} from './data.js';
+import Orden from '../../domain/orden.js';
 
 // carrito = [ {dia: string, platos: [ {plato: plato, cant: num } ]} ]
 // carrito = [ {Lunes, [ {spaggeti, 2}, {hamburguesa , 3} ]} ]
@@ -139,6 +140,14 @@ function createHtmlCarrito() {
       `;
     }
   }
+  // Boton para enviar el pedido
+  html += `
+  <div class="d-flex justify-content-end">
+    <button type="button" class="btn btn-primary" id="reaizar-pedido">
+      Realizar pedido
+    </button>
+  </div>
+  `;
   return html;
 }
 const sectionCarrito = document.querySelector('#carrito');
@@ -157,6 +166,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (btn.includes('removeCant')) {
       disminuirCant(btn);
+    }
+    // Si el boton es el de realizar pedido
+    if (btn === 'reaizar-pedido') {
+      realizarPedido();
     }
   });
 });
@@ -179,16 +192,49 @@ function disminuirCant(btnQuitarCant) {
   }
   mostrarCarrito();
 }
-// Funcion para eliminar un plato del carrito
 function eliminarPlato(btnElimModales) {
   const menuId = btnElimModales.split('-');
   const posMenu = menuId[1];
   const posPlato = menuId[2];
   carrito[posMenu].platos.splice(posPlato, 1);
+  // Si el menu queda vacio, lo elimino
   if (carrito[posMenu].platos.length === 0) {
     carrito.splice(posMenu, 1);
   }
   mostrarCarrito();
 }
+
+// Funcion para realizar el pedido
+function realizarPedido() {
+  if (carrito.length === 0) {
+    //
+  } else {
+    // Crear el objeto orden
+    const orden = new Orden();
+    // Datos de la orden
+    // this.platos = platos;
+    // this.total = total;
+    // this.metodoPago = metodoPago;
+    // this.fecha = fecha;
+    // this.comedor = comedor;
+    // this.alumno = alumno;
+    // this.tutor = tutor;
+
+    // Agregar los menus al objeto orden
+    for (let i = 0; i < carrito.length; i += 1) {
+      const dia = dias[carrito[i].dia];
+      // orden.console.log(dia);
+      // console.log(carrito[i]);
+    }
+    // Agregar el objeto orden al arreglo de ordenes
+    // ordenes.push(orden);
+    // console.log(ordenes);
+    // Limpiar el carrito
+    carrito = [];
+    // Mostrar el carrito
+    mostrarCarrito();
+  }
+}
+
 
 export {mostrarCarrito};
