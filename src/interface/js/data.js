@@ -237,4 +237,5 @@ const reserva10 = new Reserva(
 );
 reservas[4].Viernes.push(reserva10);
 
-export {alumno, tutor, comedor, resumen, menuSemanal, ordenes, carrito};
+export {alumno, tutor, comedor, resumen,
+  menuSemanal, ordenes, carrito, reservas};
