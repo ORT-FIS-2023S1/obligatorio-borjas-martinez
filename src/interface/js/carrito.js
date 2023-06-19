@@ -3,11 +3,23 @@ import {carrito} from './data.js';
 // carrito = [ {dia: string, platos: [ {plato: plato, cant: num } ]} ]
 // carrito = [ {Lunes, [ {spaggeti, 2}, {hamburguesa , 3} ]} ]
 
+const dias = {
+  0: 'Lunes',
+  1: 'Martes',
+  2: 'Miercoles',
+  3: 'Jueves',
+  4: 'Viernes',
+};
+
 function createHtmlCarrito() {
-  console.log('creandoHTML');
+  // ordeno el carrito por dia
+  carrito.sort((a, b) => {
+    return a.dia - b.dia;
+  });
   let html = '';
   for (let i = 0; i < carrito.length; i++) {
-    const menuDay = carrito[i].dia;
+    // Obtengo el dia segun el indice en dias
+    const menuDay = dias[carrito[i].dia];
     const menuPlato = carrito[i].platos;
     html += `<h1 class="text-start mt-3">${menuDay}</h1>`;
     for (let j = 0; j < menuPlato.length; j++) {
@@ -18,51 +30,52 @@ function createHtmlCarrito() {
               <img src="${menuPlato[j].plato.getImagen()}" 
                 class="img-fluid rounded-start" alt="...">
             </div>
-            <div class="col-md-8">
+            <div class="col-md-10">
               <div class="card-body">
-                <h5 class="card-title">${menuPlato[j].plato.getTitulo()}</h5>
-                <p class="card-text">${menuPlato[j].plato.getDescripcion()}</p>
                 <div class="d-flex justify-content-between">
+                  <h5 class="card-title">${menuPlato[j].plato.getTitulo()}</h5>
                   <span class="fs-2">
                     $ ${menuPlato[j].plato.getPrecio()}
                   </span>
-                  <div class="d-flex justify-content-end">
-                    <!-- Button trigger modal -->
-                    <div class="rounded-2 p-2 bg-primary-light me-2">
-                        <div class="primary-color text-center">
-                            <span>Cantidad</span>
-                        </div>
-                        <div class="d-flex flex-wrap">
-                          <button 
-                          type="button"
-                          id="removeCant-${i}-${j}"
-                          class="btn py-1 px-2 mx-2 btn-success bg-primary">
-                          <i class="material-icons fs-6">remove</i>
-                          </button>
-                          <span id="cantPlatos-${i}-${j}" >
-                            ${menuPlato[j].cant}
-                          </span>
-                          <button 
-                          type="button"
-                            id="addCant-${i}-${j}"
-                          class="btn py-1 px-2 mx-2 btn-success bg-primary">
-                          <i class="material-icons fs-6">add</i>
-                          </button>
-                        </div>   
-                    </div>
-                    <button type="button" class="btn bg-danger" 
-                      data-bs-toggle="modal" 
-                      data-bs-target="#editBtn-${menuDay}-${j}"
-                      data-dia="${menuDay}"data-indice="${j}"  
-                      data-titulo="${menuPlato[j].plato.getTitulo()}" 
-                      data-indice="${j}" 
-                      id="btn-delete-menu-${menuDay}-${j}">
-                        <span class="icon-section">
-                            <i class="material-icons">delete</i>
+                </div>
+                <p class="card-text">${menuPlato[j].plato.getDescripcion()}</p>
+  
+                <div class="d-flex justify-content-end">
+                  <!-- Button trigger modal -->
+                  <div class="rounded-2 p-2 bg-primary-light me-2">
+                      <div class="primary-color text-center">
+                          <span>Cantidad</span>
+                      </div>
+                      <div class="d-flex flex-wrap">
+                        <button 
+                        type="button"
+                        id="removeCant-${i}-${j}"
+                        class="btn py-1 px-2 mx-2 btn-success bg-primary">
+                        <i class="material-icons fs-6">remove</i>
+                        </button>
+                        <span id="cantPlatos-${i}-${j}" >
+                          ${menuPlato[j].cant}
                         </span>
-                        Eliminar
-                    </button>
+                        <button 
+                        type="button"
+                          id="addCant-${i}-${j}"
+                        class="btn py-1 px-2 mx-2 btn-success bg-primary">
+                        <i class="material-icons fs-6">add</i>
+                        </button>
+                      </div>   
                   </div>
+                  <button type="button" class="btn bg-danger" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#editBtn-${menuDay}-${j}"
+                    data-dia="${menuDay}"data-indice="${j}"  
+                    data-titulo="${menuPlato[j].plato.getTitulo()}" 
+                    data-indice="${j}" 
+                    id="btn-delete-menu-${menuDay}-${j}">
+                      <span class="icon-section">
+                          <i class="material-icons">delete</i>
+                      </span>
+                      Eliminar
+                  </button>
                 </div>
               </div>
             </div>
@@ -131,57 +144,51 @@ function createHtmlCarrito() {
 const sectionCarrito = document.querySelector('#carrito');
 function mostrarCarrito() {
   sectionCarrito.innerHTML = createHtmlCarrito();
-
-  const btnAgregarCant = document.querySelectorAll('[id^="addCant"]');
-  const btnQuitarCant = document.querySelectorAll('[id^="removeCant"]');
-
-  btnAgregarCant.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      const menuId = e.target.id.split('-');
-      const posMenu = menuId[1];
-      const posPlato = menuId[2];
-      carrito[posMenu].platos[posPlato].cant += 1;
-      const cantPlatosActualizado = carrito[posMenu].platos[posPlato].cant;
-      const cantPlatosSpan = document.querySelectorAll('[id^="cantPlatos"]');
-      cantPlatosSpan.forEach((span) => {
-        if (span.id === `cantPlatos-${posMenu}-${posPlato}`) {
-          span.textContent = cantPlatosActualizado;
-        }
-      });
-    });
-  });
-  btnQuitarCant.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      const menuId = e.target.id.split('-');
-      const posMenu = menuId[1];
-      const posPlato = menuId[2];
-      if (carrito[posMenu].platos[posPlato].cant > 0) {
-        carrito[posMenu].platos[posPlato].cant -= 1;
-      }
-      const cantPlatosActualizado = carrito[posMenu].platos[posPlato].cant;
-      const cantPlatosSpan = document.querySelectorAll('[id^="cantPlatos"]');
-      cantPlatosSpan.forEach((span) => {
-        if (span.id === `cantPlatos-${posMenu}-${posPlato}`) {
-          span.textContent = cantPlatosActualizado;
-        }
-      });
-    });
-  });
-
-  const btnEliminarModal = document.querySelectorAll('[id^="eliminarMenu"]');
-  eliminarPlato(btnEliminarModal);
 }
 
-function eliminarPlato(btnElimModales) {
-  btnElimModales.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      const menuId = e.target.id.split('-');
-      const posMenu = menuId[1];
-      const posPlato = menuId[2];
-      carrito[posMenu].platos.splice(posPlato, 1);
-      sectionCarrito.innerHTML = createHtmlCarrito();
-    });
+document.addEventListener('DOMContentLoaded', () => {
+  sectionCarrito.addEventListener('click', (e) => {
+    const btn = e.target.id;
+    if (btn.includes('eliminarMenu')) {
+      eliminarPlato(btn);
+    }
+    if (btn.includes('addCant')) {
+      aumentarCant(btn);
+    }
+    if (btn.includes('removeCant')) {
+      disminuirCant(btn);
+    }
   });
+});
+
+// Funcion para aumentar la cantidad de un plato
+function aumentarCant(btnAgregarCant) {
+  const menuId = btnAgregarCant.split('-');
+  const posMenu = menuId[1];
+  const posPlato = menuId[2];
+  carrito[posMenu].platos[posPlato].cant += 1;
+  mostrarCarrito();
+}
+// // Funcion para disminuir la cantidad de un plato
+function disminuirCant(btnQuitarCant) {
+  const menuId = btnQuitarCant.split('-');
+  const posMenu = menuId[1];
+  const posPlato = menuId[2];
+  if (carrito[posMenu].platos[posPlato].cant > 0) {
+    carrito[posMenu].platos[posPlato].cant -= 1;
+  }
+  mostrarCarrito();
+}
+// Funcion para eliminar un plato del carrito
+function eliminarPlato(btnElimModales) {
+  const menuId = btnElimModales.split('-');
+  const posMenu = menuId[1];
+  const posPlato = menuId[2];
+  carrito[posMenu].platos.splice(posPlato, 1);
+  if (carrito[posMenu].platos.length === 0) {
+    carrito.splice(posMenu, 1);
+  }
+  mostrarCarrito();
 }
 
 export {mostrarCarrito};

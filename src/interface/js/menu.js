@@ -1,19 +1,34 @@
 import {menuSemanal, carrito} from './data.js';
 import {mostrarCarrito} from './carrito.js';
 
+// Asigno un numero a cada dia de la semana siendo lunes el 0
+const dias = {
+  Lunes: 0,
+  Martes: 1,
+  Miercoles: 2,
+  Jueves: 3,
+  Viernes: 4,
+};
+
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('#menu-semanal').innerHTML = createHtmlMenuSemanal();
-  const btnAgrAlCarrito = document.querySelectorAll('[id^="agregarPlato"]');
-  btnAgrAlCarrito.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      const id = e.target.id.split('-');
-      const menu = id[1];
-      const plato = id[2];
-      agregarAlCarrito(menuSemanal[menu], menuSemanal[menu].getPlatos()[plato]);
-    });
+  const selectMenu = document.querySelector('#menu-semanal');
+  selectMenu.innerHTML = createHtmlMenuSemanal();
+
+  // Escuchar cualquier click dentro del menu semanal
+  selectMenu.addEventListener('click', (e) => {
+    const btn = e.target;
+    const btnId = btn.id;
+    if (btnId.includes('agregarPlato')) {
+      const menuACargar = {...menuSemanal};
+      const titulo = btn.dataset.plato;
+      const dia = dias[btn.dataset.dia];
+      const plato = menuACargar[dia].getPlatos().find((plato) => {
+        return plato.getTitulo() === titulo;
+      });
+      agregarAlCarrito(dia, plato);
+    }
   });
 });
-
 
 // Función para armar el html del menu semanal
 function createHtmlMenuSemanal() {
@@ -40,6 +55,8 @@ function createHtmlMenuSemanal() {
                     $ ${menuPlatos[j].getPrecio()}
                   </span>
                   <button id="agregarPlato-${i}-${j}"
+                  data-plato="${menuPlatos[j].getTitulo()}"
+                  data-dia="${menuDay}"
                     type="button" 
                     class="btn bg-primary-light">
                       <span class="primary-color icon-section">
@@ -52,7 +69,7 @@ function createHtmlMenuSemanal() {
             </div>
           </div>
         </div>
-        <div class="toast-container position-fixed top-0 p-3">
+        <div class="toast-container position-fixed top-0 end-0 p-3">
         <div id="liveToast" 
             class="toast" 
             role="alert" 
@@ -83,16 +100,16 @@ function mostrarNotificacion() {
   toastBoot.show();
 };
 
-function agregarAlCarrito(menu, plato) {
+function agregarAlCarrito(dia, plato) {
   if (carrito.length === 0) {
-    carrito.push({dia: menu.getDia(), platos: [{plato, cant: 1}]});
+    carrito.push({dia: dia, platos: [{plato, cant: 1}]});
   } else {
     let estaDia = false;
     let estaPlato = false;
     let posMenu = 0;
     let posPlato = 0;
     carrito.forEach((menuExistente, indexMenu) => {
-      if (menu.getDia() === menuExistente.dia) {
+      if (dia === menuExistente.dia) {
         estaDia = true;
         posMenu = indexMenu;
         menuExistente.platos.forEach((platoExistente, indexPlato) => {
@@ -106,7 +123,7 @@ function agregarAlCarrito(menu, plato) {
         });
       }
       if (!estaDia && indexMenu === carrito.length - 1) {
-        carrito.push({dia: menu.getDia(), platos: [{plato, cant: 1}]});
+        carrito.push({dia: dia, platos: [{plato, cant: 1}]});
       }
     });
     if (estaDia && estaPlato) {
