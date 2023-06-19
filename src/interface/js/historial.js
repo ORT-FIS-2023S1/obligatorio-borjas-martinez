@@ -1,5 +1,6 @@
 import {resumen} from './data.js';
 
+
 const historialOrdenes = resumen.getOrdenes();
 
 function createHistorialHtml() {
