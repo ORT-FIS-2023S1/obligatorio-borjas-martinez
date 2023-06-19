@@ -1,5 +1,7 @@
-import {carrito} from './data.js';
+import {carrito, alumno, tutor, comedor, ordenes, resumen} from './data.js';
 import Orden from '../../domain/orden.js';
+import {actualizarReservas} from './reservas.js';
+import {createHistorialHtml} from './historial.js';
 
 // carrito = [ {dia: string, platos: [ {plato: plato, cant: num } ]} ]
 // carrito = [ {Lunes, [ {spaggeti, 2}, {hamburguesa , 3} ]} ]
@@ -44,7 +46,7 @@ function createHtmlCarrito() {
                 <div class="d-flex justify-content-end">
                   <!-- Button trigger modal -->
                   <div class="rounded-2 p-2 bg-primary-light me-2">
-                      <div class="primary-color text-center">
+                      <div class=" text-center">
                           <span>Cantidad</span>
                       </div>
                       <div class="d-flex flex-wrap">
@@ -65,16 +67,17 @@ function createHtmlCarrito() {
                         </button>
                       </div>   
                   </div>
-                  <button type="button" class="btn bg-danger" 
+                  <button type="button" class="btn bg-primary-light" 
                     data-bs-toggle="modal" 
                     data-bs-target="#editBtn-${menuDay}-${j}"
                     data-dia="${menuDay}"data-indice="${j}"  
                     data-titulo="${menuPlato[j].plato.getTitulo()}" 
                     data-indice="${j}" 
                     id="btn-delete-menu-${menuDay}-${j}">
-                      <span class="icon-section">
-                          <i class="material-icons">delete</i>
-                      </span>
+                      
+                    <span class="primary-color icon-section">
+                      <i class="material-icons">delete</i>
+                    </span>
                       Eliminar
                   </button>
                 </div>
@@ -83,67 +86,68 @@ function createHtmlCarrito() {
           </div>
         </div>
         <div class="toast-container position-fixed end-0 p-3">
-        <div id="liveToast" 
-            class="toast" 
-            role="alert" 
-            aria-live="assertive" 
-            aria-atomic="true">
-          <div class="toast-header">
-            <strong class="me-auto">Comedor Virtual</strong>
-            <small>11 mins ago</small>
-            <button type="button"
-              class="btn-close"
-              data-bs-dismiss="toast"
-              aria-label="Close">
-            </button>
+          <div id="liveToast=${i}-${j}" 
+              class="toast bg-primary-light" 
+              role="alert" 
+              aria-live="assertive" 
+              aria-atomic="true">
+            <div class="toast-header">
+              <strong class="me-auto">Comedor Virtual</strong>
+              <small>11 mins ago</small>
+              <button type="button"
+                class="btn-close"
+                data-bs-dismiss="toast"
+                aria-label="Close">
+              </button>
+            </div>
+            <div class="toast-body">
+              Pedido realizado con exito
+            </div>
           </div>
-          <div class="toast-body">
-            Menu agregado correctamente
-          </div>
-        </div>
       </div>
 
       <!-- Modal -->
-<div class="modal fade" 
-  id="editBtn-${menuDay}-${j}" 
-  tabindex="-1" aria-labelledby="editBtnLabel" 
-  aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title" id="editBtnLabel">
-          Seguro que quiere eliminar el menu?
-        </h2>
-        <button type="button" class="btn-close" 
-          data-bs-dismiss="modal" 
-          aria-label="Close">
-        </button>
+      <div class="modal fade" 
+        id="editBtn-${menuDay}-${j}" 
+        tabindex="-1" aria-labelledby="editBtnLabel" 
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <p class="modal-title fs-4" id="editBtnLabel">
+                Seguro que quiere eliminar el menu?
+              </p>
+              <button type="button" class="btn-close" 
+                data-bs-dismiss="modal" 
+                aria-label="Close">
+              </button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark" 
+                data-bs-dismiss="modal">
+                  Cerrar
+              </button>
+              <button type="button" 
+                class="btn bg-primary-light" 
+                data-bs-dismiss="modal"
+                id="eliminarMenu-${i}-${j}"
+                data-menu="${i}" data-plato="${j}" >
+                  Eliminar
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-dark" 
-          data-bs-dismiss="modal">
-            Cerrar
-        </button>
-        <button type="button" 
-          class="btn bg-primary-light" 
-          data-bs-dismiss="modal"
-          id="eliminarMenu-${i}-${j}"
-          data-menu="${i}" data-plato="${j}" >
-            Eliminar
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
       `;
     }
   }
   // Boton para enviar el pedido
   html += `
   <div class="d-flex justify-content-end">
-    <button type="button" class="btn btn-primary" id="reaizar-pedido">
+    <button type="button" class="btn bg-primary-light" id="reaizar-pedido">
+      <span class="primary-color icon-section">
+        <i class="material-icons">done</i>
+      </span>
       Realizar pedido
     </button>
   </div>
@@ -192,6 +196,7 @@ function disminuirCant(btnQuitarCant) {
   }
   mostrarCarrito();
 }
+// Funcion para eliminar un plato del carrito
 function eliminarPlato(btnElimModales) {
   const menuId = btnElimModales.split('-');
   const posMenu = menuId[1];
@@ -204,37 +209,67 @@ function eliminarPlato(btnElimModales) {
   mostrarCarrito();
 }
 
-// Funcion para realizar el pedido
-function realizarPedido() {
-  if (carrito.length === 0) {
-    //
-  } else {
-    // Crear el objeto orden
-    const orden = new Orden();
-    // Datos de la orden
-    // this.platos = platos;
-    // this.total = total;
-    // this.metodoPago = metodoPago;
-    // this.fecha = fecha;
-    // this.comedor = comedor;
-    // this.alumno = alumno;
-    // this.tutor = tutor;
-
-    // Agregar los menus al objeto orden
-    for (let i = 0; i < carrito.length; i += 1) {
-      const dia = dias[carrito[i].dia];
-      // orden.console.log(dia);
-      // console.log(carrito[i]);
-    }
-    // Agregar el objeto orden al arreglo de ordenes
-    // ordenes.push(orden);
-    // console.log(ordenes);
-    // Limpiar el carrito
-    carrito = [];
-    // Mostrar el carrito
-    mostrarCarrito();
+// Funcion para calcular el total del carrito
+function calcularTotal(platos) {
+  let total = 0;
+  for (let i = 0; i < platos.length; i += 1) {
+    total += platos[i].getPrecio();
   }
+  return total;
 }
 
+
+function mostrarNotificacion() {
+  console.log('mostrar notificacion');
+  // tomar los id que empiecen con liveToast-
+  const elementsToast = sectionCarrito.querySelectorAll('[id^="liveToast"]');
+  // const toastLiveExample = sectionCarrito.getElementById('liveToast');
+  const toastBoot = bootstrap.Toast.getOrCreateInstance(elementsToast);
+  toastBoot.show();
+};
+
+// Funcion para realizar el pedido
+function realizarPedido() {
+  if (carrito.length > 0) {
+    mostrarNotificacion();
+    // Cada orden contiene un unico dia pero puede tener varios platos
+    // si el plato tiene cantidad > 1 se agrega dos veces el plato a la orden
+    // pero nunca se agrega la cantidad
+    for (let i = 0; i < carrito.length; i += 1) {
+      for (let j = 0; j < carrito[i].platos.length; j += 1) {
+        const orden = new Orden();
+        const plato = [];
+        orden.setDia(dias[carrito[i].dia]);
+        // Si la cantidad es mayor a 1, se agrega todas las veces
+        for (let k = 0; k < carrito[i].platos[j].cant; k += 1) {
+          plato.push(carrito[i].platos[j].plato);
+        }
+        orden.setPlatos(plato);
+        orden.setTotal(calcularTotal(plato));
+        orden.setMetodoPago('Efectivo');
+        orden.setComedor(comedor.getColegio());
+        orden.setAlumno(alumno);
+        orden.setTutor(tutor);
+        // Agregar la orden al array de ordenes
+        ordenes.push(orden);
+      }
+    }
+    resumen.setOrdenes(ordenes);
+    resumen.setTotalGastos(ordenes[0].getTotal());
+
+    // Vaciar el carrito con un pop hasta que este vacio
+    while (carrito.length > 0) {
+      carrito.pop();
+    }
+    // Mostrar el carrito
+    mostrarCarrito();
+    // Mostrar el mensaje de pedido realizado
+    // mostrarMensaje('Pedido realizado con exito', 'success');
+    // Mostar en historial de pedidos
+    actualizarReservas();
+    // Mostrar las reservas
+    createHistorialHtml();
+  }
+}
 
 export {mostrarCarrito};
