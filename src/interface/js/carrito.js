@@ -85,27 +85,6 @@ function createHtmlCarrito() {
             </div>
           </div>
         </div>
-        <div class="toast-container position-fixed end-0 p-3">
-          <div id="liveToast=${i}-${j}" 
-              class="toast bg-primary-light" 
-              role="alert" 
-              aria-live="assertive" 
-              aria-atomic="true">
-            <div class="toast-header">
-              <strong class="me-auto">Comedor Virtual</strong>
-              <small>11 mins ago</small>
-              <button type="button"
-                class="btn-close"
-                data-bs-dismiss="toast"
-                aria-label="Close">
-              </button>
-            </div>
-            <div class="toast-body">
-              Pedido realizado con exito
-            </div>
-          </div>
-      </div>
-
       <!-- Modal -->
       <div class="modal fade" 
         id="editBtn-${menuDay}-${j}" 
@@ -220,18 +199,32 @@ function calcularTotal(platos) {
 
 
 function mostrarNotificacion() {
-  console.log('mostrar notificacion');
-  // tomar los id que empiecen con liveToast-
-  const elementsToast = sectionCarrito.querySelectorAll('[id^="liveToast"]');
-  // const toastLiveExample = sectionCarrito.getElementById('liveToast');
-  const toastBoot = bootstrap.Toast.getOrCreateInstance(elementsToast);
-  toastBoot.show();
+  const htmlNotificacion = `
+  <div id="myToastEl" 
+      class="toast align-items-center position-absolute  top-0 end-0 m-3
+      text-white bg-primary border-0" 
+      role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        Pedido Realizado con exito
+      </div>
+      <button type="button" 
+        class="btn-close btn-close-white me-2 
+        m-auto" data-bs-dismiss="toast" 
+        aria-label="Close">
+      </button>
+    </div>
+  </div>
+  `;
+  sectionCarrito.innerHTML = htmlNotificacion;
+  const myToastEl = document.getElementById('myToastEl');
+  const myToast = bootstrap.Toast.getOrCreateInstance(myToastEl);
+  myToast.show();
 };
 
 // Funcion para realizar el pedido
 function realizarPedido() {
   if (carrito.length > 0) {
-    mostrarNotificacion();
     // Cada orden contiene un unico dia pero puede tener varios platos
     // si el plato tiene cantidad > 1 se agrega dos veces el plato a la orden
     // pero nunca se agrega la cantidad
@@ -256,7 +249,6 @@ function realizarPedido() {
     }
     resumen.setOrdenes(ordenes);
     resumen.setTotalGastos(ordenes[0].getTotal());
-
     // Vaciar el carrito con un pop hasta que este vacio
     while (carrito.length > 0) {
       carrito.pop();
@@ -270,6 +262,7 @@ function realizarPedido() {
     // Mostrar las reservas
     createHistorialHtml();
   }
+  mostrarNotificacion();
 }
 
 export {mostrarCarrito};
