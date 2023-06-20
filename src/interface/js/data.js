@@ -133,10 +133,11 @@ const menuSemanal = [
   menuJueves,
   menuViernes,
 ];
+
 const ordenes = [];
 const orden1 = new Orden(
     [platoVegMartes, platoRegMartes],
-    platoVegMartes.getPrecio(),
+    platoVegMartes.getPrecio()+platoRegMartes.getPrecio(),
     'efectivo',
     'Martes',
     comedor.getNombre(),
@@ -237,4 +238,5 @@ const reserva10 = new Reserva(
 );
 reservas[4].Viernes.push(reserva10);
 
-export {alumno, tutor, comedor, resumen, menuSemanal, ordenes, carrito};
+export {alumno, tutor, comedor, resumen,
+  menuSemanal, ordenes, carrito, reservas};
