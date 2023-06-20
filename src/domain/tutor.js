@@ -53,7 +53,7 @@ class Tutor {
   }
 
   getDinero() {
-    return this.ordenes;
+    return this.dinero;
   }
   setDinero(dinero) {
     this.dinero = dinero;
