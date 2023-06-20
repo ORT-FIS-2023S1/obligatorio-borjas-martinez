@@ -4,6 +4,7 @@ import './editarMenu.js';
 import './historial.js';
 import './menu.js';
 import './reservas.js';
+import './platoDiaHome.js';
 
 // Import our custom CSS
 import '../scss/styles.scss';

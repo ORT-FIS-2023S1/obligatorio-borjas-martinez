@@ -3,6 +3,8 @@ import Orden from '../../domain/orden.js';
 import {actualizarReservas} from './reservas.js';
 import {createHistorialHtml} from './historial.js';
 
+import * as bootstrap from 'bootstrap';
+
 // carrito = [ {dia: string, platos: [ {plato: plato, cant: num } ]} ]
 // carrito = [ {Lunes, [ {spaggeti, 2}, {hamburguesa , 3} ]} ]
 
