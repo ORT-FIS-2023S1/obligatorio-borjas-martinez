@@ -61,14 +61,6 @@ class Comedor {
   setAlumnos(alumnos) {
     this.alumnos = alumnos;
   }
-
-  agregarAlumno(alumno) {
-    this.getAlumnos.push(alumno);
-  }
-
-  agreagarMenu(menu) {
-    this.getCarta.push(menu);
-  }
 }
 
 export default Comedor;

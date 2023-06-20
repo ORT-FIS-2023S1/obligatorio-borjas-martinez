@@ -1,37 +1,35 @@
-// class Reserva {
-//   constructor(platos, diaSemana, comedor, cantidad) {
-//     this.platos = platos;
-//     this.diaSemana = diaSemana;
-//     this.comedor = comedor;
-//     this.cantidad = cantidad;
-//   }
+/* eslint-disable max-len */
+import Reserva from '../reserva';
+import Plato from '../plato';
 
-//   getPlatos() {
-//     return this.platos;
-//   }
-//   setPlatos(platos) {
-//     this.platos = platos;
-//   }
+describe('Reserva', () => {
+  let reserva;
 
-//   getDiaSemana() {
-//     return this.diaSemana;
-//   }
-//   setDiaSemana(diaSemana) {
-//     this.diaSemana = diaSemana;
-//   }
+  beforeEach(() => {
+    reserva = new Reserva([], '', '', 0);
+  });
 
-//   getComedor() {
-//     return this.comedor;
-//   }
-//   setComedor(comedor) {
-//     this.comedor = comedor;
-//   }
-//   getCantidad() {
-//     return this.cantidad;
-//   }
-//   setCantidad(cantidad) {
-//     this.cantidad = cantidad;
-//   }
-// }
+  test('Debería obtener los platos correctamente', () => {
+    const platos = [[new Plato('Regular', 'Hamburguesa', 'Hamburguesa de carne fresca', 250, '')]];
+    reserva.setPlatos(platos);
+    expect(reserva.getPlatos()).toEqual(platos);
+  });
 
-// export default Reserva;
+  test('Debería establecer y obtener el día de la semana correctamente', () => {
+    const diaSemana = 'Lunes';
+    reserva.setDiaSemana(diaSemana);
+    expect(reserva.getDiaSemana()).toEqual(diaSemana);
+  });
+
+  test('Debería establecer y obtener el comedor correctamente', () => {
+    const comedor = 'Comedor Centro';
+    reserva.setComedor(comedor);
+    expect(reserva.getComedor()).toEqual(comedor);
+  });
+
+  test('Debería establecer y obtener la cantidad correctamente', () => {
+    const cantidad = 2;
+    reserva.setCantidad(cantidad);
+    expect(reserva.getCantidad()).toEqual(cantidad);
+  });
+});

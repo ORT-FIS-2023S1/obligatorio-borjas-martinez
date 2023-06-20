@@ -1,38 +1,34 @@
-// class Resumen {
-//   constructor(ordenes, totalGastos, alumno, tutor) {
-//     this.ordenes = ordenes;
-//     this.totalGastos = totalGastos;
-//     this.alumno = alumno;
-//     this.tutor = tutor;
-//   }
+/* eslint-disable max-len */
+import Resumen from '../resumen';
 
-//   getOrdenes() {
-//     return this.ordenes;
-//   }
-//   setOrdenes(ordenes) {
-//     this.ordenes = ordenes;
-//   }
+describe('Resumen', () => {
+  let resumen;
 
-//   getTotalGastos() {
-//     return this.totalGastos;
-//   }
-//   setTotalGastos(totalGastos) {
-//     this.totalGastos = totalGastos;
-//   }
+  beforeEach(() => {
+    resumen = new Resumen([], 0, '', '');
+  });
 
-//   getAlumno() {
-//     return this.alumno;
-//   }
-//   setAlumno(alumno) {
-//     this.alumno = alumno;
-//   }
+  test('Debería obtener las órdenes correctamente', () => {
+    const ordenes = ['Orden 1'];
+    resumen.setOrdenes(ordenes);
+    expect(resumen.getOrdenes()).toEqual(ordenes);
+  });
 
-//   getTutor() {
-//     return this.tutor;
-//   }
-//   setTutor(tutor) {
-//     this.tutor = tutor;
-//   }
-// }
+  test('Debería establecer y obtener el total de gastos correctamente', () => {
+    const totalGastos = 1500;
+    resumen.setTotalGastos(totalGastos);
+    expect(resumen.getTotalGastos()).toEqual(totalGastos);
+  });
 
-// export default Resumen;
+  test('Debería establecer y obtener el alumno correctamente', () => {
+    const alumno = 'Juan';
+    resumen.setAlumno(alumno);
+    expect(resumen.getAlumno()).toEqual(alumno);
+  });
+
+  test('Debería establecer y obtener el tutor correctamente', () => {
+    const tutor = 'María';
+    resumen.setTutor(tutor);
+    expect(resumen.getTutor()).toEqual(tutor);
+  });
+});

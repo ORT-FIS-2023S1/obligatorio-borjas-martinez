@@ -1,45 +1,43 @@
-// class Plato {
-//   constructor(tipo, titulo, descripcion, precio, imagen) {
-//     this.tipo = tipo;
-//     this.titulo = titulo;
-//     this.descripcion = descripcion;
-//     this.precio = precio;
-//     this.imagen = imagen;
-//   }
+/* eslint-disable max-len */
+import Plato from '../plato';
 
-//   getTipo() {
-//     return this.tipo;
-//   }
-//   setTipo(tipo) {
-//     this.tipo = tipo;
-//   }
+describe('Plato', () => {
+  let plato;
 
-//   getTitulo() {
-//     return this.titulo;
-//   }
-//   setTitulo(titulo) {
-//     this.titulo = titulo;
-//   }
+  beforeEach(() => {
+    plato = new Plato('', '', '', 0, '');
+  });
 
-//   getDescripcion() {
-//     return this.descripcion;
-//   }
-//   setDescripcion(descripcion) {
-//     this.descripcion = descripcion;
-//   }
+  test('Debería obtener el tipo correctamente', () => {
+    const tipo = 'Vegetariano';
+    plato.setTipo(tipo);
+    expect(plato.getTipo()).toEqual(tipo);
+  });
 
-//   getPrecio() {
-//     return this.precio;
-//   }
-//   setPrecio(precio) {
-//     this.precio = precio;
-//   }
+  test('Debería establecer y obtener el título correctamente', () => {
+    const titulo = 'Ensalada César';
+    plato.setTitulo(titulo);
 
-//   getImagen() {
-//     return this.imagen;
-//   }
-//   setImagen(imagen) {
-//     this.imagen = imagen;
-//   }
-// }
-// export default Plato;
+    expect(plato.getTitulo()).toEqual(titulo);
+  });
+
+  test('Debería establecer y obtener la descripción correctamente', () => {
+    const descripcion = 'Deliciosa ensalada con pollo, lechuga, crutones y aderezo';
+    plato.setDescripcion(descripcion);
+
+    expect(plato.getDescripcion()).toEqual(descripcion);
+  });
+
+  test('Debería establecer y obtener el precio correctamente', () => {
+    const precio = 300;
+    plato.setPrecio(precio);
+
+    expect(plato.getPrecio()).toEqual(precio);
+  });
+
+  test('Debería establecer y obtener la imagen correctamente', () => {
+    const imagen = 'imagen.jpg';
+    plato.setImagen(imagen);
+    expect(plato.getImagen()).toEqual(imagen);
+  });
+});

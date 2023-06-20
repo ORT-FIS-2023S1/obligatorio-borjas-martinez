@@ -1,63 +1,52 @@
-// class Tutor {
-//   constructor(nombre, apellido, telefono, direccion, alumno, ordenes,
-//       dinero) {
-//     this.nombre = nombre;
-//     this.apellido = apellido;
-//     this.telefono = telefono;
-//     this.direccion = direccion;
-//     this.alumno = alumno;
-//     this.ordenes = ordenes;
-//     this.dinero = dinero;
-//   }
+/* eslint-disable max-len */
+import Tutor from '../tutor';
 
-//   getNombre() {
-//     return this.nombre;
-//   }
-//   setNombre(nombre) {
-//     this.nombre = nombre;
-//   }
+describe('Tutor', () => {
+  let tutor;
 
-//   getApellido() {
-//     return this.apellido;
-//   }
-//   setApellido(apellido) {
-//     this.apellido = apellido;
-//   }
+  beforeEach(() => {
+    tutor = new Tutor('', '', '', '', '', [], 0);
+  });
 
-//   getTelefono() {
-//     return this.telefono;
-//   }
-//   setTelefono(telefono) {
-//     this.telefono = telefono;
-//   }
+  test('Debería obtener el nombre correctamente', () => {
+    const nombre = 'Juan';
+    tutor.setNombre(nombre);
+    expect(tutor.getNombre()).toEqual(nombre);
+  });
 
-//   getDireccion() {
-//     return this.direccion;
-//   }
-//   setDireccion(direccion) {
-//     this.direccion = direccion;
-//   }
+  test('Debería establecer y obtener el apellido correctamente', () => {
+    const apellido = 'Pérez';
+    tutor.setApellido(apellido);
+    expect(tutor.getApellido()).toEqual(apellido);
+  });
 
-//   getAlumno() {
-//     return this.alumno;
-//   }
-//   setAlumno(alumno) {
-//     this.alumno = alumno;
-//   }
+  test('Debería establecer y obtener el teléfono correctamente', () => {
+    const telefono = '099876543';
+    tutor.setTelefono(telefono);
+    expect(tutor.getTelefono()).toEqual(telefono);
+  });
 
-//   getOrdenes() {
-//     return this.ordenes;
-//   }
-//   setOrdenes(ordenes) {
-//     this.ordenes = ordenes;
-//   }
+  test('Debería establecer y obtener la dirección correctamente', () => {
+    const direccion = 'Mercedes 1234';
+    tutor.setDireccion(direccion);
+    expect(tutor.getDireccion()).toEqual(direccion);
+  });
 
-//   getDinero() {
-//     return this.ordenes;
-//   }
-//   setDinero(dinero) {
-//     this.dinero = dinero;
-//   }
-// }
+  test('Debería establecer y obtener el alumno correctamente', () => {
+    const alumno = 'María';
+    tutor.setAlumno(alumno);
+    expect(tutor.getAlumno()).toEqual(alumno);
+  });
 
-// export default Tutor;
+  test('Debería obtener las órdenes correctamente', () => {
+    const ordenes = ['Orden 1', 'Orden 2'];
+    tutor.setOrdenes(ordenes);
+    expect(tutor.getOrdenes()).toEqual(ordenes);
+  });
+
+  test('Debería establecer y obtener el dinero correctamente', () => {
+    const dinero = 900;
+    tutor.setDinero(dinero);
+    expect(tutor.getDinero()).toEqual(dinero);
+  });
+});
