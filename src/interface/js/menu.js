@@ -1,6 +1,9 @@
 import {menuSemanal, carrito} from './data.js';
 import {mostrarCarrito} from './carrito.js';
 
+// Import all of Bootstrap's JS
+import * as bootstrap from 'bootstrap';
+
 // Asigno un numero a cada dia de la semana siendo lunes el 0
 const dias = {
   Lunes: 0,

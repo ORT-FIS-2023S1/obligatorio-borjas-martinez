@@ -1,3 +1,13 @@
+import './carrito.js';
+import './data.js';
+import './editarMenu.js';
+import './historial.js';
+import './menu.js';
+import './reservas.js';
+
+// Import our custom CSS
+import '../scss/styles.scss';
+
 // esperar a que cargue el DOM
 document.addEventListener('DOMContentLoaded', () => {
   // Ocultar todas las secciones excepto la sección "home" al cargar la página
