@@ -1,8 +1,9 @@
 import Plato from '../../domain/plato.js';
 import {menuSemanal} from './data.js';
+import {actualizarMenuSemanal} from './menu.js';
 
 // Función para armar el html del menu semanal
-function createHtmlMenuSemanal(menuSemanal) {
+function createHtmlMenuSemanalToEdit() {
   let html = '';
   html += `
   <!-- Botón para agregar un nuevo plato -->
@@ -116,16 +117,21 @@ function createHtmlMenuSemanal(menuSemanal) {
                         </span>  
                         Editar
                     </button>
+
                     <button type="button" class="btn bg-primary-light" 
+                      data-bs-toggle="modal" 
+                      data-bs-target="#deleteBtn-${menuDay}-${j}"
                       data-dia="${menuDay}"  
                       data-titulo="${menuPlatos[j].getTitulo()}" 
                       data-indice="${j}" 
-                      id="btn-delete-menu-${menuDay}-${j}">
+                      id="eliminarMenu-${i}-${j}"
+                      >
                         <span class="primary-color icon-section">
                             <i class="material-icons">delete</i>
                         </span>
                         Eliminar
                     </button>
+
                   </div>
                 </div>
                 <!-- Modal -->
@@ -207,13 +213,49 @@ function createHtmlMenuSemanal(menuSemanal) {
                               data-bs-dismiss="modal" 
                               id="btn-save-menu-${menuDay}-${j}" 
                               data-indice="${j}" data-dia="${menuDay}" 
-                              data-titulo="${menuPlatos[j].getTitulo()}">
-                                Guardar Cambios
+                              data-titulo="${menuPlatos[j].getTitulo()}"
+                            >
+                              Guardar Cambios
                             </button>
                           </div>
                         </div>
                       </div>
                   </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade"
+          id="deleteBtn-${menuDay}-${j}" 
+          tabindex="-1" aria-labelledby="editBtnLabel" 
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <p class="modal-title fs-4" id="editBtnLabel">
+                  Seguro que quiere eliminar el menu?
+                </p>
+                <button type="button" class="btn-close" 
+                  data-bs-dismiss="modal" 
+                  aria-label="Close">
+                </button>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" 
+                  data-bs-dismiss="modal">
+                    Cerrar
+                </button>
+                <button type="button" 
+                  class="btn bg-primary-light" 
+                  data-bs-dismiss="modal"
+                  id="btn-delete-menu-${menuDay}-${j}"
+                  data-dia="${menuDay}"  
+                  data-titulo="${menuPlatos[j].getTitulo()}" 
+                  data-indice="${j}" 
+                  data-menu="${i}" data-plato="${j}" >
+                    Eliminar
+                </button>
               </div>
             </div>
           </div>
@@ -267,7 +309,8 @@ function handleAgregarPlato() {
 
   // Agregar el plato al menu semanal correspondiente al dia
   document.querySelector('#editar-menu-semanal').innerHTML =
-    createHtmlMenuSemanal(menuSemanal);
+  createHtmlMenuSemanalToEdit();
+  actualizarMenuSemanal();
 }
 
 function handleSaveMenu(button) {
@@ -280,7 +323,8 @@ function handleSaveMenu(button) {
   updateMenuSemanal(menu, plato);
 
   document.querySelector('#editar-menu-semanal').innerHTML =
-      createHtmlMenuSemanal(menuSemanal);
+  createHtmlMenuSemanalToEdit();
+  actualizarMenuSemanal();
 }
 
 function handleDeleteMenu(button) {
@@ -291,13 +335,15 @@ function handleDeleteMenu(button) {
 
   menu.deletePlato(plato);
   document.querySelector('#editar-menu-semanal').innerHTML =
-    createHtmlMenuSemanal(menuSemanal);
+  createHtmlMenuSemanalToEdit();
+  actualizarMenuSemanal();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   const sectionEditMenu = document.querySelector('#editar-menu-semanal');
   sectionEditMenu.innerHTML =
-    createHtmlMenuSemanal(menuSemanal);
+  createHtmlMenuSemanalToEdit();
+  actualizarMenuSemanal();
 
   // Escuchar el evento click en el documento
   sectionEditMenu.addEventListener('click', (event) => {

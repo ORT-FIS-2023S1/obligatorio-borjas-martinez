@@ -33,6 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Funcion para actualizar menu from edit menu
+function actualizarMenuSemanal() {
+  const selectMenu = document.querySelector('#menu-semanal');
+  selectMenu.innerHTML = createHtmlMenuSemanal();
+}
+
 // Función para armar el html del menu semanal
 function createHtmlMenuSemanal() {
   let html = '';
@@ -43,29 +49,29 @@ function createHtmlMenuSemanal() {
     html += `<h1 class="text-start mt-3">${menuDay}</h1>`;
     for (let j = 0; j < menuPlatos.length; j++) {
       html +=
-        `<div class="card mb-3">
+        `<div class="card mb-2">
           <div class="row g-0">
             <div class="col-md-2">
               <img src="${menuPlatos[j].getImagen()}" 
                 class="img-fluid rounded-start" alt="...">
             </div>
-            <div class="col-md-8">
+            <div class="col-md-10">
               <div class="card-body">
-                <h5 class="card-title">${menuPlatos[j].getTitulo()}</h5>
+                <p class="card-title fs-4">${menuPlatos[j].getTitulo()}</p>
                 <p class="card-text">${menuPlatos[j].getDescripcion()}</p>
                 <div class="d-flex justify-content-between">
                   <span class="fs-2">
                     $ ${menuPlatos[j].getPrecio()}
                   </span>
                   <button id="agregarPlato-${i}-${j}"
-                  data-plato="${menuPlatos[j].getTitulo()}"
-                  data-dia="${menuDay}"
-                    type="button" 
-                    class="btn bg-primary-light">
-                      <span class="primary-color icon-section">
-                        <i class="material-icons">shopping_cart</i>
-                      </span>
-                      Agregar al carrito
+                    data-plato="${menuPlatos[j].getTitulo()}"
+                    data-dia="${menuDay}"
+                      type="button" 
+                      class="btn bg-primary-light">
+                        <span class="primary-color icon-section">
+                          <i class="material-icons">shopping_cart</i>
+                        </span>
+                        Agregar al carrito
                   </button>
                 </div>
               </div>
@@ -73,23 +79,23 @@ function createHtmlMenuSemanal() {
           </div>
         </div>
         <div class="toast-container position-fixed top-0 end-0 p-3">
-        <div id="liveToast" 
-            class="toast" 
-            role="alert" 
-            aria-live="assertive" 
-            aria-atomic="true">
-          <div class="toast-header">
-            <strong class="me-auto">Comedor Virtual</strong>
-            <button type="button"
-              class="btn-close"
-              data-bs-dismiss="toast"
-              aria-label="Close">
-            </button>
+          <div id="liveToast" 
+              class="toast bg-primary-light" 
+              role="alert" 
+              aria-live="assertive" 
+              aria-atomic="true">
+            <div class="toast-header">
+              <strong class="me-auto">Comedor Virtual</strong>
+              <button type="button"
+                class="btn-close"
+                data-bs-dismiss="toast"
+                aria-label="Close">
+              </button>
+            </div>
+            <div class="toast-body">
+              Menu agregado correctamente
+            </div>
           </div>
-          <div class="toast-body">
-            Menu agregado correctamente
-          </div>
-        </div>
       </div>
       `;
     }
@@ -136,3 +142,5 @@ function agregarAlCarrito(dia, plato) {
   mostrarNotificacion();
   mostrarCarrito();
 };
+
+export {actualizarMenuSemanal, agregarAlCarrito};

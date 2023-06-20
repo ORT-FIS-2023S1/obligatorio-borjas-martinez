@@ -133,10 +133,11 @@ const menuSemanal = [
   menuJueves,
   menuViernes,
 ];
+
 const ordenes = [];
 const orden1 = new Orden(
     [platoVegMartes, platoRegMartes],
-    platoVegMartes.getPrecio(),
+    platoVegMartes.getPrecio()+platoRegMartes.getPrecio(),
     'efectivo',
     'Martes',
     comedor.getNombre(),
