@@ -1,8 +1,8 @@
 import {resumen} from './data.js';
 
-const historialOrdenes = resumen.getOrdenes();
-
 function createHistorialHtml() {
+  const historialOrdenes = resumen.getOrdenes();
+
   const historialOrdenesContainer =
   document.querySelector('#historial-compras');
   historialOrdenesContainer.innerHTML = '';
@@ -44,3 +44,4 @@ function createHistorialHtml() {
 document.addEventListener('DOMContentLoaded', createHistorialHtml);
 
 
+export {createHistorialHtml};
