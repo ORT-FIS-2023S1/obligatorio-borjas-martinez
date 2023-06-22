@@ -10,6 +10,7 @@
   También se pueden configurar plugins como es el caso de `"html-webpack-plugin": "^5.5.3"` que se encuentra presente en nuestras dependencias. Éste, simplifica la generación y la gestión de archivos HTML en el proceso de construcción de una aplicación web, es decir,  inserta de forma automática las etiquetas `<script>` y `<link>` necesarias en el archivo HTML para cargar los archivos JavaScript y CSS generados por Webpack.
   Para el manejo de webpack utilizamos la dependencia `"webpack-cli": "^5.1.4"` (interfaz de línea de comandos o CLI en inglés) que es una herramienta complementaria que facilita la ejecución de comandos relacionados con la construcción y el empaquetado de proyectos. En nuestro caso `npm run start` corre el comando `webpack-cli serve` que inicia un servidor de desarrollo para servir la aplicación y recargar automáticamente los cambios en tiempo real durante el desarrollo, esto lo hace en conjunto con `"webpack-dev-server": "^4.15.1"` que permite ejecutar una instancia del servidor web. Cuando se ejecuta, el servidor sirve los archivos estáticos generados por Webpack en la memoria, lo que resulta en tiempos de carga más rápidos y facilita el desarrollo iterativo. Y por ultimo `npm run build` ejecuta `webpack build --mode=production` que se utiliza para ejecutar el proceso de construcción de Webpack en modo de producción.
   Ademas, para integrar toda la aplicación con webpack utilizamos módulos como `"sass-loader": "^13.3.2"` que nos permite cargar y compilar archivos Sass o SCSS, `"style-loader": "^3.3.3"` que permite que los estilos CSS o SCSS definidos en archivos separados se cargan dinámicamente en el navegador mediante la inyección de etiquetas `<style>` en el DOM, `"postcss-loader": "^7.3.3"` para que estos archivos de estilos mencionados anteriormente sean procesados por PostCSS primero y `"css-loader": "^6.8.1"` que hace que los archivos CSS se procesen y se conviertan en un módulo JavaScript que contiene el código CSS correspondiente para facilitar la integración.
+  <link href="bootstrap"></link>
 - #### Bootstrap `5.3.0`
   Para darle estilos a nuestro HTML utilizamos Bootstrap, que ademas de ser un gran framework de css, era un requerimiento de la letra de este proyecto. Este framework, es de código abierto y es ampliamente utilizado para el desarrollo de sitios web y aplicaciones web responsivas. Fue creado por Twitter y ahora es mantenido por la comunidad. Proporciona una colección de herramientas, estilos predefinidos y componentes de interfaz de usuario que facilitan la creación de interfaces web modernas y atractivas. El objetivo principal de Bootstrap es agilizar el proceso de diseño y desarrollo. Ademas, para tener un mejor manejo de nuestros propios estilos utilizamos  `"sass": "^1.63.4"`, una extension de CSS que agrega características y funcionalidades adicionales como Variables y Anidamiento de reglas. Su finalidad es  extender las capacidades de CSS con estas características y otras mas, y `"autoprefixer": "^10.4.14"` que es una herramienta para que CSS funciones en versiones antiguas de navegadores.
   En conjunto con bootstrap también utilizamos la dependencia `"@popperjs/core": "^2.11.8"` para controlar la posición de elementos emergentes, como menús desplegables, tooltips (información sobre herramientas) y popovers.
@@ -20,9 +21,25 @@
 
 
 ## Interfaz de usuario
+  Para desarrollar la interfaz de usuario nos fue de gran ayuda el framework bootstrap ([ver documentación](#bootstrap-530)) para que sea responsive. Se adapta a pantallas de dispositivos mobile como de escritorio.
+  La interfaz cumple con los principios de accesibilidad WCAG. En la siguiente imagen se puede apreciar una evaluacion hecha por la extension WAVE.
+![Accesibilidad](./anexo/img/web-accessibility-wave.png?raw=true "Accesibilidad")
 
 ## Codificación
 
+Para la codificación se utilizó Visual Studio Code (IDE) y se siguieron los estándares de codificación establecidos por Google para HTML, CSS y JavaScript que fueron validados por ESLint ([ver docuemntacion](#eslint-8410)).
+Se priorizo el uso de buenas prácticas de programación separando el Dominio de la Interfaz. Para la parte de Dominio se utilizó OOP y las clases desarrolladas fueron:
+- comedor.js
+- menu.js
+- orden.js
+- plato.js
+- reserva.js
+- resumen.js
+- tutor.js
 ## Test unitario
-
+Los test unitarios fueron realizados con Jest ([ver documentación](#jest-2950)). Realizamos un test por clase y se logró un 100% de cobertura que se puede observar en la siguiente imagen.
+<img src="./anexo/img/test-unitarios-jest.png" style="max-width: 600px;">
 ## Reflexión
+- #### Sebastian Borjas
+  
+
