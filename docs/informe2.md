@@ -40,6 +40,8 @@ Se priorizo el uso de buenas prácticas de programación separando el Dominio de
   Los test unitarios fueron realizados con Jest ([ver documentación](#jest-2950)). Realizamos un test por clase y se logró un 100% de cobertura que se puede observar en la siguiente imagen.
   
 ![Test unitarios](./anexo/img/test-unitarios-jest.png "test unitarios")
+## Reporte de Issues
+Serán reportados en la sección Issues de Github.
 ## Reflexión
 - #### Sebastian Borjas
   Me pareció muy interesante haber realizado este proyecto. Es la primera vez que realizo uno aplicando los fundamentos de ingeniería de software y esto me hizo descubrir la importancia de aplicar de forma correcta todos los principios. Es interesante ver como al pasar por todas las etapas el proyecto va tomando forma. Algunas tecnologías ya las conocía pero para documentarlas tuve que profundizar mi conocimiento y las otras que no tuve que aprenderlas lo cual resultó desde mi punto de vista una actividad muy enriquecedora.
