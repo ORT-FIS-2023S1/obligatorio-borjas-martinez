@@ -21,13 +21,13 @@
 
 
 ## Interfaz de usuario
-  Para desarrollar la interfaz de usuario nos fue de gran ayuda el framework bootstrap ([ver documentación](#bootstrap-530)) para que sea responsive. Se adapta a pantallas de dispositivos mobile como de escritorio.
-  La interfaz cumple con los principios de accesibilidad WCAG. En la siguiente imagen se puede apreciar una evaluacion hecha por la extension WAVE.
+  Para desarrollar la interfaz de usuario nos fue de gran ayuda el framework bootstrap ([ver documentación](#bootstrap-530)) para que sea responsiva. Se adapta a pantallas de dispositivos mobile como de escritorio.
+  La interfaz cumple con los principios de accesibilidad WCAG. En la siguiente imagen se puede apreciar una evaluación hecha por la extension WAVE.
 ![Accesibilidad](./anexo/img/web-accessibility-wave.png?raw=true "Accesibilidad")
 
 ## Codificación
 
-Para la codificación se utilizó Visual Studio Code (IDE) y se siguieron los estándares de codificación establecidos por Google para HTML, CSS y JavaScript que fueron validados por ESLint ([ver docuemntacion](#eslint-8410)).
+Para la codificación se utilizó Visual Studio Code (IDE) y se siguieron los estándares de codificación establecidos por Google para HTML, CSS y JavaScript que fueron validados por ESLint ([ver documentación](#eslint-8410)).
 Se priorizo el uso de buenas prácticas de programación separando el Dominio de la Interfaz. Para la parte de Dominio se utilizó OOP y las clases desarrolladas fueron:
 - comedor.js
 - menu.js
@@ -41,5 +41,5 @@ Los test unitarios fueron realizados con Jest ([ver documentación](#jest-2950))
 <img src="./anexo/img/test-unitarios-jest.png" style="max-width: 600px;">
 ## Reflexión
 - #### Sebastian Borjas
-  
-
+  Me pareció muy interesante haber realizado este proyecto. Es la primera vez que realizo uno aplicando los fundamentos de ingeniería de software y esto me hizo descubrir la importancia de aplicar de forma correcta todos los principios. Es interesante ver como al pasar por todas las etapas el proyecto va tomando forma. Algunas tecnologías ya las conocía pero para documentarlas tuve que profundizar mi conocimiento y las otras que no tuve que aprenderlas lo cual resultó desde mi punto de vista una actividad muy enriquecedora.
+  Mi aporte en esta parte del proyecto fue en la instalación de dependencias y configuración, en el desarrollo de las clases del dominio, en el desarrollo de la interfaz y en el los test unitarios. En conclusión creo que fue de gran ayuda este proyecto para entender los fundamentos y su importancia, y espero que el conocimiento obtenido me ayude en el futuro.
