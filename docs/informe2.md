@@ -37,7 +37,8 @@ Se priorizo el uso de buenas prácticas de programación separando el Dominio de
 - resumen.js
 - tutor.js
 ## Test unitario
-Los test unitarios fueron realizados con Jest ([ver documentación](#jest-2950)). Realizamos un test por clase y se logró un 100% de cobertura que se puede observar en la siguiente imagen.
+  Los test unitarios fueron realizados con Jest ([ver documentación](#jest-2950)). Realizamos un test por clase y se logró un 100% de cobertura que se puede observar en la siguiente imagen.
+  
 ![Test unitarios](./anexo/img/test-unitarios-jest.png "test unitarios")
 ## Reflexión
 - #### Sebastian Borjas
