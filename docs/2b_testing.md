@@ -79,7 +79,7 @@ Proyecto asignado: [link](https://github.com/ORT-FIS-2023S1/obligatorio-techera-
         - Nombre y Apellido del Comensal: "Juan Pérez"
         - Menú Deseado: "Café con leche"
         - Información Adicional: "Café sin azúcar"
-    7. Observar si la interfaz del sistema proporciona una opción para agregar más de una unidad del mismo plato en la misma orden.
+    7. Agregar pedido y confirmar que se ha agregado correctamente.
   
     **Resultado esperado:**
     - La interfaz del sistema debe proporcionar una opción para agregar más de una unidad del mismo plato en la misma orden al realizar el registro de un pedido.
@@ -96,6 +96,39 @@ Proyecto asignado: [link](https://github.com/ORT-FIS-2023S1/obligatorio-techera-
     **Observaciones:**
       - Actualmente, la interfaz del sistema no proporciona una opción para agregar más de una unidad del mismo plato en la misma orden al realizar el registro de un pedido. Este inconveniente limita la flexibilidad del usuario al no permitirle especificar la cantidad deseada de un plato.
       - Esta limitación afecta la usabilidad del sistema, ya que obliga al usuario a realizar múltiples pedidos si desea solicitar varias unidades del mismo plato. Esto resulta incómodo y puede generar confusión al gestionar las diferentes órdenes.
+    ---
+
+  - Caso de Prueba 3: **Issue 3:** No se puede agregar platos diferentes en un mismo pedido al Registrar un Pedido.
+  
+    **Descripción:**
+    Verificar si el sistema permite agregar otros platos diferentes en un mismo pedido al realizar el registro de un pedido.
+    
+    **Pasos:**
+    1. Ingresar a la aplicación en Google Chrome versión 114.0.5735.133.
+    2. Iniciar sesión con credenciales válidas de administrador.
+    3. Navegar a la sección de "Administrar pedidos".
+    4. Hacer clic en el botón "Registrar Pedido".
+    5. Realizar un nuevo pedido con los siguientes datos:
+        - Nombre y Apellido del Comensal: "Juan Pérez"
+        - Menú Deseado: "Café con leche"
+        - Información Adicional: "Café sin azúcar"
+    7. Agregar pedido y confirmar que se ha agregado correctamente.
+  
+    **Resultado esperado:**
+    - La interfaz del sistema debe proporcionar una opción para agregar otros platos diferentes en un mismo pedido al realizar el registro de un pedido.
+
+    **Datos de prueba:**
+    - Nombre y Apellido del Comensal: "Juan Pérez"
+    - Menú Deseado: "Café con leche"
+    - Información Adicional: "Café sin azúcar"
+
+    **Entorno de prueba:**
+    - Sistema Operativo: Windows 11
+    - Navegador: Google Chrome Versión 114.0.5735.133 (Official Build) (64-bit)
+
+    **Observaciones:**
+      - La interfaz del sistema no ofrece la opción de agregar otros platos diferentes en la misma orden al realizar el registro de un pedido. Esta restricción impide al usuario combinar varios platos en un solo pedido, lo cual es una limitación significativa en términos de usabilidad y conveniencia.
+      - Al no poder agregar diferentes platos en una misma orden, los usuarios se ven obligados a realizar pedidos separados para cada plato, lo que puede resultar confuso y poco eficiente, especialmente cuando desean solicitar una variedad de opciones de menú.
     ---
 
   #### Sesiones de Testing exploratorio
