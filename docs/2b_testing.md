@@ -7,14 +7,17 @@ Proyecto asignado: [link](https://github.com/ORT-FIS-2023S1/obligatorio-techera-
   - **Issue 1:** No hay validación al agregar un plato ya existente.
     **Severidad:** Moderado
 
-  - **Issue 2:** No se puede agregar mas de una unidad por orden.
+  - **Issue 2:** No se puede agregar mas de una unidad al Registrar un Pedido.
   **Severidad:** Baja
 
-  - **Issue 3:** No hay validación al agregar un grupo que ya existente.
+  - **Issue 3:** No se puede agregar platos diferentes en un mismo pedido al Registrar un Pedido.
+  **Severidad:** Baja
+
+  - **Issue 4:** No hay validación al agregar un grupo que ya existente.
     **Severidad:** Moderado
   
   #### Problemas de usabilidad
-  - **Issue 4:** Botón en realizar pedido no es visible por el pie de página.
+  - **Issue 5:** Botón en realizar pedido no es visible por el pie de página.
   **Severidad:** Importante
 
   #### Casos de prueba generados:
