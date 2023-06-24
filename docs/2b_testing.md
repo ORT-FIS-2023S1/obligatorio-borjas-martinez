@@ -63,6 +63,41 @@ Proyecto asignado: [link](https://github.com/ORT-FIS-2023S1/obligatorio-techera-
       - Se debe verificar que el sistema realiza una validación adecuada al agregar un nuevo plato para evitar duplicados en la base de datos del sistema.
       - Se recomienda que el campo “Tamaño de la porción” sea una selección de opciones descriptivas (por ejemplo, “Chica”, “Mediana”, “Grande”) en lugar de permitir cualquier número. Esto puede mejorar la usabilidad y la claridad de los datos ingresados.
     ---
+  
+
+  - Caso de Prueba 2: **Issue 2:** No se puede agregar mas de una unidad al Registrar un Pedido.
+  
+    **Descripción:**
+    Verificar si el sistema permite agregar más de una unidad del mismo plato al realizar el registro de un pedido.
+    
+    **Pasos:**
+    1. Ingresar a la aplicación en Google Chrome versión 114.0.5735.133.
+    2. Iniciar sesión con credenciales válidas de administrador.
+    3. Navegar a la sección de "Administrar pedidos".
+    4. Hacer clic en el botón "Registrar Pedido".
+    5. Realizar un nuevo pedido con los siguientes datos:
+        - Nombre y Apellido del Comensal: "Juan Pérez"
+        - Menú Deseado: "Café con leche"
+        - Información Adicional: "Café sin azúcar"
+    7. Observar si la interfaz del sistema proporciona una opción para agregar más de una unidad del mismo plato en la misma orden.
+  
+    **Resultado esperado:**
+    - La interfaz del sistema debe proporcionar una opción para agregar más de una unidad del mismo plato en la misma orden al realizar el registro de un pedido.
+
+    **Datos de prueba:**
+    - Nombre y Apellido del Comensal: "Juan Pérez"
+    - Menú Deseado: "Café con leche"
+    - Información Adicional: "Café sin azúcar"
+
+    **Entorno de prueba:**
+    - Sistema Operativo: Windows 11
+    - Navegador: Google Chrome Versión 114.0.5735.133 (Official Build) (64-bit)
+
+    **Observaciones:**
+      - Actualmente, la interfaz del sistema no proporciona una opción para agregar más de una unidad del mismo plato en la misma orden al realizar el registro de un pedido. Este inconveniente limita la flexibilidad del usuario al no permitirle especificar la cantidad deseada de un plato.
+      - Esta limitación afecta la usabilidad del sistema, ya que obliga al usuario a realizar múltiples pedidos si desea solicitar varias unidades del mismo plato. Esto resulta incómodo y puede generar confusión al gestionar las diferentes órdenes.
+    ---
+
   #### Sesiones de Testing exploratorio
 <table>
   <tr>
