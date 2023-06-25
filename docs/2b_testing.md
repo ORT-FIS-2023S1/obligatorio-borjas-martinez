@@ -101,3 +101,5 @@ Proyecto asignado: [link](https://github.com/ORT-FIS-2023S1/obligatorio-techera-
 ## Informe de calidad del sistema
 
 ## Reflexión
+ #### Sebastian Borjas
+ Desde mi punto de vista he encontrado la actividad de Testing muy interesante e importante, porque considero que desde la perspectiva de otra persona se encuentran errores o bugs que uno como desarrollador no. El nivel de detalle que poseen los métodos utilizados permiten que los desarrolladores tengan bien claro como se producen los errores y cuales son. Además de ser importante para la corrección de los mismos y mejorar la calidad del código, la objetividad de los reportes hacen que equivocarse sea algo natural y ameno para los desarrolladores. En conclusión, el testing es indispensable en la ingeniería de software y estos ejercicios me han ayudado a visualizarlo.
