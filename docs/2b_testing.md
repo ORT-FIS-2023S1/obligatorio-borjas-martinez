@@ -140,6 +140,42 @@ Proyecto asignado: [link](https://github.com/ORT-FIS-2023S1/obligatorio-techera-
       - Al no poder agregar diferentes platos en una misma orden, los usuarios se ven obligados a realizar pedidos separados para cada plato, lo que puede resultar confuso y poco eficiente, especialmente cuando desean solicitar una variedad de opciones de menú.
     ---
 
+  - Caso de Prueba 4: **Issue 4:** No hay validación al agregar un grupo que ya existente.
+  
+    **Descripción:**
+    Verificar si el sistema valida adecuadamente la duplicación de grupos al intentar agregar un grupo que ya existe durante la creación de un nuevo grupo de comensales.
+    
+    **Pasos:**
+    1. Ingresar a la aplicación en Google Chrome versión 114.0.5735.133.
+    2. Iniciar sesión con credenciales válidas de administrador.
+    3. Navegar a la sección de "Administrar Grupos".
+    4. Hacer clic en el botón "Registrar Nuevo Grupo".
+    5. Realizar el registro de un nuevo grupo con los datos:
+      - Nombre del grupo: "Grupo 1" (un grupo que ya existe en el sistema)
+      - Descripción del grupo: "Este es el grupo 1"
+      - Miembros del grupo: Juan Pérez, María González, Carlos López
+    7. Crear grupo y confirmar que se ha agregado correctamente.
+
+    **Resultado obtenido:**
+    - El sistema permite agregar un grupo sin validar si el nombre del grupo ya existe previamente en el sistema. Esto resulta en la creación de grupos duplicados con el mismo nombre y los mismos miembros.
+  
+    **Resultado esperado:**
+    - El sistema debe validar si el nombre del grupo ingresado ya existe en el sistema y mostrar un mensaje de error indicando que el grupo ya está registrado. No se debe permitir la duplicación de grupos en el sistema.
+
+    **Datos de prueba:**
+      - Nombre del grupo: "Grupo 1" (un grupo que ya existe en el sistema)
+      - Descripción del grupo: "Este es el grupo 1"
+      - Miembros del grupo: Juan Pérez, María González, Carlos López
+
+    **Entorno de prueba:**
+    - Sistema Operativo: Windows 11
+    - Navegador: Google Chrome Versión 114.0.5735.133 (Official Build) (64-bit)
+
+    **Observaciones:**
+      - La falta de validación al agregar un grupo que ya existe puede tener un impacto negativo en la usabilidad del sistema. Al permitir la creación de grupos duplicados, se genera confusión y dificulta la gestión de los grupos, especialmente cuando se tienen dos grupos con el mismo nombre y los mismos miembros.
+      - La repetición de grupos con el mismo nombre y los mismos usuarios puede dificultar la identificación y selección adecuada de los grupos durante el proceso de asignación de comensales.
+      - Esta situación puede llevar a errores en la asignación de comensales a grupos específicos y dificultar la administración y organización de los datos de los comensales.
+    ---
   #### Sesiones de Testing exploratorio
 <table>
   <tr>
