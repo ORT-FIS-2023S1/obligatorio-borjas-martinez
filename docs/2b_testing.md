@@ -303,7 +303,14 @@ Proyecto asignado: [link](https://github.com/ORT-FIS-2023S1/obligatorio-techera-
   </tr>
 </table>
    
-## Informe de calidad del sistema
+## Informe global de la calidad del sistema
+Los métodos de testing aplicados nos han permitido descubrir algunos errores en el sistema. Solo uno de ellos es de severidad importante ya que no permite el correcto desarrollo del flujo esperado. Esto quiere decir el sistema se encuentra estable pero se deberían tratar de resolver los problemas encontrados.
+Lo que respecta a la usabilidad, debemos advertir que el menu de la barra lateral presenta algunas inconsistencias y no permite un uso natural e intuitivo. Algunas opciones no están disponibles pero no es notable hasta que se quiere acceder. No hay un botón de inicio ni una sección que nos permita identificar donde quedan procesadas las ordenes. Creemos que esto es importante para los usuarios.
+Ademas, las imágenes de los platos en las cards se superponen sobre los textos del título y la descripción, lo que dificulta la legibilidad de la información. En ciertos intervalos de píxeles, la página presenta problemas de pérdida de proporciones, lo que puede afectar la apariencia visual del sitio. Aunque se corrige para el resto de los píxeles, existe un intervalo específico donde se observa una falta de corrección en las proporciones.
+A pesar de estos problemas, el sistema también cuenta con puntos positivos. 
+En resumen, si bien el sistema muestra una calidad general aceptable, es necesario abordar los problemas identificados para mejorar la funcionalidad y la usabilidad. La validación de platos duplicados, la posibilidad de agregar múltiples unidades del mismo plato y la capacidad de agregar platos diferentes en un mismo pedido son aspectos clave a mejorar. Asimismo, se recomienda ajustar la visibilidad del botón "Realizar pedido" para garantizar su accesibilidad. Con estas mejoras, el sistema ofrecerá una experiencia más completa y satisfactoria para los usuarios.
+
 
 ## Reflexión
-
+ #### Sebastian Borjas
+ Desde mi punto de vista he encontrado la actividad de Testing muy interesante e importante, porque considero que desde la perspectiva de otra persona se encuentran errores o bugs que uno como desarrollador no. El nivel de detalle que poseen los métodos utilizados permiten que los desarrolladores tengan bien claro como se producen los errores y cuales son. Además de ser importante para la corrección de los mismos y mejorar la calidad del código, la objetividad de los reportes hacen que equivocarse sea algo natural y ameno para los desarrolladores. En conclusión, el testing es indispensable en la ingeniería de software y estos ejercicios me han ayudado a visualizarlo.
