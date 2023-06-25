@@ -314,3 +314,8 @@ En resumen, si bien el sistema muestra una calidad general aceptable, es necesar
 ## Reflexión
  #### Sebastian Borjas
  Desde mi punto de vista he encontrado la actividad de Testing muy interesante e importante, porque considero que desde la perspectiva de otra persona se encuentran errores o bugs que uno como desarrollador no. El nivel de detalle que poseen los métodos utilizados permiten que los desarrolladores tengan bien claro como se producen los errores y cuales son. Además de ser importante para la corrección de los mismos y mejorar la calidad del código, la objetividad de los reportes hacen que equivocarse sea algo natural y ameno para los desarrolladores. En conclusión, el testing es indispensable en la ingeniería de software y estos ejercicios me han ayudado a visualizarlo.
+
+#### Agustina Martinez
+Al realizar las pruebas y las sesiones exploratorias, comprendi la importancia de prestar atención a los detalles y de ser minucioso al identificar problemas en un sistema.  En mi trabajo diario, solía limitarme a verificar que funcionara en casos ideales, dejando la tarea de asegurar la calidad al equipo de QA. Esta experiencia me ha dejado una mentalidad más orientada hacia la calidad en mi trabajo y me han brindado la oportunidad de crecer y desarrollar habilidades críticas para evaluar la calidad de un sistema y, lo que es más importante, para aplicarlas en adelante. En general, me siento altamente motivada para seguir mejorando en este ámbito.
+
+ 
