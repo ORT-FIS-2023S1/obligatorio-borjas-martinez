@@ -176,6 +176,41 @@ Proyecto asignado: [link](https://github.com/ORT-FIS-2023S1/obligatorio-techera-
       - La repetición de grupos con el mismo nombre y los mismos usuarios puede dificultar la identificación y selección adecuada de los grupos durante el proceso de asignación de comensales.
       - Esta situación puede llevar a errores en la asignación de comensales a grupos específicos y dificultar la administración y organización de los datos de los comensales.
     ---
+
+  #### Problemas de usabilidad
+  - Casos de Prueba 5: **Issue 5:** Botón en realizar pedido no es visible por el pie de página.
+  
+    **Descripción:**
+    Verificar si el sistema permita 
+    
+    **Pasos:**
+    1. Ingresar a la aplicación en Google Chrome versión 114.0.5735.133.
+    2. Iniciar sesión con credenciales válidas de administrador.
+    3. En la pagina de inicio identificar un pedido en la lista de pedidos realizados.
+    4. Hacer clic en el botón de procesar el pedido correspondiente al pedido seleccionado.
+    5. Verificar si se muestra el modal de confirmación "¿Deseas procesar el pedido?".
+
+    **Resultado obtenido:**
+    - El botón "Realizar pedido" no es visible debido a la obstrucción causada por el pie de página. Como resultado, los usuarios no pueden visualizar ni acceder al botón, lo que impide que puedan continuar con el proceso de pedido.
+  
+    **Resultado esperado:**
+    - El botón "Realizar pedido" debe ser claramente visible y accesible en el modal de confirmación, sin estar oculto o dificultado por el pie de página. Esto permitirá que se puedan procesar los pedidos de manera adecuada y sin obstáculos en la usabilidad.
+
+    **Datos de prueba:**
+      - Nombre del grupo: "Grupo 1" (un grupo que ya existe en el sistema)
+      - Descripción del grupo: "Este es el grupo 1"
+      - Miembros del grupo: Juan Pérez, María González, Carlos López
+
+    **Entorno de prueba:**
+    - Sistema Operativo: Windows 11
+    - Navegador: Google Chrome Versión 114.0.5735.133 (Official Build) (64-bit)
+
+    **Observaciones:**
+     - La falta de visibilidad del botón "Realizar pedido" debido al pie de página impide que los usuarios puedan avanzar y completar el proceso de pedido de manera efectiva.
+    - Esta situación crea una barrera en la usabilidad del sistema, ya que los usuarios no pueden continuar con el pedido debido a la inaccesibilidad del botón.
+    - Es necesario abordar este problema para garantizar que el botón "Realizar pedido" sea claramente visible y accesible, sin ser obstruido por el pie de página. Esto permitirá a los usuarios continuar con el proceso de pedido sin dificultades y mejorar la experiencia de usuario.
+    ---
+
   #### Sesiones de Testing exploratorio
 <table>
   <tr>
