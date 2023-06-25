@@ -42,9 +42,12 @@ Proyecto asignado: [link](https://github.com/ORT-FIS-2023S1/obligatorio-techera-
     6. Guardar el plato y confirmar que se ha agregado correctamente.
     7. Intentar agregar nuevamente un plato con los mismos datos especificados en el paso 4.
     8. Observar el comportamiento del sistema.
+
+    **Resultado obtenido:**
+    - El sistema permite agregar un plato al menú semanal sin validar si ese plato ya existe previamente. Por lo tanto, se permite la duplicación de platos en el menú semanal sin mostrar ningún mensaje de error.
   
     **Resultado esperado:**
-    - El sistema debe mostrar un mensaje de error o advertencia indicando que el plato ya existe en el sistema y no se puede agregar nuevamente.
+    - El sistema debe validar si el plato que se está agregando ya existe en el sistema y no permitir su duplicación. Se espera que se muestre un mensaje de error indicando que el plato ya existe y se impida la duplicación en el menú semanal.
 
     **Datos de prueba:**
     - Nombre del Plato: "Espaguetis con salsa de tomate"
@@ -80,9 +83,12 @@ Proyecto asignado: [link](https://github.com/ORT-FIS-2023S1/obligatorio-techera-
         - Menú Deseado: "Café con leche"
         - Información Adicional: "Café sin azúcar"
     7. Agregar pedido y confirmar que se ha agregado correctamente.
+
+    **Resultado obtenido:**
+    - La interfaz del sistema no proporciona una opción para agregar más de una unidad del mismo plato en la misma orden al registrar un pedido. No se muestra ninguna funcionalidad para especificar la cantidad deseada del plato.
   
     **Resultado esperado:**
-    - La interfaz del sistema debe proporcionar una opción para agregar más de una unidad del mismo plato en la misma orden al realizar el registro de un pedido.
+    - La interfaz del sistema debe proporcionar una opción para agregar más de una unidad del mismo plato en la misma orden al realizar el registro de un pedido. Se espera que el usuario pueda especificar la cantidad deseada del plato en el pedido y que esta información se refleje correctamente en la orden.
 
     **Datos de prueba:**
     - Nombre y Apellido del Comensal: "Juan Pérez"
@@ -113,9 +119,12 @@ Proyecto asignado: [link](https://github.com/ORT-FIS-2023S1/obligatorio-techera-
         - Menú Deseado: "Café con leche"
         - Información Adicional: "Café sin azúcar"
     7. Agregar pedido y confirmar que se ha agregado correctamente.
+
+    **Resultado obtenido:**
+    - La interfaz del sistema no ofrece la opción de agregar otros platos diferentes en la misma orden al registrar un pedido. Solo permite seleccionar un único plato para cada pedido y no se proporciona una forma de añadir platos adicionales.
   
     **Resultado esperado:**
-    - La interfaz del sistema debe proporcionar una opción para agregar otros platos diferentes en un mismo pedido al realizar el registro de un pedido.
+    - La interfaz del sistema debe permitir agregar otros platos diferentes en un mismo pedido al realizar el registro de un pedido. Se espera que el usuario pueda seleccionar y agregar varios platos diferentes en una sola orden, lo que facilitará la combinación de opciones de menú y evitará la necesidad de realizar pedidos separados para cada plato.
 
     **Datos de prueba:**
     - Nombre y Apellido del Comensal: "Juan Pérez"
