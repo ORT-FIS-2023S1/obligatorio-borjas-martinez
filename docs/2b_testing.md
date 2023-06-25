@@ -98,7 +98,7 @@ Proyecto asignado: [link](https://github.com/ORT-FIS-2023S1/obligatorio-techera-
   
 </table>
    
-## Informe de calidad del sistema
+## Informe global de la calidad del sistema
 
 ## Reflexión
  #### Sebastian Borjas
