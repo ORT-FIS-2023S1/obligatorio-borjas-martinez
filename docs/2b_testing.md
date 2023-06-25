@@ -236,19 +236,74 @@ Proyecto asignado: [link](https://github.com/ORT-FIS-2023S1/obligatorio-techera-
   </tr>
   <tr>
     <td><b>Notas de prueba:</b></td>
-    <td> -Verificación del correcto funcionamiento de los campos en agregar orden. -Verificación del funcionamiento del botón agregar pedido. -Verificación del funcionamiento de los botones del menu lateral. -Verificación de que el pedido se procese correctamente  </td>
+    <td> - Verificación del correcto funcionamiento de los campos en agregar orden.<br>
+    - Verificación del funcionamiento del botón agregar pedido. <br>
+    - Verificación del funcionamiento de los botones del menu lateral. <br>
+    - Verificación de que el pedido se procese correctamente  </td>
   </tr>
   <tr>
     <td><b>Incidentes:</b></td>
-    <td> - Se encontró que no se puede acceder botón de procesar pedido en el inicio con el puntero del mouse debido a que el pie de pagina o footer lo tapa. Para lograr realizarlo se tuvo que presionar la tecla enter. - No se puede seleccionar cantidad, es decir por ejemplo si se quieren pedir 2 donuts hay que hacer el pedido dos veces. </td>
+    <td> - Se encontró que no se puede acceder botón de procesar pedido en el inicio con el puntero del mouse debido a que el pie de pagina o footer lo tapa. Para lograr realizarlo se tuvo que presionar la tecla enter.<br>
+    - No se puede seleccionar cantidad, es decir por ejemplo si se quieren pedir 2 donuts hay que hacer el pedido dos veces. </td>
   </tr>
   <tr>
     <td><b>Inconvenientes:</b></td>
-    <td>  -Para la preparación de la sesión no se especifica cuales son los usuarios administradores precargados y se tuvo que investigar en el código de la aplicación. -No hay un botón de inicio en la menu lateral que permita ver los pedidos realizados, se pudo acceder a inicio tras hacer click en el logo. </td>
+    <td> - Para la preparación de la sesión no se especifica cuales son los usuarios administradores precargados y se tuvo que investigar en el código de la aplicación.<br>
+    -No hay un botón de inicio en la menu lateral que permita ver los pedidos realizados, se pudo acceder a inicio tras hacer click en el logo. </td>
   </tr>
-  
+</table>
+
+---
+
+<table>
+  <tr>
+    <td><b>Fecha:</b></td>
+    <td>24/6/2023</td>
+  </tr>
+  <tr>
+    <td><b>Tester:</b></td>
+    <td>Agustina Martinez</td>
+  </tr>
+  <tr>
+    <td><b>Misión:</b></td>
+    <td>Probar flujo completo de agregar grupos y comensales. <br>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Duración:</b></td>
+    <td>35 minutos</td>
+  </tr>
+  <tr>
+    <td><b>Estructura de División:</b></td>
+    <td> Diseño y ejecución de pruebas: 10 %. Investigación y reporte de defectos 85 %. Armado de la sesión 5 %. Objetivo vs Oportunidad 70 / 30</td>
+  </tr>
+  <tr>
+    <td><b>Notas de prueba:</b></td>
+    <td>
+    - Verificación del correcto funcionamiento al registar un nuevo comensal. <br>
+    - Verificación del correcto funcionamiento al registar un nuevo grupo. <br>
+    - Verificación del correcto funcionamiento al registar nuevos platos
+    - Verificación del correcto funcionamiento al eliminar un grupo.
+    </td>
+  </tr>
+  <tr>
+    <td><b>Incidentes:</b></td>
+    <td>- Se encontro que no se puede agregar platos diferentes en los pedidos, por lo que para pedir mas de un plato hay que tener varias ordenes creadas. <br>
+    - Se permite agregar un plato al menú semanal sin validar si ese plato ya existe previamente, por lo que se puede tener varios platos duplicados.<br>
+    - Se permite agregar un grupo que ya existe previamente en el sistema. Esto resulta en la creación de grupos duplicados con el mismo nombre y los mismos miembros
+    </td>
+  </tr>
+    <tr>
+    <td><b>Inconvenientes:</b></td>
+    <td>
+    <strong>Al loggearse con las credenciales de usuario:</strong><br>
+    - Se observó que al hacer clic en el botón "Agregar al carrito" en la vista del menú semanal, se produce una redirección a una página 404 en lugar de agregar el producto al carrito. Sería recomendable mostrar un mensaje informativo indicando que la funcionalidad no está disponible actualmente o simplemente desactivar el botón para evitar confusiones y redirecciones incorrectas. <br>
+   - Al intentar volver al inicio después de encontrarse en la página 404, se experimenta un comportamiento inadecuado donde el usuario es deslogueado de su sesión actual. Sería preferible que el usuario permanezca logueado al intentar volver al inicio desde una página inexistente.Esto interrumpe la continuidad de la experiencia del usuario <br>
+    </td>
+  </tr>
 </table>
    
 ## Informe de calidad del sistema
 
 ## Reflexión
+
