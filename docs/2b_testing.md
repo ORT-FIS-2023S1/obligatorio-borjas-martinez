@@ -181,7 +181,7 @@ Proyecto asignado: [link](https://github.com/ORT-FIS-2023S1/obligatorio-techera-
   - Casos de Prueba 5: **Issue 5:** Botón en realizar pedido no es visible por el pie de página.
   
     **Descripción:**
-    Verificar si el sistema permita 
+    Verificar si el sistema permite procesar correctamente el flujo al procesar un pedido.
     
     **Pasos:**
     1. Ingresar a la aplicación en Google Chrome versión 114.0.5735.133.
